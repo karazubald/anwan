@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="53.0" layoutY="25.0" text="Nama TextBox">
+         <font>
+            <Font name="Fira Sans Regular" size="18.0" />
+         </font>
+      </Label>
+      <JFXHamburger layoutX="14.0" layoutY="27.0" />
+      <JFXHamburger layoutX="316.0" layoutY="27.0" />
+      <JFXTextArea layoutX="14.0" layoutY="61.0" prefHeight="573.0" prefWidth="330.0" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum cursus turpis, vel mattis nisi tristique vitae. Aenean consectetur dictum mi ut gravida. Ut non purus velit. Praesent finibus ut metus vitae posuere. Maecenas eget ante id libero congue placerat sit amet sit amet felis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed posuere facilisis sem id convallis. Sed et tempus lorem. Sed at faucibus sem.&#10;&#10;Nunc scelerisque gravida dignissim. Proin vulputate nulla est, a iaculis metus imperdiet at. Donec est libero, varius eget bibendum id, hendrerit ac elit. Fusce lobortis urna aliquam eros hendrerit, eu ultrices felis fringilla. Maecenas viverra vel augue sit amet efficitur. Mauris pharetra porttitor lorem condimentum facilisis. Phasellus tristique nisl quis dictum mattis. Cras mauris metus, aliquam id fermentum dictum, mattis a elit. Nullam sem leo, auctor eget ex non, fermentum sodales sapien. Nullam porta risus velit, sed interdum arcu venenatis ut. Morbi molestie nisi nec ex mattis, eget accumsan enim consectetur. Integer ligula orci, sollicitudin porttitor malesuada sed, ornare ut ex. Aliquam auctor lectus et nunc posuere fringilla.&#10;&#10;Nulla convallis risus ut elit accumsan, a sollicitudin augue laoreet. In tempus porta turpis, id hendrerit ex placerat vel. Phasellus non eros leo. Vestibulum suscipit aliquet velit ac tempus. Duis finibus sit amet ante sit amet imperdiet. Nullam congue tortor dolor, et convallis metus laoreet eu. Nulla semper, velit et malesuada ultrices, quam justo hendrerit tellus, quis mattis libero nibh eget justo. " AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </JFXTextArea>
+   </children>
+</AnchorPane>

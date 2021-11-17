@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutY="80.0" prefHeight="480.0" prefWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Tema :">
+               <font>
+                  <Font name="Fira Sans Regular" size="18.0" />
+               </font>
+            </Label>
+            <JFXComboBox layoutX="78.0" layoutY="14.0" prefHeight="24.0" prefWidth="123.0" />
+            <JFXButton layoutX="274.0" layoutY="10.0" ripplerFill="#a909db" text="Ubah">
+               <font>
+                  <Font name="Fira Sans Regular" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXTextArea layoutX="14.0" layoutY="56.0" prefHeight="375.0" prefWidth="330.0" text="Isi kotak tulisan ini adalah susunan kalimat dari tema yang terpilih. Susunan kalimat ini kemudian dilengkapi atau diubah oleh analis wawancara di kotak tulisan ini. &#10;&#10;Contoh keluaran (output):&#10;&#10;Tema 1 memiliki 3 koding yaitu Koding 1, Koding 2, dan Koding 3. Koding 1 didapatkan dari keterangan narasumber ...&#10;&#10;dapat diubah menjadi:&#10;&#10;Tema 1 berdasarkan teori dari X (2012) adalah ..... Tema 1 memiliki 3 koding yaitu koding 1, koding 2, dan koding 3. Koding 1 muncul ketika narasumber ....." unFocusColor="BLACK" wrapText="true">
+               <font>
+                  <Font name="Fira Sans Regular" size="14.0" />
+               </font>
+            </JFXTextArea>
+            <JFXButton layoutX="246.0" layoutY="439.0" ripplerFill="#bbff00" text="Verifikasi">
+               <font>
+                  <Font name="Fira Sans Regular" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Pane layoutX="10.0" layoutY="560.0" prefHeight="80.0" prefWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>
