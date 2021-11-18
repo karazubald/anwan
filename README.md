@@ -18,7 +18,7 @@ Proyek ini tersedia di [Github](https://github.com/karazubald/anwan) dengan sumb
 - Mengetahui cara kerja Issues di Github dan Gitlab.
 - Mengetahui cara kerja Discussion di Github.
 ### Cara berkontribusi
-- Kontribusi ke kode dalam proyek dapat dilihat di [kontribusi_kode](anwan/kontribusi\_kode.md).
+- Kontribusi ke kode dalam proyek dapat dilihat di [kontribusi_kode Github](https://github.com/karazubald/anwan/blob/main/kontribusi_kode.md) atau di [kontribusi_kode Gitlab](https://gitlab.com/karazubald/anwan/-/blob/main/kontribusi_kode.md)].
 - Membuat isu di Issues tentang saran atau <i>bug</i> di Gitlab dan Github.
 - Memulai diskusi di Discussion Github.
 
