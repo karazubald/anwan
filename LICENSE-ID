@@ -1,0 +1,721 @@
+  This is an unofficial translation of the GNU General Public License into 
+Indonesian language. It was not published by the Free Software Foundation, 
+and does not legally state the distribution terms for software that uses the 
+GNU GPL—only the original English text of the GNU GPL does that. However, we 
+hope that this translation will help Indonesian speakers understand the GNU 
+GPL better.
+
+  You may publish this translation, modified or unmodified, only under the terms
+at http://www.gnu.org/licenses/translations.html.
+-------------------------------------------------------------------------------
+  Ini adalah penerjemahan tidak resmi dari GNU General Public License ke dalam
+Bahasa Indonesia. Penerjemahan ini tidak diterbitkan oleh Free Software 
+Foundation dan tidak sah secara hukum menyatakan syarat dan ketentuan perangkat 
+lunak yang menggunakan GNU GPL-hanya teks GNU GPL berbahasa Inggris. Meskipun
+demikian, kami berharap terjemahan ini dapat membantu penutur bahasa Indonesia
+memahami GNU GPL dengan baik.
+
+  Anda dapat mempublikasikan terjemahan ini, dengan atau tanpa modifikasi 
+sesuai syarat dan ketentuan yang ada di 
+http://www.gnu.org/licenses/translations.html.
+-------------------------------------------------------------------------------
+
+                    GNU GENERAL PUBLIC LICENSE
+                       Versi 3, 29 Juni 2007
+
+ Hak Cipta (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+ Semua orang diizinkan menyalin dan mendistribusikan salinan verbatim
+ dari lisensi ini namun tidak boleh mengubah isinya.
+
+                            Pendahuluan
+  GNU General Public License adalah lisensi bebas dan copyleft untuk
+perangkat lunak dan karya sejenis lainnya.
+
+  Lisensi pada kebanyakan perangkat lunak dan karya praktis lainnya
+dirancang untuk membatasi kebebasan Anda dalam menyebarkan dan mengubah
+karya. Sebaliknya, GNU General Public License dimaksudkan untuk menjamin
+kebebasan Anda dalam menyebarkan dan mengubah seluruh versi program--
+menjamin perihal kebebasan perangkat lunak ke semua penggunanya. Kami,
+Free Software Foundation menggunakan GNU General Public License pada
+kebanyakan perangkat lunak buatan kami; Hal yang sama berlaku pada
+semua karya lainnya yang dirilis dengan cara ini oleh pembuatnya. Anda
+juga dapat mengaplikasikan lisensi ini ke program buatan Anda.
+
+  Ketika kami menyebutkan perangkat lunak bebas, kami mengacu pada
+kebebasan bukan ke biaya. General Public License kami menjamin bahwa
+Anda memiliki kebebasan untuk mendistribusikan salinan dari perangkat
+lunak bebas (dan membebankan biayanya sesuai keinginan Anda), mampu 
+menerima kode sumber atau mendapatkannya jika diinginkan, mampu 
+mengubah perangkat lunak atau menggunakan bagian-bagiannya di program
+bebas baru, dan mengetahui bahwa Anda boleh melakukan semua hal 
+tersebut.
+
+  Demi melindungi hak-hak Anda kami perlu mencegah orang lain 
+menyangkal atau membuat Anda menyerahkan hak-hak Anda. Oleh karena
+itu, Anda mempunyai kewajiban apabila Anda mendistribusikan
+salinan perangkat lunak atau memodifikasinya: kewajiban menghargai 
+kebebasan orang lain.
+
+  Apabila Anda mendistribusikan salinan program bebas sejenis baik 
+didapatkan secara gratis maupun berbayar, Anda harus menyerahkan
+ke penerima kebebasan yang sama seperti yang Anda dapatkan. Anda harus
+memastikan bahwa mereka juga menerima atau dapat menerima sumber 
+kodenya. Anda juga harus menunjukkan kepada mereka ketentuan ini 
+sehingga mereka tahu hak dan kewajibannya.
+
+  Developper yang menggunakan GNU GPL melindungi hak Anda dengan dua
+langkah: (1) menyatakan hak cipta pada perangkat lunak, dan (2) 
+menawarkan Anda lisensi ini sehingga Anda diberikan izin hukum untuk
+menyalin, mendistribusikan, dan/atau memodifikasi.
+
+  Demi melindungi developper GPL dengan jelas menyatakan bahwa tidak 
+ada jaminan pada perangkat lunak bebas. Demi kebaikan pengguna dan 
+developper, GPL mewajibkan versi modifikasi ditandai telah dimodifikasi 
+sehingga galat perangkat lunak tidak ditujukan secara keliru ke 
+developper sebelumnya.
+
+  Sejumlah perangkat dirancang untuk menyangkal akses pengguna untuk 
+memasang atau menjalankan perangkat lunak versi modifikasi di dalamnya
+meskipun pemanufaktur dapat melakukanya. Hal ini pada dasarnya 
+bertentangan dengan tujuan melindungi kebebasan pengguna dalam
+mengubah perangkat lunak. Penyalahgunaan sistematis ini muncul pada 
+kalangan produk yang tujuannya dipakai oleh pengguna sehingga tidak 
+dapat dibenarkan. Oleh karena itu, kami merancang versi GPL ini untuk
+melarang praktik pada produk semacam itu. Apabila masalah tersebut 
+muncul di domain lainnya, kami siap memperluas ketentuan ini ke domain
+tersebut di versi GPL selanjutnya demi melindungi kebabasan pengguna.
+
+  Terakhir, setiap program terus terancam oleh paten perangkat lunak.
+Pemerintah seharusnya tidak mengizinkan paten untuk membatasi 
+pengembangan dan penggunaan perangkat lunak pada komputer tujuan umum
+namun jika terjadi, kami berharap untuk menghindari bahaya tertentu dimana
+paten yang ada di program bebas membuat programnya menjadi hak milik. 
+Demi mencegah ini, GPL memastikan bahwa paten tidak dapat digunakan untuk
+ membuat program takbebas.
+
+  Istilah, syarat dan ketentuan khusus untuk menyalin, mendistrubusikan, 
+dan memodifikasi adalah sebagai berikut.
+
+                       SYARAT DAN KETENTUAN
+
+  0. Definisi.
+
+  "Lisensi ini" berarti versi 3 dari GNU General Publik License.
+
+  "Hak cipta" juga mencakup ketentuan hukum serupa hak cipta yang
+berlaku pada karya lainnya seperti masker semikonduktor.
+
+  "Program ini" berarti karya dengan hak cipta yang dilisensi menggunakan
+Lisensi ini. Setiap penerima lisensi disebut "Anda". "Penerima lisensi" 
+atau "penerima" mencakup perorangan dan organisasi.
+
+  "Memodifikasi" karya berarti menyalin atau mengadaptasikan
+seluruh atau bagian karya kecuali salinan serupa sehingga memerlukan izin 
+hak cipta. Hasil karya disebut "versi modifikasi" dari karya sebelumnya 
+atau karya "berdasarkan" karya sebelumnya.
+
+  "Kover karya" berarti program yang tidak termodifikasi atau karya
+berdasarkan program ini.
+
+  "Menyebarluaskan"  karya berarti melakukan apapun yang tanpa izin
+dapat membuat Anda bertanggung jawab secara langsung maupun tidak
+langsung terhadap pelanggaran hukum hak cipta yang berlaku kecuali
+menjalankannya di komputer atau memodifikasi salinan partikelir.
+Penyebarluasan termasuk menyalin, mendistribusikan (dengan atau tanpa
+modifikasi), menyediakan ke publik, dan di beberapa negara juga
+termasuk aktivitas sejenis lainnya.
+
+  Melakukan "pemindahan" karya adalah segala jenis penyebarluasan yang 
+menyebabkan pihak lainnya menerima atau dapat membuat salinan karya. 
+Interaksi dengan pengguna melalui jaringan komputer tanpa transfer 
+salinan bukan merupakan pemindahan.
+
+  Antarmuka interaktif menampilkan "Pemberitahuan Ketentuan Hukum" 
+sedemikian rupa sehingga termasuk di dalamnya, fitur yang nyaman 
+dan terlihat jelas dengan: (1) menampilkan hak cipta yang sesuai, dan
+ (2) memberitahukan ke pengguna bahwa tidak ada jaminan pada karya 
+ini (kecuali ada disediakan jaminan) sehingga penerima lisensi dapat
+melakukan pemindahan karya dibawah lisensi ini dan cara melihat salinan
+lisensi ini. Apabila antarmuka berada dalam pilihan komando pengguna 
+seperti dalam menu, aitem yang mencolok di daftarnya memenuhi kriteria ini.
+
+  1. Kode Sumber.
+
+  "Kode sumber" karya adalah bentuk yang lebih disukai untuk melakukan
+modifikasi. "Kode objek" berarti segala bentuk non-sumber dari karya.
+
+  "Antarmuka Standar" adalah antarmuka yang sesuai standar resmi 
+berdasarkan suatu standar badan terakui atau dalam hal antarmuka di bahasa 
+pemrograman tertentu, antarmuka yang banyak digunakan di antara para 
+developper yang bekerja dengan bahasa itu.
+  
+  "Pustaka Sistem" dari karya yang dapat dijalankan mencakup apa pun
+selain karya secara keseluruhan yang (a) termuat dalam bentuk biasa
+dari kemasan komponen utama namun bukan merupakan bagian dari Komponen
+Utama, dan (b) berfungsi untuk memungkinkan penggunaan karya dengan
+Komponen Utama atau mengimplementasikan Antarmuka Standar dimana
+implementasinya tersedia di publik dalam bentuk kode sumber. "Komponen 
+Utama" dalam konteks ini adalah komponen besar utama (kernel, sistem
+window, dan sejenisnya) dari sistem operasi tertentu (jika ada) yang
+menjadi tempat berjalannya karya, penyusun yang digunakan untuk
+menghasilkan karya, atau penerjemah kode objek yang digunakan untuk
+menjalankannya. 
+
+  "Sumber Korespondensi" dari karya dalam bentuk kode objek berarti
+segala kode sumber yang dibutuhkan untuk membuat, memasang, (pada
+karya yang dapat dijalankan) menjalankan kode objek, dan memodifikasi
+karya termasuk sejumlah skrip untuk mengendalikan aktivitas tersebut.
+Meskipun demikian, disini tidak termasuk Pustaka Sistem, perkakas
+tujuan umum, atau program bebas yang tersedia umum yang digunakan tanpa
+modifikasi dalam menjalankan aktivitas tersebut tetapi bukan bagian
+dari karya. Sebagai contoh, Sumber Korespondensi termasuk berkas 
+definisi antarmuka yang terhubung dengan berkas sumber dari karya dan
+kode sumber untuk pustaka bersama dan subprogram-subprogram yang 
+terhubung secara dinamis yang kebutuhannya dirancang untuk semisal 
+komunikasi data intim atau pengendali alur di antara subprogram-
+subprogram dengan bagian lainnya dari karya. 
+
+  Sumber Korespondensi tidak perlu menyertakan segala sesuatu
+yang dapat diregenerasi otomatis oleh pengguna dari bagian lain
+ Sumber Korespondensi.
+  
+  Sumber Korespondensi dari karya dalam bentuk kode sumber adalah
+karya yang sama.
+
+  2. Izin Dasar.
+
+  Segala hak yang diberikan dibawah lisensi ini diberikan sesuai
+ketentuan hak cipta pada program ini, dan tidak dapat dibatalkan 
+asalkan syarat dan ketentuan telah terpenuhi. Lisensi ini secara
+eksplisit menegaskan izin tak terbatas pada Anda untuk menjalankan
+program yang tidak dimodifikasi. Hasil keluaran dari menjalankan 
+kover program dicakup oleh lisensi ini hanya jika hasil keluaran,
+berdasarkan kontennya, merupakan kover karya. Lisensi ini 
+mengakui hak Anda yaitu hak penggunaan wajar atau setara lainnya 
+sebagaimana yang tertera dalam undang-undang hak cipta.
+
+  Anda dapat membuat, menjalankan, dan menyebarluaskan kover karya
+yang tidak Anda pindahkan tanpa syarat selama lisensi Anda namun
+jika sebaliknya tetap patuh pada hukum yang berlaku. Anda boleh 
+melakukan pemindahan kover karya ke orang lain dengan satu-satunya 
+tujuan Anda meminta mereka membuatkan modifikasi khusus untuk Anda,
+atau menyediakan fasilitas untuk menjalankan karya tersebut kepada 
+Anda dengan catatan Anda memenuhi syarat dan ketentuan di lisensi 
+ini terkait pemindahan segala material yang hak ciptanya tidak
+dalam kendali Anda. Mereka yang membuat atau menjalankan kover 
+karya karena Anda harus melakukannya secara eksklusif atas nama 
+Anda, dibawah direksi dan kendali Anda, dan sesuai ketentuan yang 
+melarang mereka membuat salinan dari material berhak cipta milik
+Anda di luar hubungan mereka dengan Anda.
+
+  Pemindahan dalam kondisi apa pun diizinkan hanya dengan syarat
+dan ketentuan yang tercantum di bawah. Sublisensi tidak diizinkan;
+Bab 10 membuat hal tersebut tidak diperlukan.
+
+  3. Melindungi Hak Pengguna dari Undang-undang Anti-Circumvention.
+
+  Tidak ada kover karya yang dianggap bagian dari tindakan teknologi
+efektif berdasarkan hukum yang berlaku sesuai Pasal 11 dari 
+perjanjian hak cipta WIPO yang diadopsi tanggal 20 Desember 1996, 
+atau undang-undang sejenisnya yang melarang atau membatasi 
+sirkumfensi tindakan tersebut.
+
+  Ketika Anda melakukan pemindahan kover karya, Anda melepaskan 
+segala kuasa hukum untuk melarang sirkumfensi tindakan teknologi 
+selama sirkumfensi tersebut dilakukan dengan menggunakan hak 
+berdasarkan lisensi ini terkait kover karya, dan Anda menyangkal 
+intensi apa pun untuk membatasi pengoperasian atau modifikasi karya 
+sebagai sarana penegakan, terhadap pengguna karya, hak hukum Anda 
+atau pihak ketiga dalam melarang sirkumfensi tindakan teknologi.
+
+  4. Pemindahan Salinan Verbatim
+
+  Anda dapat melakukan pemindahan salinan verbatim dari kode sumber
+program sebagaimana Anda menerimanya dalam media apa pun dengan 
+ketentuan Anda secara pantas dan mencolok mempublikasikan 
+pemberitahuan hak cipta yang sesuai di setiap salinan; menjaga 
+keutuhan segala pemberitahuan yang menyatakan bahwa Lisensi ini dan
+segala ketentuan non-permisif tambahan sebagaimana di Bab 7 
+teraplikasikan di kode; menjaga keutuhan pemberitahuan ketiadaan 
+jaminan apa pun; dan memberikan salinan lisensi ini bersamaan dengan 
+program ini kepada semua penerima.
+
+  Anda dapat membebankan atau tidak membebankan biaya pada setiap
+salinan yang telah Anda lakukan pemindahan dan Anda boleh menawarkan
+dukungan atau jaminan perlindungan dengan membebankan biaya.
+
+  5. Pemindahan Sumber Versi Modifikasi
+
+  Anda dapat melakukan pemindahan karya berdasarkan program ini, atau
+menghasilkan modifikasi dari program ini berdasarkan syarat dan ketentuan
+di Bab 4 dengan catatan Anda juga memenuhi semua kriteria berikut:
+
+    a) Karya harus mengikutsertakan pemberitahuan mencolok yang 
+    menyatakan Anda telah memodifikasinya dan mencantumkan tanggal yang
+    relevan.
+
+    b) Karya harus mengikutsertakan pemberitahuan mencolok yang
+    menyatakan bahwa karya dirilis dibawah lisensi ini dan segala
+    ketentuan ditambahkan di bawah Bab 7. Ketentuan ini memodifikasi
+    ketentuan di Bab 4 terkait "menjaga keutuhan segala pemberitahuan".
+
+    c) Anda harus melisensi semua karya, secara keseluruhan, 
+    menggunakan lisensi ini kepada siapa saja yang memiliki 
+    salinannya. Dengan demikian, lisensi ini berlaku, dengan segala
+    ketentuan tambahan di Bab 7, pada keseluruhan karya dan bagian-
+    bagiannya, terlepas dari pengemasannya. Lisensi ini tidak 
+    mengizinkan pelisensian karya dengan cara lainnya namun tidak
+    menginvalidasi izin semacamnya apabila Anda menerimanya secara
+    terpisah.
+
+    d) Apabila karya memiliki antarmuka pengguna interaktif, tiap
+    antarmuka harus menampilkan Pemberitahuan Hukum yang Sesuai; 
+    meskipun demikian, apabila program ini memiliki antarmuka 
+    interaktif yang tidak menampilkan Pemberitahuan Hukum yang Sesuai,
+    karya Anda tidak perlu menampilkannya.
+
+  Kompilasi dari kover karya dengan karya terpisah dan independen 
+lainnya, yang secara alamiah bukan merupakan ekstensi dari kover karya,
+dan tidak dikombinasikan ke dalamnya semisal untuk membuat program
+yang lebih besar, di dalam atau pada isi dari media penyimpanan atau 
+distribusi, disebut sebagai "agregat" jika kompilasi dan hak cipta yang
+dihasilkan tidak digunakan untuk membatasi akses atau hak hukum 
+kompilasi pengguna di luar izin yang ada pada tiap karya individual.
+Inklusi kover karya dalam sebuah agregat tidak menyebabkan lisensi ini
+berlaku pada bagian agregrat lainnya.
+
+  6. Pemindahan Bentuk Nonsumber
+
+  Anda dapat melakukan pemindahan kover karya dalam bentuk kode objek
+sesuai syarat dan ketentuan di Bab 4 dan 5 dengan syarat Anda juga
+melakukan pemindahan Sumber Korespondensi yang dapat dibaca mesin 
+sesuai ketentuan di Lisensi ini dengan 1 dari beragam cara ini:
+
+    a) Pemindahan kode objek pada atau diwujudkan dalam produk fisik
+    (termasuk media distribusi fisik), disertai dengan Sumber 
+    Korespondensi dipasang pada media fisik tahan lama yang biasa 
+    digunakan untuk pertukaran perangkat lunak.
+
+    b) Pemindahan kode objek pada atau diwujudkan dalam produk fisik
+    (termasuk media distribusi fisik), disertai dengan penawaran
+    tertulis, berlaku setidaknya selama 3 tahun dan berlaku selama
+    Anda menawarkan suku cadang atau dukungan pelanggan untuk model
+    produk itu, sehingga memberikan siapa saja yang memiliki kode 
+    objek antara (1) salinan Sumber Korespondensi untuk semua 
+    perangkat lunak di produk yang dicakup lisensi ini, pada media
+    fisik tahan lama yang biasa digunakan untuk pertukaran perangkat
+    lunak, dengan harga tidak lebih dari biaya yang wajar untuk
+    melakukan pemindahan sumber secara fisik, atau (2) akses ke 
+    salinan Sumber Korespondensi melalui peladen jaringan tanpa biaya.
+
+    c) Pemindahan salinan individual dari kode objek dengan salinan
+    penawaran secara tertulis terkait penyediaan Sumber Korespondensi.
+    Pilihan ini diizinkan bersifat sekali waktu dan nonkomersial, dan
+    hanya jika Anda menerima kode objek dengan penawaran yang sama,
+    sesuai ketentuan di subbab 6b. 
+
+    d) Pemindahan kode objek dengan menawarkan akses dari tempat 
+    tertentu (gratis atau dengan biaya), dan menawarkan akses yang 
+    sejenis pada Sumber Korespondensi dengan cara yang sama di tempat
+    yang sama tanpa biaya tambahan. Anda tidak perlu meminta penerima
+    menyalin Sumber Korespondensi bersama dengan kode objek. Apabila
+    tempat untuk menyalin kode objek adalah peladen jaringan, Sumber
+    Korespondensi boleh berada pada peladen yang berbeda (dioperasikan
+    oleh Anda atau pihak ketiga) yang mendukung fasilitas penyalinan 
+    sejenis dengan syarat Anda memelihara kejelasan arah di samping 
+    kode objek yang menyatakan arah penemuan Sumber Korespondensi.
+    Bagaimanapun jenis peladen yang menyajikan Sumber Korespondensi, 
+    Anda wajib memastikan ketersediannya selama yang diperlukan untuk
+    memenuhi ketentuan ini.
+
+    e) Pemindahan kode objek menggunakan transmisi rekan ke rekan asalkan
+    Anda memberitahukan rekan lainnya dimana kode objek dan Sumber 
+    Korespondensi dari karya ditawarkan ke khalayak ramai tanpa biaya
+    mengikuti ketentuan di subbab 6d.
+
+  Bagian yang dapat terpisah dari kode objek, dimana sumbernya 
+dikecualikan dari Sumber Korespondensi sebagai Pustaka Sistem tidak 
+perlu diikutsertakan dalam pemindahan karya kode objek.
+
+  "Produk Pengguna" adalah antara (1) "produk konsumen" yaitu segala
+properti pribadi nyata yang umumnya digunakan untuk tujuan pribadi,
+kekeluargaan, atau berumah tangga, atau (2) segala sesuatu yang 
+dirancang atau dijual untuk dimasukkan ke dalam tempat tinggal. 
+Pada penentuan apakah suatu produk termasuk produk konsumen, kasus
+yang meragukan harus diselesaikan berdasarkan ketercakupan. Pada produk 
+tertentu yang diterima oleh pengguna tertentu, "umumnya digunakan" 
+berarti penggunaan khas atau umum dari kelas produk terlepas dari
+status pengguna tertentu atau cara sebenarnya pengguna tertentu 
+menggunakan, mengharapkan atau diharapkan menggunakan produk. Suatu 
+produk adalah produk konsumen terlepas dari apakah produk memiliki
+penggunaan yang dasarnya bersifat komersial, industrial, atau 
+nonkonsumtif kecuali penggunaan tersebut mewakili satu-satunya cara
+penggunaan produk yang signifikan.
+
+  "Informasi Pemasangan" pada Produk Konsumen berarti segala metode,
+prosedur, kunci otorisasi, atau informasi lainnya yang diperlukan untuk
+memasang dan menjalankan versi modifikasi kover karya di dalam
+Produk Pengguna dari sebuah versi modifikasi Sumber Korespondensinya.
+Informasi harus berkecukupan untuk memastikan bahwa kesinambungan 
+fungsi dari kode objek yang dimodifikasi tidak dicegah atau diganggu
+hanya karena modifikasi telah dilakukan.
+
+  Apabila Anda melakukan pemindahan kode objek berdasarkan ketentuan
+ini, atau dengan, atay secara khusus untuk menggunakannya dalam sebuah
+Produk Pengguna, dan pemindahan muncul sebagai bagian transaksi dimana
+hak kepemilikan dan penggunaan Produk Pengguna ditransfer ke penerima
+selamanya atau selama waktu yang telah ditentukan (terlepas dari 
+karakteristik transaksi), Sumber Korespondensi yang dipindahkan 
+berdasarkan ketentuan ini harus disertai dengan Informasi Pemasangan.
+Meskipun demikian, ketentuan ini tidak berlaku apabila Anda maupun
+pihak ketiga tidak menguasai kemampuan untuk memasang kode objek
+yang telah dimodifikasi pada Produk Pengguna (contohnya karya yang
+telah dipasang di ROM).
+
+  Ketentuan penyediaan Informasi Pemasangan tidak termasuk ketentuan 
+untuk terus menyediakan layanan dukungan, jaminan, atau peningkatan pada
+karya yang telah dimodifikasi atau telah dipasang oleh penerima, atau
+pada Produk Pengguna yang telah dimodifikasi atau dipasang. Akses ke
+sebuah jaringan dapat ditolak ketika modifikasi berdampak secara material 
+dan merugikan pada operasi jarungan atau melanggar aturan dan protokol
+komunikasi antarjaringan.
+
+  Sumber Korespondensi yan telah dipindahkan dan Informasi Pemasangan
+yang disediakan berdasarkan bagian ini harus dalam format yang 
+didokumentasikan secara publik (dan dengan implementasi yang tersedia
+ke public dalam bentuk kode sumber), dan wajib tidak memerlukan
+kata sandi atau kunci khusus untuk membuka kemasan, membaca, atau
+menyalin.
+
+  7. Ketentuan Tambahan.
+
+  "Izin tambahan" adalah ketentuan yang melengkapi ketentuan lisensi
+ini dengan membuat pengecualian dari satu atau beberapa syarat.
+Izin tambahan yang dapat diterapkan pada keseluruhan program harus
+diperlakukan selayaknya termaktub dalam lisensi ini, sesuai
+ketentuan hukum yang berlaku. Apabila izin tambahan hanya berlaku pada
+bagian dari program ini, bagian itu dapat digunakan secara terpisah
+sesuai izinnya namun keseluruhan program tetap diatur oleh lisensi ini
+tanpa memperhatikan izin tambahan.
+
+  When you convey a copy of a covered work, you may at your option
+remove any additional permissions from that copy, or from any part of
+it.  (Additional permissions may be written to require their own
+removal in certain cases when you modify the work.)  You may place
+additional permissions on material, added by you to a covered work,
+for which you have or can give appropriate copyright permission.
+
+  Notwithstanding any other provision of this License, for material you
+add to a covered work, you may (if authorized by the copyright holders of
+that material) supplement the terms of this License with terms:
+
+    a) Disclaiming warranty or limiting liability differently from the
+    terms of sections 15 and 16 of this License; or
+
+    b) Requiring preservation of specified reasonable legal notices or
+    author attributions in that material or in the Appropriate Legal
+    Notices displayed by works containing it; or
+
+    c) Prohibiting misrepresentation of the origin of that material, or
+    requiring that modified versions of such material be marked in
+    reasonable ways as different from the original version; or
+
+    d) Limiting the use for publicity purposes of names of licensors or
+    authors of the material; or
+
+    e) Declining to grant rights under trademark law for use of some
+    trade names, trademarks, or service marks; or
+
+    f) Requiring indemnification of licensors and authors of that
+    material by anyone who conveys the material (or modified versions of
+    it) with contractual assumptions of liability to the recipient, for
+    any liability that these contractual assumptions directly impose on
+    those licensors and authors.
+
+  All other non-permissive additional terms are considered "further
+restrictions" within the meaning of section 10.  If the Program as you
+received it, or any part of it, contains a notice stating that it is
+governed by this License along with a term that is a further
+restriction, you may remove that term.  If a license document contains
+a further restriction but permits relicensing or conveying under this
+License, you may add to a covered work material governed by the terms
+of that license document, provided that the further restriction does
+not survive such relicensing or conveying.
+
+  If you add terms to a covered work in accord with this section, you
+must place, in the relevant source files, a statement of the
+additional terms that apply to those files, or a notice indicating
+where to find the applicable terms.
+
+  Additional terms, permissive or non-permissive, may be stated in the
+form of a separately written license, or stated as exceptions;
+the above requirements apply either way.
+
+  8. Termination.
+
+  You may not propagate or modify a covered work except as expressly
+provided under this License.  Any attempt otherwise to propagate or
+modify it is void, and will automatically terminate your rights under
+this License (including any patent licenses granted under the third
+paragraph of section 11).
+
+  However, if you cease all violation of this License, then your
+license from a particular copyright holder is reinstated (a)
+provisionally, unless and until the copyright holder explicitly and
+finally terminates your license, and (b) permanently, if the copyright
+holder fails to notify you of the violation by some reasonable means
+prior to 60 days after the cessation.
+
+  Moreover, your license from a particular copyright holder is
+reinstated permanently if the copyright holder notifies you of the
+violation by some reasonable means, this is the first time you have
+received notice of violation of this License (for any work) from that
+copyright holder, and you cure the violation prior to 30 days after
+your receipt of the notice.
+
+  Termination of your rights under this section does not terminate the
+licenses of parties who have received copies or rights from you under
+this License.  If your rights have been terminated and not permanently
+reinstated, you do not qualify to receive new licenses for the same
+material under section 10.
+
+  9. Acceptance Not Required for Having Copies.
+
+  You are not required to accept this License in order to receive or
+run a copy of the Program.  Ancillary propagation of a covered work
+occurring solely as a consequence of using peer-to-peer transmission
+to receive a copy likewise does not require acceptance.  However,
+nothing other than this License grants you permission to propagate or
+modify any covered work.  These actions infringe copyright if you do
+not accept this License.  Therefore, by modifying or propagating a
+covered work, you indicate your acceptance of this License to do so.
+
+  10. Automatic Licensing of Downstream Recipients.
+
+  Each time you convey a covered work, the recipient automatically
+receives a license from the original licensors, to run, modify and
+propagate that work, subject to this License.  You are not responsible
+for enforcing compliance by third parties with this License.
+
+  An "entity transaction" is a transaction transferring control of an
+organization, or substantially all assets of one, or subdividing an
+organization, or merging organizations.  If propagation of a covered
+work results from an entity transaction, each party to that
+transaction who receives a copy of the work also receives whatever
+licenses to the work the party's predecessor in interest had or could
+give under the previous paragraph, plus a right to possession of the
+Corresponding Source of the work from the predecessor in interest, if
+the predecessor has it or can get it with reasonable efforts.
+
+  You may not impose any further restrictions on the exercise of the
+rights granted or affirmed under this License.  For example, you may
+not impose a license fee, royalty, or other charge for exercise of
+rights granted under this License, and you may not initiate litigation
+(including a cross-claim or counterclaim in a lawsuit) alleging that
+any patent claim is infringed by making, using, selling, offering for
+sale, or importing the Program or any portion of it.
+
+  11. Patents.
+
+  A "contributor" is a copyright holder who authorizes use under this
+License of the Program or a work on which the Program is based.  The
+work thus licensed is called the contributor's "contributor version".
+
+  A contributor's "essential patent claims" are all patent claims
+owned or controlled by the contributor, whether already acquired or
+hereafter acquired, that would be infringed by some manner, permitted
+by this License, of making, using, or selling its contributor version,
+but do not include claims that would be infringed only as a
+consequence of further modification of the contributor version.  For
+purposes of this definition, "control" includes the right to grant
+patent sublicenses in a manner consistent with the requirements of
+this License.
+
+  Each contributor grants you a non-exclusive, worldwide, royalty-free
+patent license under the contributor's essential patent claims, to
+make, use, sell, offer for sale, import and otherwise run, modify and
+propagate the contents of its contributor version.
+
+  In the following three paragraphs, a "patent license" is any express
+agreement or commitment, however denominated, not to enforce a patent
+(such as an express permission to practice a patent or covenant not to
+sue for patent infringement).  To "grant" such a patent license to a
+party means to make such an agreement or commitment not to enforce a
+patent against the party.
+
+  If you convey a covered work, knowingly relying on a patent license,
+and the Corresponding Source of the work is not available for anyone
+to copy, free of charge and under the terms of this License, through a
+publicly available network server or other readily accessible means,
+then you must either (1) cause the Corresponding Source to be so
+available, or (2) arrange to deprive yourself of the benefit of the
+patent license for this particular work, or (3) arrange, in a manner
+consistent with the requirements of this License, to extend the patent
+license to downstream recipients.  "Knowingly relying" means you have
+actual knowledge that, but for the patent license, your conveying the
+covered work in a country, or your recipient's use of the covered work
+in a country, would infringe one or more identifiable patents in that
+country that you have reason to believe are valid.
+
+  If, pursuant to or in connection with a single transaction or
+arrangement, you convey, or propagate by procuring conveyance of, a
+covered work, and grant a patent license to some of the parties
+receiving the covered work authorizing them to use, propagate, modify
+or convey a specific copy of the covered work, then the patent license
+you grant is automatically extended to all recipients of the covered
+work and works based on it.
+
+  A patent license is "discriminatory" if it does not include within
+the scope of its coverage, prohibits the exercise of, or is
+conditioned on the non-exercise of one or more of the rights that are
+specifically granted under this License.  You may not convey a covered
+work if you are a party to an arrangement with a third party that is
+in the business of distributing software, under which you make payment
+to the third party based on the extent of your activity of conveying
+the work, and under which the third party grants, to any of the
+parties who would receive the covered work from you, a discriminatory
+patent license (a) in connection with copies of the covered work
+conveyed by you (or copies made from those copies), or (b) primarily
+for and in connection with specific products or compilations that
+contain the covered work, unless you entered into that arrangement,
+or that patent license was granted, prior to 28 March 2007.
+
+  Nothing in this License shall be construed as excluding or limiting
+any implied license or other defenses to infringement that may
+otherwise be available to you under applicable patent law.
+
+  12. No Surrender of Others' Freedom.
+
+  If conditions are imposed on you (whether by court order, agreement or
+otherwise) that contradict the conditions of this License, they do not
+excuse you from the conditions of this License.  If you cannot convey a
+covered work so as to satisfy simultaneously your obligations under this
+License and any other pertinent obligations, then as a consequence you may
+not convey it at all.  For example, if you agree to terms that obligate you
+to collect a royalty for further conveying from those to whom you convey
+the Program, the only way you could satisfy both those terms and this
+License would be to refrain entirely from conveying the Program.
+
+  13. Use with the GNU Affero General Public License.
+
+  Notwithstanding any other provision of this License, you have
+permission to link or combine any covered work with a work licensed
+under version 3 of the GNU Affero General Public License into a single
+combined work, and to convey the resulting work.  The terms of this
+License will continue to apply to the part which is the covered work,
+but the special requirements of the GNU Affero General Public License,
+section 13, concerning interaction through a network will apply to the
+combination as such.
+
+  14. Revised Versions of this License.
+
+  The Free Software Foundation may publish revised and/or new versions of
+the GNU General Public License from time to time.  Such new versions will
+be similar in spirit to the present version, but may differ in detail to
+address new problems or concerns.
+
+  Each version is given a distinguishing version number.  If the
+Program specifies that a certain numbered version of the GNU General
+Public License "or any later version" applies to it, you have the
+option of following the terms and conditions either of that numbered
+version or of any later version published by the Free Software
+Foundation.  If the Program does not specify a version number of the
+GNU General Public License, you may choose any version ever published
+by the Free Software Foundation.
+
+  If the Program specifies that a proxy can decide which future
+versions of the GNU General Public License can be used, that proxy's
+public statement of acceptance of a version permanently authorizes you
+to choose that version for the Program.
+
+  Later license versions may give you additional or different
+permissions.  However, no additional obligations are imposed on any
+author or copyright holder as a result of your choosing to follow a
+later version.
+
+  15. Disclaimer of Warranty.
+
+  THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
+APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
+HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY
+OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM
+IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF
+ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+  16. Limitation of Liability.
+
+  IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS
+THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY
+GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE
+USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF
+DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD
+PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),
+EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES.
+
+  17. Interpretation of Sections 15 and 16.
+
+  If the disclaimer of warranty and limitation of liability provided
+above cannot be given local legal effect according to their terms,
+reviewing courts shall apply local law that most closely approximates
+an absolute waiver of all civil liability in connection with the
+Program, unless a warranty or assumption of liability accompanies a
+copy of the Program in return for a fee.
+
+                     AKHIR SYARAT DAN KETENTUAN
+
+            How to Apply These Terms to Your New Programs
+
+  If you develop a new program, and you want it to be of the greatest
+possible use to the public, the best way to achieve this is to make it
+free software which everyone can redistribute and change under these terms.
+
+  To do so, attach the following notices to the program.  It is safest
+to attach them to the start of each source file to most effectively
+state the exclusion of warranty; and each file should have at least
+the "copyright" line and a pointer to where the full notice is found.
+
+    anwan
+    Copyright (C) 2021  Abdul Razak
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+Also add information on how to contact you by electronic and paper mail.
+
+  If the program does terminal interaction, make it output a short
+notice like this when it starts in an interactive mode:
+
+    <program>  Copyright (C) 2021  Abdul Razak
+    This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; type `show c' for details.
+
+The hypothetical commands `show w' and `show c' should show the appropriate
+parts of the General Public License.  Of course, your program's commands
+might be different; for a GUI interface, you would use an "about box".
+
+  You should also get your employer (if you work as a programmer) or school,
+if any, to sign a "copyright disclaimer" for the program, if necessary.
+For more information on this, and how to apply and follow the GNU GPL, see
+<https://www.gnu.org/licenses/>.
+
+  The GNU General Public License does not permit incorporating your program
+into proprietary programs.  If your program is a subroutine library, you
+may consider it more useful to permit linking proprietary applications with
+the library.  If this is what you want to do, use the GNU Lesser General
+Public License instead of this License.  But first, please read
+<https://www.gnu.org/licenses/why-not-lgpl.html>.

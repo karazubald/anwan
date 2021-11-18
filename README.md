@@ -17,10 +17,12 @@ Proyek ini tersedia di [GitHub](https://github.com/karazubald/anwan) dengan sumb
 #### Kontribusi ke proyek
 - Mengetahui cara kerja Issues di GitHub dan GitLab.
 - Mengetahui cara kerja Discussion di GitHub.
+- Mempunyai akun Telegram.
 ### Cara berkontribusi
 - Kontribusi ke kode dalam proyek dapat dilihat di [kontribusi_kode GitHub](https://github.com/karazubald/anwan/blob/main/kontribusi_kode.md) atau di [kontribusi_kode GitLab](https://gitlab.com/karazubald/anwan/-/blob/main/kontribusi_kode.md).
 - Membuat isu di Issues tentang saran atau <i>bug</i> di GitLab dan GitHub.
 - Memulai diskusi di Discussion GitHub.
+- Menyampaikan isu, saran, atau memulai diskusi dengan Narahubung.
 
 ## Narahubung
-Apabila ada yang ingin ditanyakan terkait proyek ini, silakan menghubungi melalui obrolan(<i>chat</i>) Telegram di [karazubald](https://t.me/karazubald).
+Silakan menghubungi Developper melalui obrolan(<i>chat</i>) Telegram di [karazubald](https://t.me/karazubald).
