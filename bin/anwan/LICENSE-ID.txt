@@ -230,15 +230,12 @@ Ini adalah penerjemahan tidak resmi dari GNU General Public License ke dalam Bah
 
   Cara melakukannya yaitu tambahkan pemberitahuan berikut ke program ini. Akan lebih aman jika disematkan pada awal dari berkas sumber sehingga secara efektif menyatakan pengecualian jaminan; dan pada setiap berkas harus ada paling tidak baris "hak cipta" dan penunjuk yang memberikan lokasi pemberitahuan rinci.
 
+    anwan
+    Hak Cipta (C) 2021 Abdul Razak
 
-anwan
-Hak Cipta (C) 2021 Abdul Razak
-
-Program ini adalah program bebas: Anda diizinkan mendistribusikan atau memodifikasi sesuai syarat dan ketentuan dalam GNU General Public License yang dipublikasikan oleh Free Software Foundation, entah itu pada versi 3 lisensi ini, atau (sesuai pilihan Anda) versi selanjutnya.
-
-Program ini didistribusikan dengan harapan akan menjadi bermanfaat namun TIDAK ADA JAMINAN; bahkan tanpa adanya JAMINAN DAPAT DIPERDAGANGKAN atau KESESUAIAN UNTUK TUJUAN TERTENTU. Lihat GNU General Public License untuk keterangan lebih lanjut.
-
-Anda seharusnya menerima salinan dari GNU General Public License bersamaan dengan program ini. Jika tidak silahkan lihat di <https://www.gnu.org/licenses/>.
+    Program ini adalah program bebas: Anda diizinkan mendistribusikan atau memodifikasi sesuai syarat dan ketentuan dalam GNU General Public License yang dipublikasikan oleh Free Software Foundation, entah itu pada versi 3 lisensi ini, atau (sesuai pilihan Anda) versi selanjutnya.
+    Program ini didistribusikan dengan harapan akan menjadi bermanfaat namun TIDAK ADA JAMINAN; bahkan tanpa adanya JAMINAN DAPAT DIPERDAGANGKAN atau KESESUAIAN UNTUK TUJUAN TERTENTU. Lihat GNU General Public License untuk keterangan lebih lanjut.
+    Anda seharusnya menerima salinan dari GNU General Public License bersamaan dengan program ini. Jika tidak silahkan lihat di <https://www.gnu.org/licenses/>.
 
 Tambahkan juga informasi mengenai cara menghubungi Anda melalui surat elektronik dan tertulis.
 

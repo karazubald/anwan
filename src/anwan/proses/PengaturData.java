@@ -6,18 +6,21 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
+ * <h2> Pengatur Data </h2>
+ * PengaturData secara spesifik berfungsi untuk : <p>
+ * (1) Membuat dataLama dan dataBaru dari kelas Data. <p>
+ * (2) Menyimpan dataLama dan dataBaru. <p>
+ * (3) Mengakses data di dataLama dan dataBaru. <p>
+ * (4) Menyimpan data ke dalam bentuk berkas CSV. <p>
+ * (5) Menyimpan data ke dalam bentuk berkas TXT.
  * @author karazubald
- * PengaturData berfungsi untuk :
- * (1) Membuat dataLama dan dataBaru dari kelas Data
- * (2) Menyimpan dataLama dan dataBaru
- * (3) Mengakses data di dataLama dan dataBaru
- * (4) Menyimpan data ke dalam bentuk file CSV
  */
 public class PengaturData {
 	private static Data dataLama, dataSekarang;
 	
 	/**
 	 * Inisialisasis dua jenis data (dataLama dan dataBaru) dari kelas Data.
+	 * Metode ini harus menjadi metode pertama yang dipanggil.
 	 * @see Data
 	 */
 	public static void initData() {

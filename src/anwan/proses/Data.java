@@ -4,9 +4,10 @@ import java.util.ArrayList;
 
 /**
  * @author karazubald
- * Kelas untuk menyimpan data.
- * <p>
- * Kelas ini menyimpan datum (unit data) dalam array String di ArrayList. Kelas ini harus diinisialisasikan terlebih dahulu melalui konstruktornya sebelum digunakan karena properti dan metodenya bersifat <i>nonstatic</i>.
+ * <h2> Data </h2>
+ * Kelas ini menyimpan unit data dalam array String di ArrayList. 
+ * Kelas ini harus diinisialisasikan terlebih dahulu melalui konstruktornya 
+ * sebelum digunakan karena properti dan metodenya bersifat <i>nonstatic</i>.
  * @see Data#Data()
  */
 public class Data {
@@ -18,6 +19,7 @@ public class Data {
 	public Data() {
 		datum = new ArrayList<String[]>();
 	}
+	
 	/**
 	 * Mengakses String[] berdasarkan nomor indeks data
 	 * @param nomorData nomor indeks data

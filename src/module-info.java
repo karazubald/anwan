@@ -5,5 +5,8 @@ module anwan {
 	requires com.jfoenix;
 	requires javafx.base;
 	
+	exports anwan.tampilan;
+	
 	opens anwan to javafx.graphics, javafx.fxml;
+	opens anwan.tampilan to javafx.fxml;
 }

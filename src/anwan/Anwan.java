@@ -2,17 +2,14 @@ package anwan;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
-import java.nio.file.Path;
+import java.util.HashMap;
 import java.util.ResourceBundle;
-import java.util.Scanner;
-
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -25,79 +22,35 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
-public class Anwan extends Application implements Initializable {
-	@FXML 
-	private AnchorPane anchorpane;
-	@FXML
-	private JFXButton tombol;
-	@FXML
-	private Label label;
-	@FXML
-	private JFXTextArea ta;
-	
+/**
+ * <h1>AnWan</h1>
+ * Aplikasi ini dibuat untuk membantu menyiapkan laporan analisis wawancara dalam mata kuliah Psikodiagnostik: Wawancara.
+ * <p>
+ * Aplikasi ini mencatat kata/kalimat yang didapatkan dari transkrip wawancara. 
+ * Hasil catatan kemudian disusun dari tema pertama hingga tema terakhir.
+ * Setelah itu, pengguna dapat mengetikkan analisis atau interpretasi dari setiap tema.
+ * Hasil akhir dari aplikasi utamanya adalah berkas dalam bentuk CSV dan TXT.
+ * <p>
+ * Berkas CSV adalah susunan tema yang sudah tercatat dari aplikasi.
+ * <p>
+ * Berkas TXT adalah hasil akhir dari analisis/interpretasi dari tema di CSV dalam bentuk paragraf.
+ * @author karazubald
+ * @version 0.1
+ * @since 2019
+ */
+public class Anwan extends Application {
     private Stage aplikasi;
     private Scene tampilan;
-    private Parent root;
     
 	@Override
 	public void start(Stage aplikasi) {
-		String fxml = "tampilan/Layar_0.fxml".replace("/", File.separator);
-		String css = "tampilan/Layar_0.css".replace("/", File.separator);
-
-		try {
-			root = FXMLLoader.load(getClass().getResource(fxml));
-			tampilan = new Scene(root);
-			tampilan.getStylesheets().add(getClass().getResource(css).toExternalForm());
-			
-			aplikasi.setScene(tampilan);
-			aplikasi.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-    @Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
+		PenataLayar penataTampilan = new PenataLayar();
+		penataTampilan.siapkanTampilan(4);
 		
-	}
-	
-	public void setuju(ActionEvent klik) {
+		tampilan = penataTampilan.munculkanTampilan("Layar Persetujuan", 0);
 		
-		String fxml = "tampilan/Layar_1.fxml".replace("/", File.separator);
-		String css = "tampilan/Layar_1.css".replace("/", File.separator);
-
-		try {
-			root = FXMLLoader.load(getClass().getResource(fxml));
-			aplikasi = (Stage) ((Node) klik.getSource()).getScene().getWindow();
-
-			tampilan = new Scene(root);
-			tampilan.getStylesheets().add(getClass().getResource(css).toExternalForm());
-
-			aplikasi.setScene(tampilan);
-			aplikasi.show();
-		} catch (Exception e) {
-			e.printStackTrace();
-			return;
-		}
-		
-	}
-	
-	public void lisensi(MouseEvent me) {
-		try {
-			var lisensi = getClass().getResourceAsStream("LICENSE-ID");
-			BufferedReader pembacaIsi = new BufferedReader(new InputStreamReader(lisensi));
-			String isiLisensi = "";
-			while(pembacaIsi.readLine() != null) {
-				isiLisensi += pembacaIsi.readLine();
-			}
-			ta.setText(isiLisensi);
-			pembacaIsi.close();
-			
-		} catch (Exception e) {
-			ta.setText(e.getMessage());
-		}
+		aplikasi.setScene(tampilan);
+		aplikasi.show();
 	}
 	
 	public static void main(String[] args) {
