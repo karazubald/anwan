@@ -62,7 +62,7 @@ public class PengaturData {
 			FileOutputStream fileCSV = new FileOutputStream(csv);
 			OutputStreamWriter writer = new OutputStreamWriter(fileCSV, StandardCharsets.UTF_8);
 			
-			StringBuilder sb = new StringBuilder();
+			StringBuilder isi = new StringBuilder();
 			String barisBaru = System.lineSeparator();
 			
 			for(int i = 0; i < dataSekarang.banyakData(); i++) {
@@ -73,13 +73,14 @@ public class PengaturData {
 					String dataUjungBaris = dataSekarang.ambilData(i)[ujungData].replace(",", "^").replace("\"", "!");
 					
 					String kategoriData = dataSekarang.ambilData(i)[j].replace(",", "^").replace("\"", "!");
-					sb.append(kategoriData);
+
+					isi.append(kategoriData);
 					
-					if(kategoriData.equals(dataUjungBaris))	sb.append(barisBaru); else sb.append(","); 
+					if(kategoriData.equals(dataUjungBaris))	isi.append(barisBaru); else isi.append(","); 
 				}
 			}
 			
-			writer.write(barisBaru.toString());
+			writer.write(isi.toString());
 			
 			writer.flush();
 			writer.close();

@@ -39,7 +39,6 @@ public class Layar_0 implements Initializable {
 	
     @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
 	}
 	
 	public void setuju(ActionEvent klik) {
@@ -54,11 +53,12 @@ public class Layar_0 implements Initializable {
 		try {
 			InputStream lisensi = getClass().getResourceAsStream("LICENSE-ID.txt");
 			BufferedReader pembacaIsi = new BufferedReader(new InputStreamReader(lisensi));
-			String isiLisensi = "";
+			StringBuilder isiLisensi = new StringBuilder();
 			while(pembacaIsi.readLine() != null) {
-				isiLisensi += pembacaIsi.readLine();
+				isiLisensi.append(pembacaIsi.readLine());
 			}
-			ta.setText(isiLisensi);
+			ta.setText(isiLisensi.toString());
+            pembacaIsi.flush();
 			pembacaIsi.close();
 			
 		} catch (Exception e) {
