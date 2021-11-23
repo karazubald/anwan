@@ -2,6 +2,8 @@ package anwan;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URL;
 import java.util.HashMap;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,28 +17,32 @@ import javafx.scene.Scene;
  *
  */
 public class PenataLayar {
-	private Scene tampilanSekarang;
-	private final String folderTampilan = "tampilan/".replace("/", File.separator);
-	private String fxml, css;
-	private HashMap<Integer, Parent> kumpulanTampilan = new HashMap<>();
-	private FXMLLoader loader;
+	private static Scene TampilanSekarang;
+	private static final String FolderTampilan = System.getProperty("user.dir")+"/src/anwan/tampilan/".replace("/", File.separator);
+	private static String LokasiFXML, LokasiCSS;
+	private static HashMap<Integer, Parent> KumpulanTampilan = new HashMap<>();
+	private static FXMLLoader PembacaFXML;
 	
 	/**
-	 * Metode ini harus menjadi yang pertama dipanggil setelah inisialisasi. Metode ini menyiapkan layar dari 0 sampai ke bilangan yang disebutkan di jumlahTampilan.
+	 * Metode ini adalah metode yang pertama dipanggil. 
+	 * Metode ini menyiapkan layar dari 0 sampai ke bilangan yang disebutkan di jumlahTampilan.
 	 * @param jumlahTampilan banyak layar aplikasi yang ditampilkan dalam bentuk bilangan cacah yang lebih besar dari 1.
+	 * @throws Exception: memunculkan info galat yang terjadi selama proses inisialisasi.
 	 */
-	public void siapkanTampilan(int jumlahTampilan) {
+	private static void initTampilan(int jumlahTampilan) {
+		URL referensi;
 		for(Integer nomorTampilan = 0; nomorTampilan <= Integer.valueOf(jumlahTampilan); nomorTampilan++) {
-			fxml = folderTampilan+"Layar_"+nomorTampilan+".fxml";
-			css = folderTampilan+"Layar_"+nomorTampilan+".css";
-			System.out.println(fxml+" & "+css);
+			LokasiFXML = FolderTampilan + "Layar_" + nomorTampilan+".fxml";
+			LokasiCSS = FolderTampilan + "Layar_" + nomorTampilan+".css";
 			try {
-				loader = new FXMLLoader(getClass().getResource(fxml));
-				kumpulanTampilan.put(nomorTampilan, loader.load());
-				kumpulanTampilan.get(nomorTampilan).getStylesheets().add(getClass().getResource(css).toExternalForm());
-				System.out.println(kumpulanTampilan.toString());
-			} catch (IOException e) {
-				e.printStackTrace();
+				referensi = new File(LokasiFXML).toURI().toURL();
+				PembacaFXML = new FXMLLoader(referensi);
+				KumpulanTampilan.put(nomorTampilan, PembacaFXML.load());
+				
+				referensi = new File(LokasiCSS).toURI().toURL();
+				KumpulanTampilan.get(nomorTampilan).getStylesheets().add(referensi.toExternalForm());
+			} catch (Exception galat) {
+				galat.printStackTrace();
 			}
 		}
 	}
@@ -47,9 +53,11 @@ public class PenataLayar {
 	 * @param nomorTampilan nomor layar yang akan ditampilkan dalam bentuk bilangan cacah yang lebih besar dari 1.
 	 * @return Layar yang siap ditampilkan.
 	 */
-	public Scene munculkanTampilan(String namaTampilan, Integer nomorTampilan) {
-		tampilanSekarang = new Scene(kumpulanTampilan.get(nomorTampilan));
-		return tampilanSekarang;
+	public static Scene munculkanTampilan(String namaTampilan, Integer nomorTampilan) {
+		initTampilan(4);
+		TampilanSekarang = new Scene(KumpulanTampilan.get(nomorTampilan));
+		TampilanSekarang.setRoot(KumpulanTampilan.get(nomorTampilan));
+		return TampilanSekarang;
 	}
 	
 }

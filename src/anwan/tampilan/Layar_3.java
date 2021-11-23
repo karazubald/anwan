@@ -5,6 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXTextArea;
 
 import anwan.PenataLayar;
 import javafx.event.ActionEvent;
@@ -16,35 +17,28 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 /**
- * <h2>Layar 1</h2>
- * Layar utama dari aplikasi Anwan.
+ * <h2>Layar 3</h2>
+ * Layar yang menampilkan TextBox untuk menginput data dari transkrip wawancara.
+ * 
  * @author karazubald
  *
  */
-public class Layar_1 implements Initializable {
-
+public class Layar_3 implements Initializable {
 	@FXML
-	private JFXButton buat;
+	private Label namaTextBox;
 	@FXML
-	private JFXButton muat;
-	@FXML
-	private JFXButton keluar;
-	@FXML
-	private Label bantuan;
-	@FXML
-	private ImageView logo;
+	private JFXTextArea TextBox;
 	
 	private Stage aplikasi;
 	private Scene tampilan;
 	
-	/**
-	 * Membuat data baru dengan mengarahkan ke layar input data.
-	 * @param klik id dari event tetikus
-	 */
-	public void buatBaru(ActionEvent klik) {
+	public void hapus(ActionEvent klik) {
+		TextBox.setText("");
+	}
+	
+	public void lanjutAnalisis(ActionEvent klik) {
 		tampilan = PenataLayar.munculkanTampilan("Layar Input Data", 2);
 		//tampilan = penataTampilan.munculkanTampilan("Layar Input Data", 2);
 		
@@ -52,27 +46,11 @@ public class Layar_1 implements Initializable {
 		aplikasi.setScene(tampilan);
 		aplikasi.show();
 	}
-
-	public void muatData(ActionEvent ae) {
-		// TODO: Memuat data dari file TXT.
-	}
-	
-	public void tutorial(ActionEvent ae) {
-		// TODO: Mengarahkan ke tutorial (gambar / video)
-	}
-	
-	public void keluarAplikasi(ActionEvent ae) {
-		System.exit(0);
-	}
-	
-	public void klikLogo(ActionEvent ae) {
-		// TODO: Memuat gambar setelah logo diklik
-		logo.setImage(null);
-	}
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+		// TODO: Inisialisasi isi TextBox dari Layar 2;
+		TextBox.setText("");
 	}
 
 }

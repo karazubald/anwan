@@ -18,108 +18,109 @@
                   <Font name="Fira Sans Regular" size="18.0" />
                </font>
             </TextField>
-            <JFXHamburger layoutX="14.0" layoutY="30.0" />
-            <JFXHamburger layoutX="135.0" layoutY="30.0" />
+            <JFXHamburger fx:id="IkonKembali" layoutX="14.0" layoutY="30.0" />
+            <JFXHamburger fx:id="IkonLanjut" layoutX="135.0" layoutY="30.0" />
+            <JFXHamburger fx:id="IkonHapusSemua" layoutX="309.0" layoutY="30.0" onMouseClicked="#hapusSemua" />
          </children>
       </Pane>
       <Pane layoutY="80.0" prefHeight="480.0" prefWidth="360.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
          <children>
             <Pane layoutX="10.0" layoutY="24.0" prefHeight="149.0" prefWidth="164.0">
                <children>
-                  <Label layoutX="5.0" layoutY="5.0" text="Impresi/Kesan">
+                  <Label fx:id="LabelImpresi" layoutX="5.0" layoutY="5.0" onMouseClicked="#inputTextBox" text="Impresi/Kesan">
                      <font>
                         <Font name="Fira Sans Regular" size="18.0" />
                      </font>
                   </Label>
-                  <TextArea disable="true" editable="false" layoutX="5.0" layoutY="36.0" prefHeight="114.0" prefWidth="149.0" text="Isi kotak tulisan ini adalah kesan yang didapatkan dari observasi terhadap narasumber selama wawancara berlangsung." wrapText="true">
+                  <TextArea fx:id="Impresi" disable="true" layoutX="5.0" layoutY="36.0" prefHeight="114.0" prefWidth="149.0" text="Isi kotak tulisan ini adalah kesan yang didapatkan dari observasi terhadap narasumber selama wawancara berlangsung." wrapText="true">
                      <font>
                         <Font name="Fira Sans Regular" size="11.0" />
                      </font>
                   </TextArea>
-                  <JFXHamburger layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
+                  <JFXHamburger fx:id="IkonHapusImpresi" layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="176.0" prefHeight="136.0" prefWidth="164.0">
                <children>
-                  <Label layoutX="5.0" layoutY="5.0" text="Pertanyaan">
+                  <Label fx:id="LabelPertanyaan" layoutX="5.0" layoutY="5.0" onMouseClicked="#inputTextBox" text="Pertanyaan">
                      <font>
                         <Font name="Fira Sans Regular" size="18.0" />
                      </font>
                   </Label>
-                  <TextArea disable="true" editable="false" layoutX="5.0" layoutY="36.0" prefHeight="90.0" prefWidth="149.0" text="Isi kotak tulisan ini berupa pertanyaan yang diajukan pewawancara." wrapText="true">
+                  <TextArea fx:id="Pertanyaan" disable="true" layoutX="5.0" layoutY="36.0" prefHeight="90.0" prefWidth="149.0" text="Isi kotak tulisan ini berupa pertanyaan yang diajukan pewawancara." wrapText="true">
                      <font>
                         <Font name="Fira Sans Regular" size="11.0" />
                      </font>
                   </TextArea>
-                  <JFXHamburger layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
+                  <JFXHamburger fx:id="IkonHapusPertanyaan" layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
                </children>
             </Pane>
             <Pane layoutX="182.0" layoutY="176.0" prefHeight="136.0" prefWidth="164.0">
                <children>
-                  <Label layoutX="5.0" layoutY="5.0" text="Jawaban">
+                  <Label fx:id="LabelJawaban" layoutX="5.0" layoutY="5.0" onMouseClicked="#inputTextBox" text="Jawaban">
                      <font>
                         <Font name="Fira Sans Regular" size="18.0" />
                      </font>
                   </Label>
-                  <TextArea disable="true" editable="false" layoutX="5.0" layoutY="36.0" prefHeight="90.0" prefWidth="149.0" text="Isi kotak tulisan ini berupa kata atau kalimat yang diucapkan narasumber." wrapText="true">
+                  <TextArea fx:id="Jawaban" disable="true" layoutX="5.0" layoutY="36.0" prefHeight="90.0" prefWidth="149.0" text="Isi kotak tulisan ini berupa kata atau kalimat yang diucapkan narasumber." wrapText="true">
                      <font>
                         <Font name="Fira Sans Regular" size="11.0" />
                      </font>
                   </TextArea>
-                  <JFXHamburger layoutX="136.0" layoutY="10.0" prefHeight="16.0" prefWidth="16.0" />
+                  <JFXHamburger fx:id="IkonHapusJawaban" layoutX="136.0" layoutY="10.0" prefHeight="16.0" prefWidth="16.0" />
                </children>
             </Pane>
             <Pane layoutX="182.0" layoutY="308.0" prefHeight="136.0" prefWidth="164.0">
                <children>
-                  <Label layoutX="5.0" layoutY="5.0" text="Ide Utama">
+                  <Label fx:id="LabelIdeUtama" layoutX="5.0" layoutY="5.0" onMouseClicked="#inputTextBox" text="Ide Utama">
                      <font>
                         <Font name="Fira Sans Regular" size="18.0" />
                      </font>
                   </Label>
-                  <TextArea disable="true" editable="false" layoutX="5.0" layoutY="36.0" prefHeight="90.0" prefWidth="149.0" text="Isi kotak tulisan ini berupa ide utama dari jawaban narasumber." wrapText="true">
+                  <TextArea fx:id="IdeUtama" disable="true" layoutX="5.0" layoutY="36.0" prefHeight="90.0" prefWidth="149.0" text="Isi kotak tulisan ini berupa ide utama dari jawaban narasumber." wrapText="true">
                      <font>
                         <Font name="Fira Sans Regular" size="11.0" />
                      </font>
                   </TextArea>
-                  <JFXHamburger layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
+                  <JFXHamburger fx:id="IkonHapusIdeUtama" layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
                </children>
             </Pane>
             <Pane layoutX="182.0" layoutY="104.0" prefHeight="72.0" prefWidth="164.0">
                <children>
-                  <Label layoutX="5.0" layoutY="5.0" text="Koding">
+                  <Label fx:id="LabelKoding" layoutX="5.0" layoutY="5.0" onMouseClicked="#inputTextBox" text="Koding">
                      <font>
                         <Font name="Fira Sans Regular" size="18.0" />
                      </font>
                   </Label>
-                  <TextArea disable="true" editable="false" layoutX="5.0" layoutY="36.0" prefHeight="16.0" prefWidth="149.0" text="Koding dari ide utama" wrapText="true">
+                  <TextArea fx:id="Koding" disable="true" layoutX="5.0" layoutY="36.0" prefHeight="16.0" prefWidth="149.0" text="Koding dari ide utama" wrapText="true">
                      <font>
                         <Font name="Fira Sans Regular" size="11.0" />
                      </font>
                   </TextArea>
-                  <JFXHamburger layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
+                  <JFXHamburger fx:id="IkonHapusKoding" layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
                </children>
             </Pane>
             <Pane layoutX="182.0" layoutY="24.0" prefHeight="72.0" prefWidth="164.0">
                <children>
-                  <Label layoutX="5.0" layoutY="5.0" text="Tema">
+                  <Label fx:id="LabelTema" layoutX="5.0" layoutY="5.0" onMouseClicked="#inputTextBox" text="Tema">
                      <font>
                         <Font name="Fira Sans Regular" size="18.0" />
                      </font>
                   </Label>
-                  <TextArea disable="true" editable="false" layoutX="5.0" layoutY="36.0" prefHeight="10.0" prefWidth="149.0" text="Tema dari koding." wrapText="true">
+                  <TextArea fx:id="Tema" disable="true" layoutX="5.0" layoutY="36.0" prefHeight="10.0" prefWidth="149.0" text="Tema dari koding." wrapText="true">
                      <font>
                         <Font name="Fira Sans Regular" size="11.0" />
                      </font>
                   </TextArea>
-                  <JFXHamburger layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
+                  <JFXHamburger fx:id="IkonHapusTema" layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
                </children>
             </Pane>
-            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="15.0" layoutY="318.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="154.0" ripplerFill="#2deb02" text="Lanjut" textAlignment="CENTER">
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="15.0" layoutY="318.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#lanjutAnalisis" prefHeight="48.0" prefWidth="154.0" ripplerFill="#2deb02" text="Lanjut" textAlignment="CENTER">
                <font>
                   <Font name="Fira Sans Regular" size="24.0" />
                </font>
             </JFXButton>
-            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="15.0" layoutY="376.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="48.0" prefWidth="154.0" ripplerFill="#eb3802" text="Menu Utama" textAlignment="CENTER">
+            <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="15.0" layoutY="376.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#menuUtama" prefHeight="48.0" prefWidth="154.0" ripplerFill="#eb3802" text="Menu Utama" textAlignment="CENTER">
                <font>
                   <Font name="Fira Sans Regular" size="20.0" />
                </font>

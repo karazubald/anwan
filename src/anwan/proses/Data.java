@@ -29,6 +29,10 @@ public class Data {
 		return datum.get(nomorData);
 	}
 	
+	public ArrayList<String[]> ambilDatum(){
+		return datum;
+	}
+	
 	public void simpan(int nomorData, String...data) {
 		datum.set(nomorData, data);
 	}

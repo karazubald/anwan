@@ -43,10 +43,7 @@ public class Layar_0 implements Initializable {
 	}
 	
 	public void setuju(ActionEvent klik) {
-		PenataLayar penataTampilan = new PenataLayar();
-		penataTampilan.siapkanTampilan(4);
-		
-		tampilan = penataTampilan.munculkanTampilan("Layar Menu Utama", 1);
+		tampilan = PenataLayar.munculkanTampilan("Layar Menu Utama", 1);
 		
 		aplikasi = (Stage) ((Node) klik.getSource()).getScene().getWindow();
 		aplikasi.setScene(tampilan);
