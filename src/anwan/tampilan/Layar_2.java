@@ -13,6 +13,8 @@ import com.jfoenix.transitions.hamburger.HamburgerNextArrowBasicTransition;
 import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 
 import anwan.PenataLayar;
+import anwan.proses.DataTextBox;
+import anwan.proses.PengaturData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +24,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -75,12 +78,13 @@ public class Layar_2 implements Initializable {
 	private JFXHamburger IkonLanjut;
 	@FXML
 	private JFXHamburger IkonKembali;
+	@FXML
+	private TextField UrutanData;
 	
 	private Stage aplikasi;
 	private Scene tampilan;
 	
-	public void hapusSemua(ActionEvent klik) {
-		// TODO: Illegal akses? Argument MisMatch?
+	public void hapusSemua(MouseEvent klik) {
 		Tema.setText("");
 		Koding.setText("");
 		IdeUtama.setText("");
@@ -89,12 +93,98 @@ public class Layar_2 implements Initializable {
 		Impresi.setText("");
 	}
 	
-	public void inputTextBox(ActionEvent klik) {
-		tampilan = PenataLayar.munculkanTampilan("Layar Analisis Data", 4);
+	private void aktifkanInputData(MouseEvent klik) {
+		System.out.println(klik.getSource().toString());
+		
+		tampilan = PenataLayar.munculkanTampilan("Layar Analisis Data", 3);
 		
 		aplikasi = (Stage) ((Node) klik.getSource()).getScene().getWindow();
 		aplikasi.setScene(tampilan);
 		aplikasi.show();
+	}
+	
+	public void inputImpresi(MouseEvent klik) {
+		int urutandata = Integer.valueOf(UrutanData.getText());
+		
+		DataTextBox.setId(Impresi.getId());
+		DataTextBox.setData(Impresi.getText());
+
+		/*
+		 * TODO: Memasukkan kode berikut
+		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
+		 */
+
+		aktifkanInputData(klik);
+	}
+	
+	public void inputPertanyaan(MouseEvent klik) {
+		int urutandata = Integer.valueOf(UrutanData.getText());
+		
+		DataTextBox.setId(Pertanyaan.getId());
+		DataTextBox.setData(Pertanyaan.getText());
+
+		/*
+		 * TODO: Memasukkan kode berikut
+		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
+		 */
+
+		aktifkanInputData(klik);
+	}
+	
+	public void inputJawaban(MouseEvent klik) {
+		int urutandata = Integer.valueOf(UrutanData.getText());
+		
+		DataTextBox.setId(Jawaban.getId());
+		DataTextBox.setData(Jawaban.getText());
+
+		/*
+		 * TODO: Memasukkan kode berikut
+		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
+		 */
+
+		aktifkanInputData(klik);
+	}
+	
+	public void inputIdeUtama(MouseEvent klik) {
+		int urutandata = Integer.valueOf(UrutanData.getText());
+		
+		DataTextBox.setId(IdeUtama.getId());
+		DataTextBox.setData(IdeUtama.getText());
+
+		/*
+		 * TODO: Memasukkan kode berikut
+		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
+		 */
+
+		aktifkanInputData(klik);
+	}
+	
+	public void inputKoding(MouseEvent klik) {
+		int urutandata = Integer.valueOf(UrutanData.getText());
+		
+		DataTextBox.setId(Koding.getId());
+		DataTextBox.setData(Koding.getText());
+
+		/*
+		 * TODO: Memasukkan kode berikut
+		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
+		 */
+
+		aktifkanInputData(klik);
+	}
+	
+	public void inputTema(MouseEvent klik) {
+		int urutandata = Integer.valueOf(UrutanData.getText());
+		
+		DataTextBox.setId(Tema.getId());
+		DataTextBox.setData(Tema.getText());
+
+		/*
+		 * TODO: Memasukkan kode berikut
+		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
+		 */
+
+		aktifkanInputData(klik);
 	}
 	
 	public void lanjutAnalisis(ActionEvent klik) {
@@ -115,12 +205,15 @@ public class Layar_2 implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		inisialisiAnimasiHapus(IkonHapusSemua, IkonHapusTema, IkonHapusKoding, IkonHapusIdeUtama, IkonHapusJawaban, IkonHapusPertanyaan, IkonHapusImpresi);	
-		inisialisiAnimasiLanjut();
-		inisialisiAnimasiKembali();
+		animasiHapus(IkonHapusSemua, IkonHapusTema, IkonHapusKoding, IkonHapusIdeUtama, IkonHapusJawaban, IkonHapusPertanyaan, IkonHapusImpresi);	
+		animasiDataSelanjutnya();
+		animasiDataSebelumnya();
+		// TODO: Menyiapkan data kosong
+		PengaturData.initData();
+		UrutanData.setText("0");
 	}
 	
-	private void inisialisiAnimasiHapus(JFXHamburger... KelompokIkon) {
+	private void animasiHapus(JFXHamburger... KelompokIkon) {
 		for(JFXHamburger ikon : KelompokIkon) {
 			if(ikon.equals(KelompokIkon[0])) {
 				HamburgerSlideCloseTransition animasi = new HamburgerSlideCloseTransition(ikon);
@@ -168,8 +261,7 @@ public class Layar_2 implements Initializable {
 		}
 	}
 	
-	private void inisialisiAnimasiLanjut() {
-		
+	private void animasiDataSelanjutnya() {	
 		HamburgerNextArrowBasicTransition animasi = new HamburgerNextArrowBasicTransition(IkonLanjut);
 		animasi.setRate(-1);
 		
@@ -192,7 +284,7 @@ public class Layar_2 implements Initializable {
 		});
 	}
 	
-	private void inisialisiAnimasiKembali() {
+	private void animasiDataSebelumnya() {
 		HamburgerBackArrowBasicTransition animasi = new HamburgerBackArrowBasicTransition(IkonKembali);
 		animasi.setRate(1);
 		

@@ -41,6 +41,10 @@ public class PengaturData {
 		dataLama = dataSekarang;
 	}
 	
+	public static String[] dataSekarang(int nomorData) {
+		return dataSekarang.ambilData(nomorData);
+	}
+	
 	public static String[] dataSelanjutnya(int nomorData) {
 		return dataSekarang.ambilData(nomorData+1);
 	}
@@ -60,14 +64,14 @@ public class PengaturData {
 			if(!csv.exists()) csv.createNewFile();
 			
 			FileOutputStream fileCSV = new FileOutputStream(csv);
-			OutputStreamWriter writer = new OutputStreamWriter(fileCSV, StandardCharsets.UTF_8);
+			OutputStreamWriter penulisData = new OutputStreamWriter(fileCSV, StandardCharsets.UTF_8);
 			
 			StringBuilder isi = new StringBuilder();
 			String barisBaru = System.lineSeparator();
 			
 			for(int i = 0; i < dataSekarang.banyakData(); i++) {
-				sb.append(i);
-				sb.append(",");
+				isi.append(i);
+				isi.append(",");
 				for(int j = 0; j < dataSekarang.ambilData(i).length; j++) {
 					int ujungData = dataSekarang.ambilData(i).length-1;
 					String dataUjungBaris = dataSekarang.ambilData(i)[ujungData].replace(",", "^").replace("\"", "!");
@@ -80,10 +84,10 @@ public class PengaturData {
 				}
 			}
 			
-			writer.write(isi.toString());
+			penulisData.write(isi.toString());
 			
-			writer.flush();
-			writer.close();
+			penulisData.flush();
+			penulisData.close();
 		} catch (Exception galat) {
 			galat.printStackTrace();
 		}

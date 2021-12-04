@@ -53,12 +53,15 @@ public class Layar_0 implements Initializable {
 		try {
 			InputStream lisensi = getClass().getResourceAsStream("LICENSE-ID.txt");
 			BufferedReader pembacaIsi = new BufferedReader(new InputStreamReader(lisensi));
+			
 			StringBuilder isiLisensi = new StringBuilder();
+			
 			while(pembacaIsi.readLine() != null) {
 				isiLisensi.append(pembacaIsi.readLine());
 			}
+			
 			ta.setText(isiLisensi.toString());
-            pembacaIsi.flush();
+
 			pembacaIsi.close();
 			
 		} catch (Exception e) {
