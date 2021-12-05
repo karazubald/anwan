@@ -210,6 +210,7 @@ public class Layar_2 implements Initializable {
 		animasiDataSebelumnya();
 		// TODO: Menyiapkan data kosong
 		PengaturData.initData();
+		// TODO: Inisialisasi data
 		UrutanData.setText("0");
 	}
 	

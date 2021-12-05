@@ -12,6 +12,7 @@ import com.jfoenix.transitions.hamburger.HamburgerBasicCloseTransition;
 
 import anwan.PenataLayar;
 import anwan.proses.DataTextBox;
+import anwan.proses.PengaturData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

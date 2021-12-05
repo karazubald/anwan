@@ -4,6 +4,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStreamWriter;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 import com.jfoenix.controls.JFXTextArea;
 
@@ -19,46 +23,58 @@ import com.jfoenix.controls.JFXTextArea;
  * @author karazubald
  */
 public class PengaturData {
-	private static Data dataLama, dataSekarang, dataKlasifikasi;
+	private static HashMap<String, String> pair;
+	private static Data[] data;
 	
 	/**
-	 * Inisialisasis tiga jenis data (dataLama, dataBaru, dan dataKlasifikasi) dari kelas Data.
-	 * Metode ini harus menjadi metode pertama yang dipanggil.
+	 * Membuat objek Data dan melakukan inisialisasi array Data sebanyak yang disebutkan dalam parameter namaData.
+	 * @param namaData nama untuk objek kelas Data
 	 * @see Data
 	 */
-	public static void initData() {
-		dataLama = new Data();
-		dataSekarang = new Data();
-		dataKlasifikasi = new Data();
+	public static void initData(String...namaData) {
+		String id;
+		int banyakData = namaData.length;
+		data = new Data[banyakData];
+		
+		for(int i = 0; i < banyakData; i++) {
+			id = namaData[i];
+			data[i] = new Data(id);
+		}
 	}
 	
-	public static void simpanManual(int nomorData, String...data) {
-		dataSekarang.simpan(nomorData, data);
+	/**
+	 * Menyimpan data di array data sesuai dengan nomor urut yang ditentukan.
+	 * @param namaData
+	 * @param nomorUrut
+	 * @param tulisan
+	 */
+	public static void simpanData(String namaData, int nomorUrut, String tulisan) {
+		String idData;
+		
+		for(Data jenisData : data) {
+			idData = jenisData.getID().toLowerCase();
+			
+			if(idData.equals(namaData.toLowerCase())) {
+				jenisData.simpan(nomorUrut, tulisan);
+			}
+		}
 	}
-	
-	public static void simpanOtomatis(int nomorData, String...data) {
-		dataSekarang.simpan(nomorData, data);
-		dataLama = dataSekarang;
-	}
-	
-	public static String[] dataSekarang(int nomorData) {
-		return dataSekarang.ambilData(nomorData);
-	}
-	
-	public static String[] dataSelanjutnya(int nomorData) {
-		return dataSekarang.ambilData(nomorData+1);
-	}
-	
-	public static String[] dataSebelumnya(int nomorData) {
-		if (nomorData >= 1)	return dataSekarang.ambilData(nomorData-1);
-		return dataSekarang.ambilData(nomorData);
-	}
+
 	/**
 	 * Menyimpan hasil wawancara ke berkas CSV dengan format nomor,tema,koding,ide_utama,jawaban,pertanyaan,impresi.
 	 * @param namaBerkas nama dari berkas CSV; nama ini akan dikonversi menjadi huruf nonkapital.
 	 * @throws Exception: memunculkan info galat yang terjadi selama proses pembuatan berkas.
 	 */
 	public static void simpanCSV(String namaBerkas) {
+		int jumlahData = 0;
+		for(int n = 0; n < data.length; n++) {
+			for(int m = 0; m < n; m++) {
+				if(data[n].banyakData() >= data[m].banyakData()) {
+					jumlahData = data[n].banyakData();
+				}
+			}
+		}
+		
 		File csv = new File(namaBerkas.toLowerCase()+".csv");
 		try {
 			if(!csv.exists()) csv.createNewFile();
@@ -69,18 +85,10 @@ public class PengaturData {
 			StringBuilder isi = new StringBuilder();
 			String barisBaru = System.lineSeparator();
 			
-			for(int i = 0; i < dataSekarang.banyakData(); i++) {
-				isi.append(i);
-				isi.append(",");
-				for(int j = 0; j < dataSekarang.ambilData(i).length; j++) {
-					int ujungData = dataSekarang.ambilData(i).length-1;
-					String dataUjungBaris = dataSekarang.ambilData(i)[ujungData].replace(",", "^").replace("\"", "!");
-					
-					String kategoriData = dataSekarang.ambilData(i)[j].replace(",", "^").replace("\"", "!");
-
-					isi.append(kategoriData);
-					
-					if(kategoriData.equals(dataUjungBaris))	isi.append(barisBaru); else isi.append(","); 
+			for(int baris = 0; baris < data.length; baris++) {
+				for(int kolom = 0; kolom < jumlahData; kolom++) {
+					isi.append(data[baris].ambilData(kolom));
+					if (kolom == jumlahData) isi.append(barisBaru); else isi.append(",");
 				}
 			}
 			
@@ -93,31 +101,53 @@ public class PengaturData {
 		}
 	}
 	
+	/**
+	 * Menyiapkan HashMap untuk mencatat tema.
+	 */
 	public static void siapkanAnalisis() {
-		StringBuilder sb = new StringBuilder();	
+		pair = new HashMap<>();
+		String tema = "";
 		
-		int banyakData = dataSekarang.banyakData();
-		String[] dataTerakhir = dataSekarang.ambilData(banyakData-1);
-		
-		for(int i = 0; i < banyakData; i++) {				
-			String tema = dataSekarang.ambilData(i)[5];
-			for(int baris = 0; baris < banyakData; baris++) {
-				if(dataSekarang.ambilData(baris)[5].equals(tema)) sb.append(dataSekarang.ambilData(baris)[4]);
-				if(dataSekarang.ambilData(baris).equals(dataTerakhir)) sb.append("."); else sb.append(","); 
-			}				
-		dataKlasifikasi.simpan(i, tema, sb.toString());
+		int letakTema = 0;
+		for(Data data : data) {
+			if(data.getID().toLowerCase().equals("tema")) {
+				for(int n = 0; n < data.banyakData(); n++) {
+					tema = data.ambilDatum().get(n);
+					pair.put(tema, String.valueOf(data.ambilDatum().indexOf(tema)));
+				}
+			}
 		}
 	}
 	
 	public static void muatHasilAnalisis(String tema, JFXTextArea kotakAnalisisTema) {
-		String analisisTema = "";
-		int letakTema = dataKlasifikasi.ambilDatum().indexOf(tema);
+		int urutanTema = Integer.valueOf(pair.get(tema));
+		String kalimat = "";
+
+		int jumlahData = 0;
+		for(int n = 0; n < data.length; n++) {
+			for(int m = 0; m < n; m++) {
+				if(data[n].banyakData() >= data[m].banyakData()) {
+					jumlahData = data[n].banyakData();
+				}
+			}
+		}	
 		
-		for(String s : dataKlasifikasi.ambilData(letakTema)) {
-			analisisTema = "Tema " + Terbilang.sebut(letakTema) + " adalah " + tema;
-			analisisTema += "Tema ini memiliki koding: " + dataKlasifikasi.ambilData(letakTema)[1];
+		kalimat = "Tema " + Terbilang.sebut(urutanTema) + "adalah " + tema;
+
+		pair.put(tema, kalimat);
+		
+		// TODO : Mencari pasangan tema dan koding
+		
+		Set<String> koding = new LinkedHashSet<>();
+		for(Data data : data) {
+		
 		}
-		kotakAnalisisTema.setText(analisisTema);
+		
+		kalimat = "Tema ini memiliki koding: ";
+		
+		kalimat = pair.get(tema);
+		
+		kotakAnalisisTema.setText(kalimat);
 	}
 	
 	public static void simpanAnalisis(String tema, JFXTextArea kotakAnalisisTema) {
