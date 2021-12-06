@@ -4,7 +4,7 @@ package anwan.proses;
  * <h2> Kelas untuk Membilang Angka </h2>
  * 
  * Kode ini merupakan salinan dari kode yang dibuat oleh Agung Setiawan.
- * Hanya sedikit modifikasi yang dilakukan pada kode ini.
+ * 
  * @author Agung Setiawan
  * @see <a href="https://agung-setiawan.com/program-terbilang-java">Program Terbilang</a>
  */

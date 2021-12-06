@@ -14,7 +14,6 @@ import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 
 import anwan.PenataLayar;
 import anwan.proses.DataTextBox;
-import anwan.proses.PengaturData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -209,7 +208,6 @@ public class Layar_2 implements Initializable {
 		animasiDataSelanjutnya();
 		animasiDataSebelumnya();
 		// TODO: Menyiapkan data kosong
-		PengaturData.initData();
 		// TODO: Inisialisasi data
 		UrutanData.setText("0");
 	}

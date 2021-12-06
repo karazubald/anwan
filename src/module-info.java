@@ -4,6 +4,7 @@ module anwan {
 	requires javafx.fxml;
 	requires com.jfoenix;
 	requires javafx.base;
+	requires java.sql;
 	
 	exports anwan.tampilan;
 	
