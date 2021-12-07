@@ -1,28 +1,31 @@
-# anwan
-
+# Anwan
 Anwan ditujukan untuk membantu dalam menganalisis transkrip wawancara dalam Psikodiagnostik: Wawancara. 
 
-Proyek ini tersedia di [GitHub](https://github.com/karazubald/anwan) dengan sumber aslinya berasal dari [GitLab](https://gitlab.com/karazubald/anwan). Proyek ini masih dalam tahap pengembangan dan terbuka untuk kontribusi.
+📝 Proyek ini tersedia di [GitHub](https://github.com/karazubald/anwan) dengan sumber aslinya berasal dari [GitLab](https://gitlab.com/karazubald/anwan). 
+
+🔥 Proyek ini masih dalam tahap pengembangan dan terbuka untuk kontribusi.
 
 | Waktu Mulai Project | Bahasa Pemrograman | Dependensi | Target Platform | Lisensi |
-| -------------: | -------------: | -------------: | -------------: |  -------------: |
-| Februari 2019 | Java | OpenJDK 11+, OpenJFX, JFoenix, MySQL 8.0+ | Desktop | [GPLv3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)|
+| -------------: | -------------: | ----------: | -------------: |  -------------: |
+| Februari 2019 | Java, MySQL | OpenJDK 11+, OpenJFX 8+, JFoenix 9, MySQL 8.0+ | Desktop | [GPLv3.0](https://github.com/karazubald/anwan/blob/main/LICENSE-ID)|
 
-## Kontribusi
-### Syarat
-#### Kontribusi ke kode
-1. Mengetahui cara menjalankan perintah melalui terminal atau command line.
-1. Telah memasang Git dan mengetahui perintah dasar Git.
-1. Mengetahui bahasa pemrograman Java khususnya JavaFX (dengan atau tanpa IDE).
-#### Kontribusi ke proyek
-- Mengetahui cara kerja Issues di GitHub dan GitLab.
-- Mengetahui cara kerja Discussion di GitHub.
-- Mempunyai akun Telegram.
+![GitHub repo size](https://img.shields.io/github/repo-size/karazubald/anwan?color=%23eedc82&style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/w/karazubald/anwan?color=%23efdecd&style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/karazubald/anwan?color=%23e6e6fa&style=for-the-badge)
+
+## 🌀 Kontribusi
+### Kebutuhan
+Proyek ini masih dalam tahap awal pengembangan sehingga membutuhkan relawan(<i>volunteer</i>):
+- 🧑‍🔬 Peneliti atau akademisi dengan latar belakang ilmu psikologi atau ilmu sosial.
+- 📑 Penerjemah bahasa Inggris ke bahasa Indonesia untuk evaluasi penerjemahan lisensi (LICENSE-ID.txt).
+- 🧑‍🎨 JavaFX UI Designer yang akrab/mahir dengan SceneBuilder. 🎨
+- 🧑‍💻 Penguji aplikasi(<i>Tester</i>).
+
 ### Cara berkontribusi
-- Kontribusi ke kode dalam proyek dapat dilihat di [kontribusi_kode GitHub](https://github.com/karazubald/anwan/blob/main/kontribusi_kode.md) atau di [kontribusi_kode GitLab](https://gitlab.com/karazubald/anwan/-/blob/main/kontribusi_kode.md).
-- Membuat isu di Issues tentang saran atau <i>bug</i> di GitLab dan GitHub.
-- Memulai diskusi di Discussion GitHub.
-- Menyampaikan isu, saran, atau memulai diskusi dengan Narahubung.
+- 🧑‍💻 Kontribusi ke kode dalam proyek dapat dilihat di [kontribusi_kode](https://github.com/karazubald/anwan/blob/main/kontribusi_kode.md).
+- 📑 Membuat isu di Issues tentang galat(<i>error</i>) atau <i>bug</i> di GitLab atau GitHub.
+- 💬 Memulai diskusi di Discussion GitHub.
+- 🗨️ Menyampaikan isu, ide/saran, atau memulai diskusi dengan developer: [@karazubald](https://t.me/karazubald).
 
-## Narahubung
-Silakan menghubungi Developper melalui obrolan(<i>chat</i>) Telegram di [karazubald](https://t.me/karazubald).
+## 🔗 Developer
+Silakan menghubungi developer melalui obrolan(<i>chat</i>) 💭 di Telegram: [@karazubald](https://t.me/karazubald).
