@@ -14,6 +14,7 @@ import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 
 import anwan.PenataLayar;
 import anwan.proses.DataTextBox;
+import anwan.proses.Proses;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -84,15 +85,21 @@ public class Layar_2 implements Initializable {
 	private Scene tampilan;
 	
 	public void hapusSemua(MouseEvent klik) {
+		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
+		
 		Tema.setText("");
 		Koding.setText("");
 		IdeUtama.setText("");
 		Jawaban.setText("");
 		Pertanyaan.setText("");
 		Impresi.setText("");
+		
+		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 	}
 	
 	private void aktifkanInputData(MouseEvent klik) {
+		Proses.hitungWaktu(true, klik.getClass()); //TODO: hapus ini
+		
 		System.out.println(klik.getSource().toString());
 		
 		tampilan = PenataLayar.munculkanTampilan("Layar Analisis Data", 3);
@@ -100,9 +107,13 @@ public class Layar_2 implements Initializable {
 		aplikasi = (Stage) ((Node) klik.getSource()).getScene().getWindow();
 		aplikasi.setScene(tampilan);
 		aplikasi.show();
+		
+		Proses.hitungWaktu(false, klik.getClass()); //TODO: hapus ini
 	}
 	
 	public void inputImpresi(MouseEvent klik) {
+		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
+		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
 		DataTextBox.setId(Impresi.getId());
@@ -113,10 +124,14 @@ public class Layar_2 implements Initializable {
 		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
 		 */
 
+		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
+		
 		aktifkanInputData(klik);
 	}
 	
 	public void inputPertanyaan(MouseEvent klik) {
+		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
+		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
 		DataTextBox.setId(Pertanyaan.getId());
@@ -127,10 +142,14 @@ public class Layar_2 implements Initializable {
 		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
 		 */
 
+		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
+		
 		aktifkanInputData(klik);
 	}
 	
 	public void inputJawaban(MouseEvent klik) {
+		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
+		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
 		DataTextBox.setId(Jawaban.getId());
@@ -141,10 +160,14 @@ public class Layar_2 implements Initializable {
 		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
 		 */
 
+		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
+		
 		aktifkanInputData(klik);
 	}
 	
 	public void inputIdeUtama(MouseEvent klik) {
+		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
+		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
 		DataTextBox.setId(IdeUtama.getId());
@@ -155,10 +178,14 @@ public class Layar_2 implements Initializable {
 		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
 		 */
 
+		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
+		
 		aktifkanInputData(klik);
 	}
 	
 	public void inputKoding(MouseEvent klik) {
+		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
+		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
 		DataTextBox.setId(Koding.getId());
@@ -169,10 +196,14 @@ public class Layar_2 implements Initializable {
 		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
 		 */
 
+		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
+		
 		aktifkanInputData(klik);
 	}
 	
 	public void inputTema(MouseEvent klik) {
+		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
+		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
 		DataTextBox.setId(Tema.getId());
@@ -183,33 +214,49 @@ public class Layar_2 implements Initializable {
 		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
 		 */
 
+		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
+		
 		aktifkanInputData(klik);
 	}
 	
 	public void lanjutAnalisis(ActionEvent klik) {
+		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
+		
 		tampilan = PenataLayar.munculkanTampilan("Layar Analisis Data", 4);
 		
 		aplikasi = (Stage) ((Node) klik.getSource()).getScene().getWindow();
 		aplikasi.setScene(tampilan);
 		aplikasi.show();
+		
+		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 	}
 	
 	public void menuUtama(ActionEvent klik) {
+		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
+		
 		tampilan = PenataLayar.munculkanTampilan("Layar Menu Utama", 1);
 		
 		aplikasi = (Stage) ((Node) klik.getSource()).getScene().getWindow();
 		aplikasi.setScene(tampilan);
 		aplikasi.show();
+		
+		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 	}
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		Proses.pesan("Metode Initialize di Layar 2"); //TODO: hapus ini
+		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
+		
 		animasiHapus(IkonHapusSemua, IkonHapusTema, IkonHapusKoding, IkonHapusIdeUtama, IkonHapusJawaban, IkonHapusPertanyaan, IkonHapusImpresi);	
 		animasiDataSelanjutnya();
 		animasiDataSebelumnya();
 		// TODO: Menyiapkan data kosong
+		
 		// TODO: Inisialisasi data
-		UrutanData.setText("0");
+		UrutanData.setText("1");
+		
+		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 	
 	private void animasiHapus(JFXHamburger... KelompokIkon) {

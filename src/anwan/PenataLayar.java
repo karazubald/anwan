@@ -3,6 +3,8 @@ package anwan;
 import java.io.File;
 import java.net.URL;
 import java.util.HashMap;
+
+import anwan.proses.Proses;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -28,6 +30,8 @@ public class PenataLayar {
 	 * @throws Exception: memunculkan info galat yang terjadi selama proses inisialisasi.
 	 */
 	private static void initTampilan(int jumlahTampilan) {
+		Proses.hitungWaktu(true, PenataLayar.class); //TODO: hapus ini
+		
 		URL referensi;
 		for(Integer nomorTampilan = 0; nomorTampilan <= Integer.valueOf(jumlahTampilan); nomorTampilan++) {
 			LokasiFXML = FolderTampilan + "Layar_" + nomorTampilan+".fxml";
@@ -39,10 +43,14 @@ public class PenataLayar {
 				
 				referensi = new File(LokasiCSS).toURI().toURL();
 				KumpulanTampilan.get(nomorTampilan).getStylesheets().add(referensi.toExternalForm());
+				
 			} catch (Exception galat) {
 				galat.printStackTrace();
 			}
 		}
+		
+		Proses.hitungWaktu(false, PenataLayar.class); //TODO: hapus ini
+		
 	}
 	
 	/**
@@ -52,9 +60,15 @@ public class PenataLayar {
 	 * @return Layar yang siap ditampilkan.
 	 */
 	public static Scene munculkanTampilan(String namaTampilan, Integer nomorTampilan) {
+		Proses.pesan("Metode tampilkanTampilan di Penata Layar");//TODO: hapus ini
+		Proses.hitungWaktu(true, PenataLayar.class); //TODO: hapus ini
+		
 		initTampilan(4);
 		TampilanSekarang = new Scene(KumpulanTampilan.get(nomorTampilan));
 		TampilanSekarang.setRoot(KumpulanTampilan.get(nomorTampilan));
+		
+		Proses.hitungWaktu(false, PenataLayar.class);//TODO: hapus ini
+		
 		return TampilanSekarang;
 	}
 	

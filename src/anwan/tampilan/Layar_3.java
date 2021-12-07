@@ -12,7 +12,7 @@ import com.jfoenix.transitions.hamburger.HamburgerBasicCloseTransition;
 
 import anwan.PenataLayar;
 import anwan.proses.DataTextBox;
-
+import anwan.proses.Proses;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -45,10 +45,15 @@ public class Layar_3 implements Initializable {
 	private Scene tampilan;
 	
 	public void hapus(MouseEvent klik) {
+		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
+		
 		TextBox.setText("");
+		
+		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 	
 	public void kembali(MouseEvent klik) {
+		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
 		// TODO: Simpan otomatis sebelum kembali ke layar 2
 		
 		tampilan = PenataLayar.munculkanTampilan("Layar Input Data", 2);
@@ -58,15 +63,22 @@ public class Layar_3 implements Initializable {
 		aplikasi.show();
 
 		DataTextBox.kosongkanData();
+		
+		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
 	}
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		Proses.pesan("Metode Initialize di Layar 3"); //TODO: hapus ini
+		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
+		
 		animasiKembali();
 		animasiHapus();
 		
 		namaTextBox.setText(DataTextBox.getId());
 		TextBox.setText(DataTextBox.getData());
+		
+		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 	}
 	
 	private void animasiKembali() {

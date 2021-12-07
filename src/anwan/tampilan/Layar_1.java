@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import com.jfoenix.controls.JFXButton;
 
 import anwan.PenataLayar;
+import anwan.proses.Proses;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -45,16 +46,21 @@ public class Layar_1 implements Initializable {
 	 * @param klik id dari event tetikus
 	 */
 	public void buatBaru(ActionEvent klik) {
+		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
+		
 		tampilan = PenataLayar.munculkanTampilan("Layar Input Data", 2);
 		//tampilan = penataTampilan.munculkanTampilan("Layar Input Data", 2);
 		
 		aplikasi = (Stage) ((Node) klik.getSource()).getScene().getWindow();
 		aplikasi.setScene(tampilan);
 		aplikasi.show();
+		
+		
+		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 
 	public void muatData(ActionEvent ae) {
-		// TODO: Memuat data dari file TXT.
+		// TODO: Memuat data dari database MySQL
 	}
 	
 	public void tutorial(ActionEvent ae) {
@@ -72,7 +78,8 @@ public class Layar_1 implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+		Proses.pesan("Metode Initialize di Layar 1"); //TODO: hapus ini
+		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
+		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
-
 }

@@ -49,6 +49,7 @@ public class DataBase {
 	 * <TD>String (VARCHAR[8000])</TD>
 	 * </TR>
 	 * </TABLE>
+	 * 
 	 * @param NamaDataBase nama yang akan digunakan sebagai berkas database.
 	 */
 	public static void dataBaru(String NamaDataBase) {
@@ -68,6 +69,21 @@ public class DataBase {
 					+ "Pertanyaan MEDIUMTEXT,"
 					+ "Impresi MEDIUMTEXT,"
 					+ "PRIMARY KEY (UrutanData))";
+			perintah.execute(query);
+		} catch (Exception galat) {
+			galat.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Memuat database yang sudah pernah dibuat.
+	 */
+	public static void dataLama() {
+		if(namaBerkasDB == null) return;
+		try (Connection koneksiDataBase = DriverManager.getConnection(LOKASI + namaBerkasDB, DEFAULT_USER, DEFAULT_PASSWORD);
+				Statement perintah = koneksiDataBase.createStatement())
+		{	
+			query = "SELECT * FROM data_mentah";
 			perintah.execute(query);
 		} catch (Exception galat) {
 			galat.printStackTrace();
@@ -119,7 +135,7 @@ public class DataBase {
 			query = "SELECT Koding FROM pairTK WHERE Tema="+tema+" GROUP BY Koding";
 			hasilQuery = perintah.executeQuery(query);
 			while(hasilQuery.next()) {
-				kalimat += hasilQuery.getString("Koding");
+				kalimat += hasilQuery.getString("Koding")+",";
 			}
 		} catch (Exception galat) {
 			System.out.println("Terjadi galat: ");

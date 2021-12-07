@@ -11,6 +11,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
 
 import anwan.PenataLayar;
+import anwan.proses.Proses;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -39,17 +40,26 @@ public class Layar_0 implements Initializable {
 	
     @Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+    	Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
+    	Proses.pesan("Metode Initialize di Layar 0"); //TODO: hapus ini
+    	Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 	
 	public void setuju(ActionEvent klik) {
+		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
+		
 		tampilan = PenataLayar.munculkanTampilan("Layar Menu Utama", 1);
 		
 		aplikasi = (Stage) ((Node) klik.getSource()).getScene().getWindow();
 		aplikasi.setScene(tampilan);
 		aplikasi.show();
+		
+		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 	
 	public void lisensi(MouseEvent me) {
+		Proses.hitungWaktu(true, this.getClass()); //TODO hapus ini
+		
 		try {
 			InputStream lisensi = getClass().getResourceAsStream("LICENSE-ID.txt");
 			BufferedReader pembacaIsi = new BufferedReader(new InputStreamReader(lisensi));
@@ -67,5 +77,7 @@ public class Layar_0 implements Initializable {
 		} catch (Exception e) {
 			ta.setText(e.getMessage());
 		}
+		
+		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 }

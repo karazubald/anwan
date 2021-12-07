@@ -26,8 +26,7 @@ public class Anwan extends Application {
 	@Override
 	public void start(Stage aplikasi) {
 		tampilan = PenataLayar.munculkanTampilan("Layar Persetujuan", 0);
-		//tampilan = penataTampilan.munculkanTampilan("Layar Persetujuan", 0);
-		
+
 		aplikasi.setScene(tampilan);
 		aplikasi.show();
 	}
