@@ -4,9 +4,9 @@ Anwan ditujukan untuk membantu dalam menganalisis transkrip wawancara dalam Psik
 
 Proyek ini tersedia di [GitHub](https://github.com/karazubald/anwan) dengan sumber aslinya berasal dari [GitLab](https://gitlab.com/karazubald/anwan). Proyek ini masih dalam tahap pengembangan dan terbuka untuk kontribusi.
 
-| Waktu Mulai Project | Bahasa Pemrograman | Library yang digunakan | Target Platform | Lisensi |
+| Waktu Mulai Project | Bahasa Pemrograman | Dependensi | Target Platform | Lisensi |
 | -------------: | -------------: | -------------: | -------------: |  -------------: |
-| Februari 2019 | Java (OpenJDK 17) | JavaFX (OpenJFX + JFoenix) | Desktop | [GPLv3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)|
+| Februari 2019 | Java | OpenJDK 11+, OpenJFX, JFoenix, MySQL 8.0+ | Desktop | [GPLv3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)|
 
 ## Kontribusi
 ### Syarat
