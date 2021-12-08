@@ -56,9 +56,9 @@ kewajiban apabila Anda mendistribusikan salinan perangkat lunak atau
 memodifikasinya: kewajiban menghargai kebebasan orang lain.
 
   Apabila Anda mendistribusikan salinan program bebas sejenis baik didapatkan 
-secara gratis maupun berbayar, Anda harus menyerahkan ke penerima kebebasan 
+secara gratis maupun berbayar, Anda harus menyerahkan ke penerima, kebebasan 
 yang sama seperti yang Anda dapatkan. Anda harus memastikan bahwa mereka juga 
-menerima atau dapat menerima sumber kodenya. Anda juga harus menunjukkan kepada 
+menerima atau dapat menerima kode sumbernya. Anda juga harus menunjukkan kepada 
 mereka ketentuan ini sehingga mereka tahu hak dan kewajibannya.
 
   Developper yang menggunakan GNU GPL melindungi hak Anda dengan dua langkah: 
@@ -73,7 +73,7 @@ perangkat lunak tidak ditujukan secara keliru ke developper sebelumnya.
 
   Sejumlah perangkat dirancang untuk menyangkal akses pengguna untuk memasang 
 atau menjalankan perangkat lunak versi modifikasi di dalamnya meskipun 
-pemanufaktur dapat melakukanya. Hal ini pada dasarnya bertentangan dengan 
+pemanufaktur dapat melakukannya. Hal ini pada dasarnya bertentangan dengan 
 tujuan melindungi kebebasan pengguna dalam mengubah perangkat lunak. 
 Penyalahgunaan sistematis ini muncul pada kalangan produk yang tujuannya 
 dipakai oleh pengguna sehingga tidak dapat dibenarkan. Oleh karena itu, kami 
@@ -81,14 +81,14 @@ merancang versi GPL ini untuk melarang praktik pada produk semacam itu. Apabila
 masalah tersebut muncul di domain lainnya, kami siap memperluas ketentuan ini 
 ke domain tersebut di versi GPL selanjutnya demi melindungi kebabasan pengguna.
 
-  Terakhir, setiap program terus terancam oleh paten perangkat lunak.Pemerintah 
-seharusnya tidak mengizinkan paten untuk membatasi pengembangan dan penggunaan 
-perangkat lunak pada komputer tujuan umumnamun jika terjadi, kami berharap 
-untuk menghindari bahaya tertentu dimanapaten yang ada di program bebas membuat 
-programnya menjadi hak milik. Demi mencegah ini, GPL memastikan bahwa paten 
-tidak dapat digunakan untuk membuat program takbebas.
+  Terakhir, setiap program terus terancam oleh paten perangkat lunak. 
+Pemerintah seharusnya tidak mengizinkan paten untuk membatasi pengembangan dan 
+penggunaan perangkat lunak pada komputer tujuan umum namun jika terjadi, kami 
+berharap untuk menghindari bahaya tertentu di mana paten yang ada di program 
+bebas membuat programnya menjadi hak milik. Demi mencegah ini, GPL memastikan 
+bahwa paten tidak dapat digunakan untuk membuat program takbebas.
 
-  Istilah, syarat dan ketentuan khusus untuk menyalin, mendistrubusikan, dan 
+  Istilah, syarat, dan ketentuan khusus untuk menyalin, mendistrubusikan, dan 
 memodifikasi adalah sebagai berikut.
 
                        SYARAT DAN KETENTUAN
@@ -109,8 +109,8 @@ bagian karya kecuali salinan serupa sehingga memerlukan izin hak cipta. Hasil
 karya disebut "versi modifikasi" dari karya sebelumnya atau karya "berdasarkan" 
 karya sebelumnya.
 
-  "Kover karya" berarti program yang tidak termodifikasi atau karya berdasarkan 
-program ini.
+  "Karya yang dimaksud" berarti program yang tidak termodifikasi atau karya 
+berdasarkan program ini.
 
   "Menyebarluaskan" karya berarti melakukan apapun yang tanpa izin dapat 
 membuat Anda bertanggung jawab secara langsung maupun tidak langsung terhadap 
@@ -128,9 +128,9 @@ merupakan pemindahan.
 sedemikian rupa sehingga termasuk di dalamnya, fitur yang nyaman dan terlihat 
 jelas dengan: (1) menampilkan hak cipta yang sesuai, dan (2) memberitahukan ke 
 pengguna bahwa tidak ada jaminan pada karya ini (kecuali ada disediakan 
-jaminan) sehingga penerima lisensi dapat melakukan pemindahan karya dibawah 
+jaminan) sehingga penerima lisensi dapat melakukan pemindahan karya di bawah 
 lisensi ini dan cara melihat salinan lisensi ini. Apabila antarmuka berada 
-dalam pilihan komando pengguna seperti dalam menu, aitem yang mencolok di 
+dalam pilihan perintah pengguna seperti dalam menu, aitem yang mencolok di 
 daftarnya memenuhi kriteria ini.
 
   1. Kode Sumber.
@@ -147,12 +147,12 @@ bekerja dengan bahasa itu.
 karya secara keseluruhan yang (a) termuat dalam bentuk biasa dari kemasan 
 komponen utama namun bukan merupakan bagian dari Komponen Utama, dan (b) 
 berfungsi untuk memungkinkan penggunaan karya dengan Komponen Utama atau 
-mengimplementasikan Antarmuka Standar dimana implementasinya tersedia di publik 
-dalam bentuk kode sumber. "Komponen Utama" dalam konteks ini adalah komponen 
-besar utama (kernel, sistem window, dan sejenisnya) dari sistem operasi 
-tertentu (jika ada) yang menjadi tempat berjalannya karya, penyusun yang 
-digunakan untuk menghasilkan karya, atau penerjemah kode objek yang digunakan 
-untuk menjalankannya. 
+mengimplementasikan Antarmuka Standar di mana implementasinya tersedia di 
+publik dalam bentuk kode sumber. "Komponen Utama" dalam konteks ini adalah 
+komponen besar utama (kernel, sistem window, dan sejenisnya) dari sistem 
+operasi tertentu (jika ada) yang menjadi tempat berjalannya karya, penyusun 
+yang digunakan untuk menghasilkan karya, atau penerjemah kode objek yang 
+digunakan untuk menjalankannya. 
 
   "Sumber Korespondensi" dari karya dalam bentuk kode objek berarti segala kode 
 sumber yang dibutuhkan untuk membuat, memasang, (pada karya yang dapat 
@@ -173,138 +173,147 @@ Sumber Korespondensi dari karya dalam bentuk kode sumber adalah karya yang sama.
 
   2. Izin Dasar.
 
-  Segala hak yang diberikan dibawah lisensi ini diberikan sesuai ketentuan hak 
+  Segala hak yang diberikan di bawah lisensi ini diberikan sesuai ketentuan hak 
 cipta pada program ini, dan tidak dapat dibatalkan asalkan syarat dan ketentuan 
 telah terpenuhi. Lisensi ini secara eksplisit menegaskan izin tak terbatas pada 
 Anda untuk menjalankan program yang tidak dimodifikasi. Hasil keluaran dari 
-menjalankan kover program dicakup oleh lisensi ini hanya jika hasil keluaran, 
-berdasarkan kontennya, merupakan kover karya. Lisensi ini mengakui hak Anda 
-yaitu hak penggunaan wajar atau setara lainnya sebagaimana yang tertera dalam 
-undang-undang hak cipta.
+menjalankan program yang dicakup oleh lisensi ini hanya jika hasil keluaran, 
+berdasarkan kontennya, merupakan karya yang dimaksud. Lisensi ini mengakui hak 
+Anda yaitu hak penggunaan wajar atau setara lainnya sebagaimana yang tertera 
+dalam undang-undang hak cipta.
 
-  Anda dapat membuat, menjalankan, dan menyebarluaskan kover karya yang tidak 
-Anda pindahkan tanpa syarat selama lisensi Anda namun jika sebaliknya tetap 
-patuh pada hukum yang berlaku. Anda boleh melakukan pemindahan kover karya ke 
-orang lain dengan satu-satunya tujuan Anda meminta mereka membuatkan modifikasi 
-khusus untuk Anda, atau menyediakan fasilitas untuk menjalankan karya tersebut 
-kepada Anda dengan catatan Anda memenuhi syarat dan ketentuan di lisensi ini 
-terkait pemindahan segala material yang hak ciptanya tidak dalam kendali Anda. 
-Mereka yang membuat atau menjalankan kover karya karena Anda harus melakukannya 
-secara eksklusif atas nama Anda, dibawah direksi dan kendali Anda, dan sesuai 
-ketentuan yang melarang mereka membuat salinan dari material berhak cipta milik 
-Anda di luar hubungan mereka dengan Anda.
+  Anda dapat membuat, menjalankan, dan menyebarluaskan karya yang dimaksud yang 
+tidak Anda pindahkan tanpa syarat selama lisensi Anda namun jika sebaliknya 
+tetap patuh pada hukum yang berlaku. Anda boleh melakukan pemindahan karya yang 
+dimaksud ke orang lain dengan satu-satunya tujuan Anda, meminta mereka 
+membuatkan modifikasi khusus untuk Anda, atau menyediakan fasilitas untuk 
+menjalankan karya tersebut kepada Anda dengan catatan Anda memenuhi syarat dan 
+ketentuan di lisensi ini terkait pemindahan segala material yang hak ciptanya 
+tidak dalam kendali Anda. Mereka yang membuat atau menjalankan karya yang 
+dimaksud karena Anda, harus melakukannya secara eksklusif atas nama Anda, di 
+bawah direksi dan kendali Anda, dan sesuai ketentuan yang melarang mereka 
+membuat salinan dari material berhak cipta milik Anda di luar hubungan mereka 
+dengan Anda.
 
   Pemindahan dalam kondisi apa pun diizinkan hanya dengan syarat dan ketentuan 
 yang tercantum di bawah. Sublisensi tidak diizinkan; Bab 10 membuat hal 
 tersebut tidak diperlukan.
 
-  3. Melindungi Hak Pengguna dari Undang-undang Anti-Circumvention.
+  3. Melindungi Hak Pengguna dari Undang-undang Antisirkumvensi.
 
-  Tidak ada kover karya yang dianggap bagian dari tindakan teknologi efektif 
-berdasarkan hukum yang berlaku sesuai Pasal 11 dari perjanjian hak cipta WIPO 
-yang diadopsi tanggal 20 Desember 1996, atau undang-undang sejenisnya yang 
-melarang atau membatasi sirkumfensi tindakan tersebut.
+  Tidak ada karya yang dimaksud yang dianggap bagian dari tindakan teknologi 
+efektif berdasarkan hukum yang berlaku sesuai Pasal 11 dari perjanjian hak 
+cipta WIPO yang diadopsi tanggal 20 Desember 1996, atau undang-undang 
+sejenisnya yang melarang atau membatasi sirkumvensi tindakan tersebut.
 
-  Ketika Anda melakukan pemindahan kover karya, Anda melepaskan segala kuasa 
-hukum untuk melarang sirkumfensi tindakan teknologi selama sirkumfensi tersebut 
-dilakukan dengan menggunakan hak berdasarkan lisensi ini terkait kover karya, 
-dan Anda menyangkal intensi apa pun untuk membatasi pengoperasian atau 
-modifikasi karya sebagai sarana penegakan, terhadap pengguna karya, hak hukum 
-Anda atau pihak ketiga dalam melarang sirkumfensi tindakan teknologi.
+  Ketika Anda melakukan pemindahan karya yang dimaksud, Anda melepaskan segala 
+kuasa hukum untuk melarang sirkumfensi tindakan teknologi selama sirkumvensi 
+tersebut dilakukan dengan menggunakan hak berdasarkan lisensi ini terkait karya 
+yang dimaksud, dan Anda menyangkal intensi apa pun untuk membatasi 
+pengoperasian atau modifikasi karya sebagai sarana penegakan, terhadap pengguna 
+karya, hak hukum Anda atau pihak ketiga dalam melarang sirkumvensi tindakan 
+teknologi.
 
-  4. Pemindahan Salinan Verbatim
+  4. Pemindahan Salinan Verbatim.
 
   Anda dapat melakukan pemindahan salinan verbatim dari kode sumber program 
 sebagaimana Anda menerimanya dalam media apa pun dengan ketentuan Anda secara 
-pantas dan mencolok mempublikasikan pemberitahuan hak cipta yang sesuai di 
+pantas dan mencolok, mempublikasikan pemberitahuan hak cipta yang sesuai di 
 setiap salinan; menjaga keutuhan segala pemberitahuan yang menyatakan bahwa 
 Lisensi ini dan segala ketentuan non-permisif tambahan sebagaimana di Bab 7 
 teraplikasikan di kode; menjaga keutuhan pemberitahuan ketiadaan jaminan apa 
-pun; dan memberikan salinan lisensi ini bersamaan dengan program ini kepada 
+pun; dan memberikan salinan Lisensi ini bersamaan dengan program ini kepada 
 semua penerima.
 
   Anda dapat membebankan atau tidak membebankan biaya pada setiap salinan yang 
 telah Anda lakukan pemindahan dan Anda boleh menawarkan dukungan atau jaminan 
 perlindungan dengan membebankan biaya.
 
-  5. Pemindahan Sumber Versi Modifikasi
+  5. Pemindahan Sumber Versi Modifikasi.
 
   Anda dapat melakukan pemindahan karya berdasarkan program ini, atau 
 menghasilkan modifikasi dari program ini berdasarkan syarat dan ketentuan di 
 Bab 4 dengan catatan Anda juga memenuhi semua kriteria berikut:
 
     a) Karya harus mengikutsertakan pemberitahuan mencolok yang menyatakan Anda 
-telah memodifikasinya dan mencantumkan tanggal yang relevan.
+    telah memodifikasinya dan mencantumkan tanggal yang relevan.
 
     b) Karya harus mengikutsertakan pemberitahuan mencolok yang menyatakan 
-bahwa karya dirilis dibawah lisensi ini dan segala ketentuan ditambahkan di 
-bawah Bab 7. Ketentuan ini memodifikasi ketentuan di Bab 4 terkait "menjaga 
-keutuhan segala pemberitahuan".
+    bahwa karya dirilis di bawah lisensi ini dan segala ketentuan ditambahkan 
+    di bawah Bab 7. Ketentuan ini memodifikasi ketentuan di Bab 4 terkait 
+    "menjaga keutuhan segala pemberitahuan".
 
-    c) Anda harus melisensi semua karya, secara keseluruhan, menggunakan 
-lisensi ini kepada siapa saja yang memiliki salinannya. Dengan demikian, 
-lisensi ini berlaku, dengan segala ketentuan tambahan di Bab 7, pada 
-keseluruhan karya dan bagian-bagiannya, terlepas dari pengemasannya. Lisensi 
-ini tidak mengizinkan pelisensian karya dengan cara lainnya namun tidak 
-menginvalidasi izin semacamnya apabila Anda menerimanya secara terpisah.
+    c) Anda harus melisensi semua karya, secara keseluruhan, menggunakan
+    lisensi ini kepada siapa saja yang memiliki salinannya. Dengan demikian, 
+    lisensi ini berlaku, dengan segala ketentuan tambahan di Bab 7, pada 
+    keseluruhan karya dan bagian-bagiannya, terlepas dari pengemasannya. 
+    Lisensi ini tidak mengizinkan pelisensian karya dengan cara lainnya namun 
+    tidak menginvalidasi izin semacam itu apabila Anda menerimanya secara 
+    terpisah.
 
     d) Apabila karya memiliki antarmuka pengguna interaktif, tiap antarmuka 
-harus menampilkan Pemberitahuan Hukum yang Sesuai; meskipun demikian, apabila 
-program ini memiliki antarmuka interaktif yang tidak menampilkan Pemberitahuan 
-Hukum yang Sesuai, karya Anda tidak perlu menampilkannya.
+    harus menampilkan Pemberitahuan Ketentuan Hukum yang Sesuai; meskipun 
+    demikian, apabila program ini memiliki antarmuka interaktif yang tidak 
+    menampilkan Pemberitahuan Ketentuan Hukum yang Sesuai, karya Anda tidak 
+    perlu menampilkannya.
 
-  Kompilasi dari kover karya dengan karya terpisah dan independen lainnya, yang 
-secara alamiah bukan merupakan ekstensi dari kover karya,dan tidak 
-dikombinasikan ke dalamnya semisal untuk membuat program yang lebih besar, di 
-dalam atau pada isi dari media penyimpanan atau distribusi, disebut sebagai 
-"agregat" jika kompilasi dan hak cipta yang dihasilkan tidak digunakan untuk 
-membatasi akses atau hak hukum kompilasi pengguna di luar izin yang ada pada 
-tiap karya individual.Inklusi kover karya dalam sebuah agregat tidak 
-menyebabkan lisensi iniberlaku pada bagian agregrat lainnya.
+  Kompilasi dari karya yang dimaksud dengan karya terpisah dan independen 
+lainnya, yang secara alamiah bukan merupakan ekstensi dari karya yang dimaksud 
+dan tidak dikombinasikan ke dalamnya semisal untuk membuat program yang lebih 
+besar, di dalam atau pada isi dari media penyimpanan atau distribusi, disebut 
+sebagai "agregat" jika kompilasi dan hak cipta yang dihasilkan tidak digunakan 
+untuk membatasi akses atau hak hukum kompilasi pengguna di luar izin yang ada 
+pada tiap karya individual. Inklusi karya yang dimaksud dalam sebuah agregat 
+tidak menyebabkan lisensi ini berlaku pada bagian agregrat lainnya.
 
-  6. Pemindahan Bentuk Nonsumber
+  6. Pemindahan Bentuk Non-sumber.
 
-  Anda dapat melakukan pemindahan kover karya dalam bentuk kode objek sesuai 
-syarat dan ketentuan di Bab 4 dan 5 dengan syarat Anda juga melakukan 
+  Anda dapat melakukan pemindahan karya yang dimaksud dalam bentuk kode objek 
+sesuai syarat dan ketentuan di Bab 4 dan 5 dengan syarat Anda juga melakukan 
 pemindahan Sumber Korespondensi yang dapat dibaca mesin sesuai ketentuan di 
 Lisensi ini dengan 1 dari beragam cara ini:
 
     a) Pemindahan kode objek pada atau diwujudkan dalam produk fisik (termasuk 
-media distribusi fisik), disertai dengan Sumber Korespondensi dipasang pada 
-media fisik tahan lama yang biasa digunakan untuk pertukaran perangkat lunak.
+    media distribusi fisik), disertai dengan Sumber Korespondensi dipasang pada 
+    media fisik tahan lama yang biasa digunakan untuk pertukaran perangkat 
+    lunak.
 
     b) Pemindahan kode objek pada atau diwujudkan dalam produk fisik (termasuk 
-media distribusi fisik), disertai dengan penawaran tertulis, berlaku setidaknya 
-selama 3 tahun dan berlaku selama Anda menawarkan suku cadang atau dukungan 
-pelanggan untuk model produk itu, sehingga memberikan siapa saja yang memiliki 
-kode objek antara (1) salinan Sumber Korespondensi untuk semua perangkat lunak 
-di produk yang dicakup lisensi ini, pada media fisik tahan lama yang biasa 
-digunakan untuk pertukaran perangkat lunak, dengan harga tidak lebih dari biaya 
-yang wajar untuk melakukan pemindahan sumber secara fisik, atau (2) akses ke 
-salinan Sumber Korespondensi melalui peladen jaringan tanpa biaya.
+    media distribusi fisik), disertai dengan penawaran tertulis, berlaku 
+    setidaknya selama 3 tahun dan berlaku selama Anda menawarkan suku cadang 
+    atau dukungan pelanggan untuk model produk itu, sehingga memberikan siapa 
+    saja yang memiliki kode objek antara (1) salinan Sumber Korespondensi untuk 
+    semua perangkat lunak di produk yang dicakup lisensi ini, pada media fisik 
+    tahan lama yang biasa digunakan untuk pertukaran perangkat lunak, dengan 
+    harga tidak lebih dari harga yang wajar untuk melakukan pemindahan sumber 
+    secara fisik, atau (2) akses ke salinan Sumber Korespondensi melalui 
+    peladen jaringan tanpa biaya.
 
     c) Pemindahan salinan individual dari kode objek dengan salinan penawaran 
-secara tertulis terkait penyediaan Sumber Korespondensi. Pilihan ini diizinkan 
-bersifat sekali waktu dan nonkomersial, dan hanya jika Anda menerima kode objek 
-dengan penawaran yang sama, sesuai ketentuan di subbab 6b. 
+    secara tertulis terkait penyediaan Sumber Korespondensi. Pilihan ini 
+    diizinkan bersifat sekali waktu dan non-komersial, dan hanya jika Anda 
+    menerima kode objek dengan penawaran yang sama, sesuai ketentuan di subbab 
+    6b. 
 
     d) Pemindahan kode objek dengan menawarkan akses dari tempat tertentu 
-(gratis atau dengan biaya), dan menawarkan akses yang sejenis pada Sumber 
-Korespondensi dengan cara yang sama di tempat yang sama tanpa biaya tambahan. 
-Anda tidak perlu meminta penerima menyalin Sumber Korespondensi bersama dengan 
-kode objek. Apabila tempat untuk menyalin kode objek adalah peladen jaringan, 
-Sumber Korespondensi boleh berada pada peladen yang berbeda (dioperasikan oleh 
-Anda atau pihak ketiga) yang mendukung fasilitas penyalinan sejenis dengan 
-syarat Anda memelihara kejelasan arah di samping kode objek yang menyatakan 
-arah penemuan Sumber Korespondensi. Bagaimanapun jenis peladen yang menyajikan 
-Sumber Korespondensi, Anda wajib memastikan ketersediannya selama yang 
-diperlukan untuk memenuhi ketentuan ini.
+    (gratis atau dengan biaya), dan menawarkan akses yang sejenis pada Sumber 
+    Korespondensi dengan cara yang sama di tempat yang sama tanpa biaya 
+    tambahan. Anda tidak perlu meminta penerima menyalin Sumber Korespondensi 
+    bersama dengan kode objek. Apabila tempat untuk menyalin kode objek adalah 
+    peladen jaringan, Sumber Korespondensi boleh berada pada peladen yang 
+    berbeda (dioperasikan oleh Anda atau pihak ketiga) yang mendukung fasilitas 
+    penyalinan sejenis dengan syarat Anda memelihara kejelasan arah di samping 
+    kode objek yang menyatakan arah untuk menemukan Sumber Korespondensi. 
+    Bagaimana pun jenis peladen yang menyajikan Sumber Korespondensi, Anda 
+    wajib memastikan ketersediannya selama yang diperlukan untuk memenuhi 
+    ketentuan ini.
 
-    e) Pemindahan kode objek menggunakan transmisi rekan ke rekan asalkan Anda 
-memberitahukan rekan lainnya dimana kode objek dan Sumber Korespondensi dari 
-karya ditawarkan ke khalayak ramai tanpa biaya mengikuti ketentuan di subbab 6d.
+    e) Pemindahan kode objek menggunakan transmisi rekan ke rekan asalkan Anda
+    memberitahukan rekan lainnya di mana kode objek dan Sumber Korespondensi 
+    dari karya ditawarkan ke khalayak ramai tanpa biaya, mengikuti ketentuan di 
+    subbab 6d.
 
-  Bagian yang dapat terpisah dari kode objek, dimana sumbernya dikecualikan 
+  Bagian yang dapat terpisah dari kode objek, di mana sumbernya dikecualikan 
 dari Sumber Korespondensi sebagai Pustaka Sistem tidak perlu diikutsertakan 
 dalam pemindahan karya kode objek.
 
@@ -323,30 +332,30 @@ tersebut mewakili satu-satunya cara penggunaan produk yang signifikan.
 
   "Informasi Pemasangan" pada Produk Konsumen berarti segala metode, prosedur, 
 kunci otorisasi, atau informasi lainnya yang diperlukan untuk memasang dan 
-menjalankan versi modifikasi kover karya di dalamProduk Pengguna dari sebuah 
-versi modifikasi Sumber Korespondensinya. Informasi harus berkecukupan untuk 
-memastikan bahwa kesinambungan fungsi dari kode objek yang dimodifikasi tidak 
-dicegah atau diganggu hanya karena modifikasi telah dilakukan.
+menjalankan versi modifikasi karya yang dimaksud di dalamProduk Pengguna dari 
+sebuah versi modifikasi Sumber Korespondensinya. Informasi harus berkecukupan 
+untuk memastikan bahwa kesinambungan fungsi dari kode objek yang dimodifikasi 
+tidak dicegah atau diganggu hanya karena modifikasi telah dilakukan.
 
   Apabila Anda melakukan pemindahan kode objek berdasarkan ketentuan ini, atau 
 dengan, atay secara khusus untuk menggunakannya dalam sebuah Produk Pengguna, 
-dan pemindahan muncul sebagai bagian transaksi dimana hak kepemilikan dan 
+dan pemindahan muncul sebagai bagian transaksi di mana hak kepemilikan dan 
 penggunaan Produk Pengguna ditransfer ke penerima selamanya atau selama waktu 
 yang telah ditentukan (terlepas dari karakteristik transaksi), Sumber 
 Korespondensi yang dipindahkan berdasarkan ketentuan ini harus disertai dengan 
-Informasi Pemasangan.eskipun demikian, ketentuan ini tidak berlaku apabila Anda 
-maupunpihak ketiga tidak menguasai kemampuan untuk memasang kode objekyang 
-telah dimodifikasi pada Produk Pengguna (contohnya karya yangtelah dipasang di 
-ROM).
+Informasi Pemasangan. Meskipun demikian, ketentuan ini tidak berlaku apabila 
+Anda maupun pihak ketiga tidak menguasai kemampuan untuk memasang kode objek 
+yang telah dimodifikasi pada Produk Pengguna (contohnya karya yang telah 
+dipasang di ROM).
 
   Ketentuan penyediaan Informasi Pemasangan tidak termasuk ketentuan untuk 
 terus menyediakan layanan dukungan, jaminan, atau peningkatan pada karya yang 
-telah dimodifikasi atau telah dipasang oleh penerima, ataupada Produk Pengguna 
-yang telah dimodifikasi atau dipasang. Akses kesebuah jaringan dapat ditolak 
+telah dimodifikasi atau telah dipasang oleh penerima, atau pada Produk Pengguna 
+yang telah dimodifikasi atau dipasang. Akses ke sebuah jaringan dapat ditolak 
 ketika modifikasi berdampak secara material dan merugikan pada operasi jarungan 
 atau melanggar aturan dan protokolkomunikasi antarjaringan.
 
-  Sumber Korespondensi yan telah dipindahkan dan Informasi Pemasanganyang 
+  Sumber Korespondensi yan telah dipindahkan dan Informasi Pemasangan yang 
 disediakan berdasarkan bagian ini harus dalam format yang didokumentasikan 
 secara publik (dan dengan implementasi yang tersediake public dalam bentuk kode 
 sumber), dan wajib tidak memerlukankata sandi atau kunci khusus untuk membuka 
@@ -356,74 +365,75 @@ kemasan, membaca, atau menyalin.
 
   "Izin tambahan" adalah ketentuan yang melengkapi ketentuan lisensiini dengan 
 membuat pengecualian dari satu atau beberapa syarat.Izin tambahan yang dapat 
-diterapkan pada keseluruhan program harusdiperlakukan selayaknya termaktub 
-dalam lisensi ini, sesuaiketentuan hukum yang berlaku. Apabila izin tambahan 
+diterapkan pada keseluruhan program harus diperlakukan selayaknya termaktub 
+dalam lisensi ini, sesuai ketentuan hukum yang berlaku. Apabila izin tambahan 
 hanya berlaku pada bagian dari program ini, bagian itu dapat digunakan secara 
-terpisahsesuai izinnya namun keseluruhan program tetap diatur oleh lisensi 
+terpisah sesuai izinnya namun keseluruhan program tetap diatur oleh lisensi 
 initanpa memperhatikan izin tambahan.
 
-  Ketika Anda melakukan pemindahan salinan dari kover karya, Anda dapat memilih 
-untuk menghilangkan izin tambahan dari salinan tersebut atau dari bagian 
-salinan itu. (Izin tambahan dapat ditulis dengan tujuan agar dihapuskan dalam 
-suatu perkara dimana Anda memodifikasi karya). Anda dapat menambahkan izin 
-tambahan pada material, yang Anda tambahkan pada kover karya, dimana Anda 
-memiliki atau dapat memberikan izin hak cipta.
+  Ketika Anda melakukan pemindahan salinan dari karya yang dimaksud, Anda dapat 
+memilih untuk menghilangkan izin tambahan dari salinan tersebut atau dari 
+bagian salinan itu. (Izin tambahan dapat ditulis dengan tujuan agar dihapuskan 
+dalam suatu perkara di mana Anda memodifikasi karya). Anda dapat menambahkan 
+izin tambahan pada material, yang Anda tambahkan pada karya yang dimaksud, di 
+mana Anda memiliki atau dapat memberikan izin hak cipta.
 
   Terlepas dari ketentuan lainnya di lisensi ini, pada material yang Anda 
-tambahkan ke kover karya, Anda dapat (apabila telah disahkan/diizinkan oleh 
-pemegang hak cipta dari material tersebut) menambahkan syarat dan ketentuan di 
-lisensi ini dengan ketentuan:
+tambahkan ke karya yang dimaksud, Anda dapat (apabila telah disahkan/diizinkan 
+oleh pemegang hak cipta dari material tersebut) menambahkan syarat dan 
+ketentuan di lisensi ini dengan ketentuan:
 
     a) Menafikan jaminan atau membatasi tanggung jawab berbeda dari syarat dan 
-ketentuan Bab 15 dan 16 di lisensi ini; atau
+    ketentuan Bab 15 dan 16 di lisensi ini; atau
     
     b) Mensyaratkan pemeliharaan pemberitahuan hukum yang wajar atau atribusi 
-pencipta di dalam materialnya atau menampilkan Pemberitahuan Ketentuan Hukum 
-yang Sesuai yang dikandung dalam karya; atau
+    pencipta di dalam materialnya atau menampilkan Pemberitahuan Ketentuan 
+    Hukum yang Sesuai yang dikandung dalam karya; atau
 
     c) Melarang penyajian yang keliru mengenai asal material, atau mensyaratkan 
-versi modifikasi dari material tersebut ditandai dengan wajar sebagai pembeda 
-dari versi asli; atau
+    versi modifikasi dari material tersebut ditandai dengan wajar sebagai 
+    pembeda dari versi asli; atau
 
     d) Membatasi penggunaan untuk tujuan publisitas untuk nama-nama pemberi 
-lisensi atau pencipta material; atau
+    lisensi atau pencipta material; atau
 
     e) Menolak memberikan hak berdasarkan undang-undang merek dagang pada 
-sejumlah nama, merek dagang, atau merek layanan; atau
+    sejumlah nama, merek dagang, atau merek layanan; atau
 
     f) Mewajibkan ganti rugi dari pemilik lisensi dan pencipta material bagi 
-setiap orang yang melakukan pemindahan material (atau material versi 
-modifikasi) dengan kewajiban dalam kontrak yang disepakati ke penerima, untuk 
-setiap kewajiban dalam kontrak yang disepakati itu yang dikenakan pada pemilik 
-lisensi dan pencipta.
+    setiap orang yang melakukan pemindahan material (atau material versi 
+    modifikasi) dengan kewajiban dalam kontrak yang disepakati ke penerima, 
+    untuk setiap kewajiban dalam kontrak yang disepakati itu yang dikenakan 
+    pada pemilik lisensi dan pencipta.
 
   Segala jenis ketentuan tambahan nonpermisif lainnya dianggap sebagai 
 "pembatasan lebih lanjut" yang dimaksud dalam Bab 10. Apabila Anda ketika 
 menerima program ini atau sejumlah bagiannya mengandung pemberitahuan yang 
 menyatakan bahwa program diatur oleh lisensi ini bersamaan dengan ketentuan 
 yang merupakan pembatasan lebih lanjut, Anda diizinkan untuk menambahkan 
-material pada kover karya yang ketentuannya diatur di dokumen lisensi itu 
-dengan ketentuan bahwa pembatasan lebih lanjut tidak bertahan pada pelisensian 
-ulang atau pemindahan. 
+material pada karya yang dimaksud yang ketentuannya diatur di dokumen lisensi 
+itu dengan ketentuan bahwa pembatasan lebih lanjut tidak bertahan pada 
+pelisensian ulang atau pemindahan. 
 
-  Apabila Anda memuat ketentuan tambahan pada kover karya berdasarkan Bab ini, 
-Anda harus meletakkan di dalam sumber berkas yang relevan, pernyataan tentang 
-izin tambahan yang berlaku pada berkas-berkas, atau meletakkan pemberitahuan 
-yang menunjukkan di mana menemukan syarat dan ketentuan yang berlaku.
+  Apabila Anda memuat ketentuan tambahan pada karya yang dimaksud berdasarkan 
+Bab ini, Anda harus meletakkan di dalam sumber berkas yang relevan, pernyataan 
+tentang izin tambahan yang berlaku pada berkas-berkas, atau meletakkan 
+pemberitahuan yang menunjukkan di mana menemukan syarat dan ketentuan yang 
+berlaku.
   
-  Syarat dan ketentuan tambahan, baik permisif dan nonpermisif, dapat 
+  Syarat dan ketentuan tambahan, baik permisif dan non-permisif dapat 
 dinyatakan dalam bentuk lisensi tulis terpisah atau dinyatakan sebagai 
 pengecualian; ketentuan di atas berlaku terlepas dari cara pernyataannya.
 
   8. Pembatalan.
 
-  Anda tidak diizinkan menyebarluaskan atau memodifikasi kover karya 
-sebagaimana yang ditentukan secara tegas di lisensi ini. Sebaliknya segala 
+  Anda tidak diizinkan menyebarluaskan atau memodifikasi karya yang dimaksud 
+sebagaimana yang ditentukan dengan tegas di lisensi ini. Sebaliknya segala 
 tindakan menyebarluaskan atau memodifikasi dianggap ilegal dan secara otomatis 
-membatalkan hak Anda yang berlaku di lisensi ini (termasuk segala lisensi paten 
+membatalkan hak Anda yang berlaku di Lisensi ini (termasuk segala lisensi paten 
 yang diberikan dalam paragraf ke 3 Bab 11).
 
-  Meskipun demikian, apabila Anda menghentikan pelanggaran lisensi ini maka 
+  Meskipun demikian, apabila Anda menghentikan pelanggaran Lisensi ini maka 
 lisensi Anda yang berasal dari pemegang hak cipta tertentu dipulihkan (a) untuk 
 sementara, kecuali dan sampai pemegang hak cipta secara eksplisit dan akhirnya 
 membatalkan lisensi Anda, dan (b) secara permanen, apabila pemegang hak cipta 
@@ -442,40 +452,40 @@ pihak-pihak yang telah menerima salinan atau hak Anda dari lisensi ini. Apabila
 hak Anda telah dibatalkan dan tidak secara permanen dipulihkan, Anda tidak 
 berhak menerima lisensi baru dari material terkait sesuai ketentuan di Bab 10.
 
-  9. Tidak Perlu Setuju dalam Memiliki Salinan
+  9. Tidak Perlu Setuju dalam Memiliki Salinan.
 
-  Anda tidak perlu menyetujui lisensi ini dalam hal menerima atau menjalankan 
-salinan program ini.  Sokongan penyebarluasan dari kover karya yang muncul 
-sebagai akibat dari penggunaan transmisi rekan-ke-rekan dalam penerimaan 
+  Anda tidak perlu menyetujui Lisensi ini dalam hal menerima atau menjalankan 
+salinan program ini. Sokongan penyebarluasan dari karya yang dimaksud yang 
+muncul sebagai akibat dari penggunaan transmisi rekan ke rekan dalam penerimaan 
 salinan juga tidak mensyaratkan persetujuan. Meskipun demikian, tidak ada 
-selain lisensi ini yang memberikan Anda izin untuk menyebarluaskan atau 
-memodifikasi segala kover karya. Tindakan itu melanggar hak cipta apabila Anda 
-tidak menyetujui lisensi ini. Oleh karena itu, dengan memodifikasi atau 
-menyebarluaskan kover karya, Anda mengindikasikan kesetujuan Anda terhadap 
-lisensi ini dalam tindakan tersebut.
+selain Lisensi ini yang memberikan Anda izin untuk menyebarluaskan atau 
+memodifikasi segala karya yang dimaksud. Tindakan itu melanggar hak cipta 
+apabila Anda tidak menyetujui Lisensi ini. Oleh karena itu, dengan memodifikasi 
+atau menyebarluaskan karya yang dimaksud, Anda mengindikasikan kesetujuan Anda 
+terhadap Lisensi ini dalam tindakan tersebut.
 
   10. Lisensi Otomatis pada Penerima Sehilir.
 
-  Setiap Anda melakukan pemindahan dari kover karya, penerima secara otomatis 
-mendapatkan lisensi dari pemberi lisensi asli untuk menjalankan, memodifikasi, 
-dan menyebarluaskan karya sesuai ketentuan di lisensi ini. Anda tidak 
-bertanggung jawab dalam menegakkan kepatuhan oleh pihak ketiga dengan lisensi 
-ini.
+  Setiap Anda melakukan pemindahan dari karya yang dimaksud, penerima secara 
+otomatis mendapatkan lisensi dari pemberi lisensi asli untuk menjalankan, 
+memodifikasi, dan menyebarluaskan karya sesuai ketentuan di lisensi ini. Anda 
+tidak bertanggung jawab dalam menegakkan kepatuhan oleh pihak ketiga dengan 
+lisensi ini.
 
   "Transaksi entitas" adalah sebuah pegendali transfer transaksi dari suatu 
 organisasi, atau secara substansial adalah segala aset dari satu, atau 
 subdivisi sebuah organisasi, atau organisasi-organisasi gabungan. Apabila 
-penyebarluasan kover karya berasal dari transaksi entitas, setiap pihak dalam 
-transaksi itu yang menerima salinan karya juga menerima lisensi apa pun untuk 
-karya yand dimiliki atau dapat diberikan pihak pendahulu yang berkepentingan 
-sesuai ketentuan paragraf sebelumnya, ditambah hak untuk mendapatkan Sumber 
-Korespondensi karya dari pendahulu yang berkepentingan apabila pendahulu 
-memilikinya atau dapat memilikinya dengan cara yang wajar. 
+penyebarluasan karya yang dimaksud berasal dari transaksi entitas, setiap pihak 
+dalam transaksi itu yang menerima salinan karya juga menerima lisensi apa pun 
+untuk karya yand dimiliki atau dapat diberikan pihak pendahulu yang 
+berkepentingan sesuai ketentuan paragraf sebelumnya, ditambah hak untuk 
+mendapatkan Sumber Korespondensi karya dari pendahulu yang berkepentingan 
+apabila pendahulu memilikinya atau dapat memilikinya dengan cara yang wajar. 
 
   Anda diizinkan menerapkan batasan tambahan lainnya atas pelaksanaan hak yang 
-diberikan atau diakui oleh lisensi ini. Sebagai contoh, Anda diizinkan untuk 
+diberikan atau diakui oleh Lisensi ini. Sebagai contoh, Anda diizinkan untuk 
 tidak membebankan biaya lisensi, royalti, atau biaya lainnya atas pelaksanaan 
-hak di lisensi ini, dan Anda tidak diizinkan memulai perkara pengadilan 
+hak di Lisensi ini, dan Anda tidak diizinkan memulai perkara pengadilan 
 (termasuk klaim silang dan tuntutan balasan dalam perkara hukum) dengan tuduhan 
 segala klaim paten telah dilanggar karena adanya pembuatan, penggunaan, 
 penjualan, penawaran penjualan, dan impor pada program ini atau pada segala 
@@ -484,24 +494,24 @@ bagiannya.
   11. Paten.
 
   "Kontributor" adalah pemegang hak cipta yang memiliki otorisasi sesuai 
-ketentuan lisensi ini, dari program ini atau karya yang dibuat berdasarkan 
-program ini. Karya yang dilisensi itu disebut "versi kontributor" milik 
+ketentuan di Lisensi ini, dari program ini atau karya yang dibuat berdasarkan 
+program ini. Karya yang kemudian dilisensikan disebut "versi kontributor" milik 
 kontributor. 
 
   "Hak paten dasar" dari kontributor adalah segala hak paten yang dimiliki atau 
 dikendalikan oleh kontributor, entah itu yang telah didapatkan atau yang 
-selanjutnya akan didapatkan, yang dianggap sebagai pelanggaran hak berdasarkan 
-tindakan tertentu sesuai ketentuan di lisensi ini, pembuatan, penggunaan, atau 
-penjualan dari versi kontributornya tetapi tidak termasuk klaim yang akan 
-dikenakan pelanggaran hak akibat dari modifikasi lebih lanjut dari versi 
-kontributor. Kendali sebagaimana dimaksud dalam definisi ini termasuk hak untuk 
-memberikan sublisensi paten dengan cara yang sesuai syarat dan ketentuan 
+selanjutnya akan didapatkan, yang dianggap sebagai pelanggaran hak apabila 
+terjadi tindakan tertentu, sesuai dengan Lisensi ini yaitu aksi pembuatan, 
+penggunaan, atau penjualan dari versi kontributornya namun tidak termasuk klaim 
+yang akan dikenakan pelanggaran hak akibat dari modifikasi lebih lanjut dari 
+versi kontributor. Kendali sebagaimana dimaksud dalam definisi ini termasuk hak 
+untuk memberikan sublisensi paten dengan cara yang sesuai syarat dan ketentuan 
 lisensi ini.
 
   Setiap kontributor memberikan lisensi yang bersifat non-eksklusif, mendunia, 
 dan bebas royalti kepada Anda sesuai hak paten dasar dalam pembuatan, 
-penggunaan, penjualan, penawaran penjualan, impor dan sebaliknya, penjalanan, 
-pemodifikasian dan penyebarluasan dari konten di versi kontributornya.
+penggunaan, penjualan, penawaran penjualan, impor dan selanjutnya penjalanan, 
+pemodifikasian, dan penyebarluasan dari konten di versi kontributornya.
   
   "Lisensi paten" pada tiga paragraf berikutnya adalah segala persetujuan atau 
 komitmen tegas, terlepas dari penamaannya, untuk tidak menegakkan hak paten 
@@ -510,71 +520,72 @@ tidak menuntut pelanggaran hak paten). "Pemberian hak" pada lisensi paten
 semacam itu kepada suatu pihak berarti membuat perjanjian atau komitmen 
 tertentu untuk tidak menegakkan paten kepada pihak itu.
 
-  Apabila Anda melakukan pemindahan kover karya dengan sadar mengandalkan pada 
-lisensi paten, dan Sumber Korespondensi karya tidak tersedia untuk disalin oleh 
-siapa pun, bebas biaya dengan seusai syarat dan ketentuan di lisensi ini, 
-melalui peladen jaringan yang tersedia ke publik atau melalui saran lain yang 
-mudah diakses, maka Anda berkewajiban antara (1) membuat Sumber Korespondensi 
-tersedia, atau (2) membuat diri Anda tercabut dari faedah lisensi paten di 
-karya ini, atau (3) mengatur perpanjangan lisensi paten ke penerima sehilir 
-dengan cara yang sesuai syarat dan ketentuan lisensi ini. "Dengan sadar 
+  Apabila Anda melakukan pemindahan karya yang dimaksud dengan sadar 
+mengandalkan pada lisensi paten, dan Sumber Korespondensi karya tidak tersedia 
+untuk disalin oleh siapa pun, bebas biaya dengan sesuai syarat dan ketentuan di 
+lisensi ini, melalui peladen jaringan yang tersedia ke publik atau melalui 
+saran lain yang mudah diakses, maka Anda berkewajiban antara (1) membuat Sumber 
+Korespondensi tersedia, atau (2) membuat diri Anda tercabut dari faedah lisensi 
+paten di karya ini, atau (3) mengatur perpanjangan lisensi paten ke penerima 
+sehilir dengan cara yang sesuai syarat dan ketentuan lisensi ini. "Dengan sadar 
 mengandalkan" berarti Anda benar-benar mengetahui bahwa, kecuali pada lisensi 
-paten, tindakan pemindahan kover karya di dalam suatu negara, atau penggunaan 
-kover karya oleh penerima dari Anda di dalam suatu negara, dengan alasan yang 
-valid akan melanggar satu atau lebih paten yang teridentifkasi di negera 
-tersebut.
+paten, tindakan pemindahan karya yang dimaksud di dalam suatu negara, atau 
+penggunaan karya yang dimaksud oleh penerima dari Anda di dalam suatu negara, 
+dengan alasan yang valid akan melanggar satu atau lebih paten yang 
+teridentifkasi di negera tersebut.
 
   Apabila mengikuti atau terkait dengan sebuah transaksi atau perjanjian, Anda 
 melakukan pemindahan, atau menyebarluaskan dengan mengadakan sarana pemindahan 
-sebuah kover karya, dan memberikan hak lisensi paten ke sejumlah pihak penerima 
-kover karya yang mengotoriasasi mereka untuk menggunakan, menyebarluaskan, 
-memodifikasi, atau melakukan pemindahan salinan tertentu dari kover karya, maka 
-hak lisensi paten yang Anda berikan secara otomatis diperluas kepada semua 
-penerima kover karya dan karya yang berdasarkan karya itu.
+sebuah karya yang dimaksud, dan memberikan hak lisensi paten ke sejumlah pihak 
+penerima karya yang dimaksud yang mengotoriasasi mereka untuk menggunakan, 
+menyebarluaskan, memodifikasi, atau melakukan pemindahan salinan tertentu dari 
+karya yang dimaksud, maka hak lisensi paten yang Anda berikan secara otomatis 
+diperluas kepada semua penerima karya yang dimaksud dan karya yang berdasarkan 
+karya itu.
 
   Lisensi paten bersifat "diskriminatif" apabila di dalam isinya tidak 
 mencakup, melarang pelaksanaan, atau dikondisikan pada non-pelaksanaan dari 
 satu atau lebih hak yang secara khusus ada di lisensi ini. Anda tidak dapat 
-melakukan pemindahan kover karya apabila Anda merupakan pihak yang membuat 
-persetujuan dengan pihak ketiga dalam bisnis penyebarluasan perangkat lunak, 
-dimana Anda membuat pembayaran ke pihak ketiga berdasarkan sejauh mana 
-aktivitas Anda dalam pemindahan karya, dan dimana pihak ketiga memberikan hak, 
-kepada segala pihak lainnya sebagai penerima kover karya dari Anda, lisensi 
-paten diskriminatif yang (a) terkait dengan salinan kover karya yang merupakan 
-hasil pemindahan dari Anda (atau salinan dari salinannya), atau (b) terutama 
-dan terkait dengan produk atau kompilasi tertentu yang memuat kover karya, 
-kecuali Anda telah membuat kesepakatan, atau lisensi paten itu diberikan 
-sebelum tanggal 28 Maret 2007.
+melakukan pemindahan karya yang dimaksud apabila Anda merupakan pihak yang 
+membuat persetujuan dengan pihak ketiga dalam bisnis penyebarluasan perangkat 
+lunak, di mana Anda membuat pembayaran ke pihak ketiga berdasarkan sejauh mana 
+aktivitas Anda dalam pemindahan karya, dan di mana pihak ketiga memberikan hak, 
+kepada segala pihak lainnya sebagai penerima karya yang dimaksud dari Anda, 
+lisensi paten diskriminatif yang (a) terkait dengan salinan karya yang dimaksud 
+yang merupakan hasil pemindahan dari Anda (atau salinan dari salinannya), atau 
+(b) terutama dan terkait dengan produk atau kompilasi tertentu yang memuat 
+karya yang dimaksud, kecuali Anda telah membuat kesepakatan, atau lisensi paten 
+itu diberikan sebelum tanggal 28 Maret 2007.
 
   Tidak satu pun hal di dalam lisensi ini yang dapat ditafsirkan sebagai 
 pengecualian atau pembatasan segala lisensi tersirat atau pembelaan lainnya 
 pada pelanggaran hak yang mungkin tersedia kepada Anda sesuai undang-undang 
 paten yang berlaku.
 
-  12. Pantang Menyerah pada Kebebasan Pengguna  
+  12. Pantang Menyerah pada Kebebasan Pengguna.  
 
   Apabila syarat dan ketentuan yang dikenakan pada Anda (entah itu berasal dari 
-putusan pengadilan, perjanjian/kesepakatan, atau lainnya) yang bertentangan 
-dengan syarat dan ketentuan lisensi ini, hal itu tidak mengecualikan Anda dari 
-syarat dan ketentuan di lisensi ini. Apabila Anda tidak dapat melakukan 
-pemindahan karya untuk memenuhi hak dan kewajiban Anda secara serentak 
-sebagaimana tertera di lisensi ini dan hak dan kewajiban terkait lainnya, maka 
-konsekuensinya adalah Anda tidak diizinkan melakukan pemindahan sama sekali. 
-Misalnya jika Anda menyetujui syarat dan ketentuan yang mewajibkan Anda 
-menerima royalti sebagai akibat dari pemindahan lebih lanjut dari penerima 
-pemindahan Anda terhadap program ini, satu-satunya cara agar Anda memenuhi 
-semua hak dan ketentuan di lisensi ini adalah menjauhkan diri dari tindakan 
-pemindahan program ini.
+putusan pengadilan, perjanjian/kesepakatan, atau lainnya) bertentangan dengan 
+syarat dan ketentuan lisensi ini, hal itu tidak mengecualikan Anda dari syarat 
+dan ketentuan di Lisensi ini. Apabila Anda tidak dapat melakukan pemindahan 
+karya untuk memenuhi hak dan kewajiban Anda secara serentak sebagaimana tertera 
+di Lisensi ini dan hak dan kewajiban terkait lainnya, maka konsekuensinya 
+adalah Anda tidak diizinkan melakukan pemindahan sama sekali. Misalnya jika 
+Anda menyetujui syarat dan ketentuan yang mewajibkan Anda menerima royalti 
+sebagai akibat dari pemindahan lebih lanjut dari penerima pemindahan Anda 
+terhadap program ini, satu-satunya cara agar Anda memenuhi semua hak dan 
+ketentuan di lisensi ini adalah menjauhkan diri dari tindakan pemindahan 
+program ini.
 
   13. Penggunaan dengan GNU Affero General Public License.
 
   Terlepas dari segala hak dan ketentuan di lisensi ini, Anda diizinkan untuk 
-menautkan atau mengombinasikan kover karya dengan karya yang dilisensi 
+menautkan atau mengombinasikan karya yang dimaksud dengan karya yang dilisensi 
 menggunakan GNU Affero General Public License versi 3 ke satu karya kombinasi, 
 dan melakukan pemindahan hasil karya itu. Syarat dan ketentuan dari lisensi ini 
-akan tetap berlaku pada kover karya namun persyaratan khusus dalam GNU General 
-Public License di Bab 13 mengenai interaksi melalui jaringan tetap berlaku pada 
-kombinasi sebagaimana mestinya.
+akan tetap berlaku pada karya yang dimaksud namun persyaratan khusus dalam GNU 
+General Public License di Bab 13 mengenai interaksi melalui jaringan tetap 
+berlaku pada kombinasi sebagaimana mestinya.
 
   14. Versi Revisi dari Lisensi Ini.
 
@@ -591,12 +602,12 @@ dipublikasikan oleh Free Software Foundation. Apabila program ini tidak
 menspesifikasikan nomor versi dari GNU General Public License, Anda bebas 
 memilih versi berapa pun yang pernah diterbitkan oleh Free Software Foundation. 
   
-  Apabila program ini menspesifikasikan sebuah wali yang dapat menentukan versi 
-baru mana dari GNU General Public License yang dapat diterapkan, pernyataan 
-terhadap versi di wali tersebut yang bersifat publik secara permanen 
-mengesahkan Anda menggunakan versi itu pada program ini.
+  Apabila program ini menspesifikasikan sebuah proksi yang dapat menentukan 
+versi baru mana dari GNU General Public License yang dapat diterapkan, 
+pernyataan publik tentang suatu versi yang diterima di proksi tersebut secara 
+permanen mengesahkan Anda menggunakan versi itu pada program ini.
 
-  Versi lisensi selanjutnya dapat memberikan syarat dan ketentuan yang bersifat 
+  Lisensi versi selanjutnya dapat memberikan syarat dan ketentuan yang bersifat 
 tambahan atau berbeda kepada Anda. Meskipun demikian, tidak ada kewajiban 
 tambahan yang dikenakan oleh segala pencipta atau pemegang hak cipta sebagai 
 akibat dari pilihan Anda untuk mengikuti versi selanjutnya. 
@@ -607,8 +618,8 @@ akibat dari pilihan Anda untuk mengikuti versi selanjutnya.
 UNDANG-UNDANG YANG BERLAKU. KECUALI DINYATAKAN LAIN SECARA TERTULIS, PEMEGANG 
 HAK CIPTA DAN/ATAU PIHAK LAINNYA MEMBERIKAN PROGRAM "SEBAGAIMANA ADANYA" TANPA 
 JAMINAN DALAM BENTUK APA PUN, BAIK ITU SECARA LANGSUNG MAUPUN TERSIRAT, 
-TERMASUK NAMUN TIDAK TERBATAS PADA, JAMINAN DAPAT DIPERDAGANGKAN DAN KESESUAIAN 
-UNTUK TUJUAN TERTENTU. SEGALA RESIKO MENGENAI KUALITAS DAN KINERJA PROGRAM 
+TERMASUK NAMUN TIDAK TERBATAS PADA JAMINAN DAPAT DIPERDAGANGKAN DAN KESESUAIAN 
+UNTUK TUJUAN TERTENTU. SEGALA RISIKO MENGENAI KUALITAS DAN KINERJA PROGRAM 
 SEPENUHNYA DI TANGAN ANDA. JIKA TERBUKTI ADA KERUSAKAN PADA PROGRAM INI, ANDA 
 YANG MENANGGUNG BIAYA DARI SEGALA LAYANAN, PERBAIKAN, DAN KOREKSI.
 
@@ -628,11 +639,11 @@ DIBERITAHUKAN MENGENAI ADANYA KEMUNGKINAN KERUGIAN SEMACAM ITU.
   17. Interpretasi Bab 15 dan 16.
 
   Apabila penafian jaminan dan batasan tanggung jawab yang telah disebutkan 
-berdasarkan syarat dan ketentuannya, tidak dapat diterapkan pada hukum 
-setempat, tinjauan pengadilan harus menerapkan hukum setempat yang paling 
-mendekati pengabaian mutlak tanggung jawab sipil terkait program ini, kecuali 
-jaminan atau tanggung jawab diikutsertakan dalam salinan program ini dengan 
-membebankan biaya.
+berdasarkan syarat dan ketentuannya tidak dapat diterapkan pada hukum setempat, 
+tinjauan pengadilan harus menerapkan hukum setempat yang paling mendekati 
+pengabaian mutlak tanggung jawab sipil terkait program ini, kecuali jaminan 
+atau tanggung jawab diikutsertakan dalam salinan program ini dengan membebankan 
+biaya.
 
                      AKHIR SYARAT DAN KETENTUAN
                      
@@ -640,7 +651,7 @@ membebankan biaya.
 
   Apabila Anda mengembangkan program baru dan Anda ingin program agar dapat 
 digunakan oleh publik dengan kemungkinan terbaik, cara terbaik untuk 
-mewujudkannya adalah menjadikan program sebagai program bebas dimana semua 
+mewujudkannya adalah menjadikan program sebagai program bebas di mana semua 
 orang dapat mendistribusikan ulang dan mengubahnya sesuai syarat dan ketentuan 
 disini.
 
@@ -679,7 +690,7 @@ berupa pemberitahuan singkat seperti berikut dalam mode interaktifnya:
     ulang sesuai syarat dan ketentuan; ketik 'show c' untuk keterangan lebih 
     lanjut.
 
-Perintah hipotetik 'show w' dan 'show c' seharusnya menampilkan bagian dari GNU 
+Perintah hipotetis 'show w' dan 'show c' seharusnya menampilkan bagian dari GNU 
 General Public License yang sesuai. Tentu saja perintah program Anda boleh 
 berbeda; pada antarmuka GUI, Anda menggunakan "kotak tentang".
 
