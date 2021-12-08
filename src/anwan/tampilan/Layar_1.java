@@ -1,6 +1,11 @@
 package anwan.tampilan;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -16,7 +21,9 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 /**
@@ -71,15 +78,38 @@ public class Layar_1 implements Initializable {
 		System.exit(0);
 	}
 	
-	public void klikLogo(ActionEvent ae) {
+	public void klikLogo(MouseEvent me) {
 		// TODO: Memuat gambar setelah logo diklik
-		logo.setImage(null);
 	}
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		Proses.pesan("Metode Initialize di Layar 1"); //TODO: hapus ini
 		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
+		
+		Image logoAnwan = null;
+		
+		String namaLogo = "anwanLogo.png";
+		String lokasiLogo = System.getProperty("user.dir")+"/src/anwan/resource/".replace("/", File.separator)+namaLogo;
+		File berkasLogo = new File(lokasiLogo);
+		
+		URL urlLogo = null;
+		try {
+			urlLogo = berkasLogo.toURI().toURL();
+		} catch (MalformedURLException galat) {
+			Proses.pesan("Galat di inisialisasi URL:");
+			galat.printStackTrace();
+		}
+		
+		try (InputStream streamLogo = urlLogo.openStream()){
+			logoAnwan = new Image(streamLogo);
+		} catch (IOException galat) {
+			Proses.pesan("Galat dalam pemrosesan berkas:");
+			galat.printStackTrace();
+		}
+		
+		logo.setImage(logoAnwan);
+		
 		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 }
