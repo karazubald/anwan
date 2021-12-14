@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 import com.jfoenix.controls.JFXButton;
 
 import anwan.PenataLayar;
+import anwan.proses.DataBase;
 import anwan.proses.Proses;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -67,7 +68,7 @@ public class Layar_1 implements Initializable {
 	}
 
 	public void muatData(ActionEvent ae) {
-		// TODO: Memuat data dari database MySQL
+		DataBase.muatData();
 	}
 	
 	public void tutorial(ActionEvent ae) {

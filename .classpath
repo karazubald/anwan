@@ -18,7 +18,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="/home/karazubald/Documents/devs/mysql-connector-java-8.0.27/mysql-connector-java-8.0.27.jar">
 		<attributes>
-			<attribute name="module" value="true"/>
+			<attribute name="javadoc_location" value="https://dev.mysql.com/doc/dev/connector-j/8.0/"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
