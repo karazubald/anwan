@@ -16,14 +16,14 @@
       </Label>
       <Pane layoutX="22.0" layoutY="55.0" prefHeight="530.0" prefWidth="316.0" style="-fx-background-color: white;" styleClass="pane">
          <children>
-            <JFXTextArea fx:id="ta" editable="false" layoutX="10.0" layoutY="13.0" prefHeight="504.0" prefWidth="297.0" text="Berikut cuplikan syarat dan ketentuan yang ditekankan oleh pembuat aplikasi (developper):&#10;&#10;APLIKASI INI DIBUAT TANPA ADANYA JAMINAN FINANSIAL DAN JAMINAN KUALITAS. RISIKO DAN/ATAU KERUSAKAN AKIBAT DARI APLIKASI ATAU KELALAIAN/KESALAHAN PENGGUNA SEPENUHNYA MERUPAKAN TANGGUNG JAWAB PENGGUNA.&#10;&#10;Aplikasi ini dapat disebarluaskan dengan atau tanpa biaya dengan syarat mengikutsertakan semua berkas dan kode aplikasi.&#10;&#10;Modifikasi aplikasi (termasuk aset di dalamnya) diperbolehkan dengan syarat: (1) menyatakan apa yang dimodifikasi ke publik, (2) menyatakan apa yang dimodifikasi ke pembuat aplikasi, dan (3) tidak melanggar ketentuan hak cipta.&#10;&#10;PENGGUNA DENGAN INI MENYATAKAN BAHWA BERSEDIA MENGIKUTI SYARAT DAN KETENTUAN YANG BERADA DI LISENSI APLIKASI BAIK YANG DITAMPILKAN MAUPUN YANG TIDAK DITAMPILKAN DI LAYAR INI*.&#10;&#10;*Keterangan lebih lanjut mengenai syarat dan ketentuan tercantum di LISENSI_ID.txt" wrapText="true">
+            <JFXTextArea fx:id="ta" editable="false" layoutX="10.0" layoutY="13.0" prefHeight="504.0" prefWidth="297.0" styleClass="sk" text="Berikut cuplikan syarat dan ketentuan yang ditekankan oleh pembuat aplikasi (developper):&#10;&#10;APLIKASI INI DIBUAT TANPA ADANYA JAMINAN FINANSIAL DAN JAMINAN KUALITAS. RISIKO DAN/ATAU KERUSAKAN AKIBAT DARI APLIKASI ATAU KELALAIAN/KESALAHAN PENGGUNA SEPENUHNYA MERUPAKAN TANGGUNG JAWAB PENGGUNA.&#10;&#10;Aplikasi ini dapat disebarluaskan dengan atau tanpa biaya dengan syarat mengikutsertakan semua berkas dan kode aplikasi.&#10;&#10;Modifikasi aplikasi (termasuk aset di dalamnya) diperbolehkan dengan syarat: (1) menyatakan apa yang dimodifikasi ke publik, (2) menyatakan apa yang dimodifikasi ke pembuat aplikasi, dan (3) tidak melanggar ketentuan hak cipta.&#10;&#10;PENGGUNA DENGAN INI MENYATAKAN BAHWA BERSEDIA MENGIKUTI SYARAT DAN KETENTUAN YANG BERADA DI LISENSI APLIKASI BAIK YANG DITAMPILKAN MAUPUN YANG TIDAK DITAMPILKAN DI LAYAR INI*.&#10;&#10;*Keterangan lebih lanjut mengenai syarat dan ketentuan tercantum di LISENSI_ID.txt" wrapText="true">
                <font>
                   <Font name="Fira Sans Regular" size="13.0" />
                </font>
             </JFXTextArea>
          </children>
       </Pane>
-      <JFXButton layoutX="286.0" layoutY="588.0" onAction="#setuju" styleClass="tombol" text="Setuju" textAlignment="CENTER">
+      <JFXButton layoutX="286.0" layoutY="588.0" onAction="#setuju" styleClass="tombol" stylesheets="@Layar_0.css" text="Setuju" textAlignment="CENTER">
          <font>
             <Font name="Fira Sans Regular" size="16.0" />
          </font>

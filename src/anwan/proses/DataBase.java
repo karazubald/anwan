@@ -18,7 +18,7 @@ import java.sql.Statement;
  *
  */
 public class DataBase {
-	static final String DEFAULT_USER = "guest";
+	static final String DEFAULT_USER = "anwan";
 	static final String DEFAULT_PASSWORD = "12345";
 	static final String LOKASI =  "jdbc:mysql://localhost/";
 	static String query = null;
@@ -78,8 +78,12 @@ public class DataBase {
 	/**
 	 * Memuat database yang sudah pernah dibuat.
 	 */
-	public static void dataLama() {
-		if(namaBerkasDB == null) return;
+	public static void muatData() {
+		if(namaBerkasDB == null) {
+			namaBerkasDB = "anwandb";
+			dataBaru(namaBerkasDB);
+			return;
+		}
 		try (Connection koneksiDataBase = DriverManager.getConnection(LOKASI + namaBerkasDB, DEFAULT_USER, DEFAULT_PASSWORD);
 				Statement perintah = koneksiDataBase.createStatement())
 		{	

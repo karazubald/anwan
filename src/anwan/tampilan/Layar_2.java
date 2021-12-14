@@ -13,6 +13,7 @@ import com.jfoenix.transitions.hamburger.HamburgerNextArrowBasicTransition;
 import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 
 import anwan.PenataLayar;
+import anwan.proses.DataBase;
 import anwan.proses.DataTextBox;
 import anwan.proses.Proses;
 import javafx.event.ActionEvent;
@@ -251,9 +252,10 @@ public class Layar_2 implements Initializable {
 		animasiHapus(IkonHapusSemua, IkonHapusTema, IkonHapusKoding, IkonHapusIdeUtama, IkonHapusJawaban, IkonHapusPertanyaan, IkonHapusImpresi);	
 		animasiDataSelanjutnya();
 		animasiDataSebelumnya();
-		// TODO: Menyiapkan data kosong
 		
 		// TODO: Inisialisasi data
+		DataBase.muatData();
+		
 		UrutanData.setText("1");
 		
 		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
