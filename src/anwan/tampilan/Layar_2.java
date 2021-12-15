@@ -304,7 +304,7 @@ public class Layar_2 implements Initializable {
 	/**
 	 * Mempersiapkan animasi hapus dan mengaplikasikannya ke KelompokIkon.
 	 * @param KelompokIkon satu atau lebih objek JFXHamburger
-	 * @see JFXHamburger
+	 * @see <a href="https://javadoc.io/doc/com.jfoenix/jfoenix/latest/com/jfoenix/controls/JFXHamburger.html">JFXHamburger</a>
 	 */
 	private void animasiHapus(JFXHamburger... KelompokIkon) {
 		for(JFXHamburger ikon : KelompokIkon) {
@@ -357,7 +357,7 @@ public class Layar_2 implements Initializable {
 	/**
 	 * Mempersiapkan animasi panah lanjut untuk mengindikasikan perpindahan data.
 	 * Metode ini hanya dapat diaplikasikan pada JFXHamburger.
-	 * @see jfoenix.controls.JFXHamburger
+	 * @see <a href="https://javadoc.io/doc/com.jfoenix/jfoenix/latest/com/jfoenix/controls/JFXHamburger.html">JFXHamburger</a>
 	 */
 	private void animasiDataSelanjutnya() {	
 		HamburgerNextArrowBasicTransition animasi = new HamburgerNextArrowBasicTransition(IkonLanjut);
@@ -385,7 +385,7 @@ public class Layar_2 implements Initializable {
 	/**
 	 * Mempersiapkan animasi panah kembali untuk mengindikasikan perpindahan data.
 	 * Metode ini hanya dapat diaplikasikan pada JFXHamburger.
-	 * @see JFXHamburger
+	 * @see <a href="https://javadoc.io/doc/com.jfoenix/jfoenix/latest/com/jfoenix/controls/JFXHamburger.html">JFXHamburger</a>
 	 */
 	private void animasiDataSebelumnya() {
 		HamburgerBackArrowBasicTransition animasi = new HamburgerBackArrowBasicTransition(IkonKembali);

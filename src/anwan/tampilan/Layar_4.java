@@ -13,7 +13,13 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-
+/**
+ * <h2>Layar 4</h2>
+ * Layar yang menampilkan data wawancara yang sudah dikelompokkan dalam database.
+ * 
+ * @author karazubald
+ *
+ */
 public class Layar_4 implements Initializable {
 	
 	@FXML

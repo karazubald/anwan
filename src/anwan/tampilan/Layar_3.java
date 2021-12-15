@@ -91,7 +91,7 @@ public class Layar_3 implements Initializable {
 	
 	/**
 	 * Mempersiapkan animasi panah kembali ke IkonKembali (objek JFXHamburger).
-	 * @see JFXHamburger
+	 * @see <a href="https://javadoc.io/doc/com.jfoenix/jfoenix/latest/com/jfoenix/controls/JFXHamburger.html">JFXHamburger</a>
 	 */
 	private void animasiKembali() {
 		HamburgerBackArrowBasicTransition animasi = new HamburgerBackArrowBasicTransition(IkonKembali);
@@ -118,7 +118,7 @@ public class Layar_3 implements Initializable {
 	
 	/**
 	 * Mempersiapkan animasi hapus dan mengaplikasikannya ke IkonHapus (objek JFXHamburger).
-	 * @see JFXHamburger
+	 * @see <a href="https://javadoc.io/doc/com.jfoenix/jfoenix/latest/com/jfoenix/controls/JFXHamburger.html">JFXHamburger</a>
 	 */
 	private void animasiHapus() {
 		HamburgerBasicCloseTransition animasi = new HamburgerBasicCloseTransition(IkonHapus);
