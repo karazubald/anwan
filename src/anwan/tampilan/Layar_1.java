@@ -67,18 +67,34 @@ public class Layar_1 implements Initializable {
 		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 
+	/**
+	 * Memuat data dari MySQL.
+	 * @param ae
+	 */
 	public void muatData(ActionEvent ae) {
 		DataBase.muatData();
 	}
 	
+	/**
+	 * Mengaktifkan layar tutorial.
+	 * @param ae
+	 */
 	public void tutorial(ActionEvent ae) {
 		// TODO: Mengarahkan ke tutorial (gambar / video)
 	}
 	
+	/**
+	 * Segera menghentikan aplikasi ketika diaktifkan.
+	 * @param ae
+	 */
 	public void keluarAplikasi(ActionEvent ae) {
 		System.exit(0);
 	}
 	
+	/**
+	 * Metode untuk aksi setelah mengklik logo.
+	 * @param me
+	 */
 	public void klikLogo(MouseEvent me) {
 		// TODO: Memuat gambar setelah logo diklik
 	}

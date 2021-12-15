@@ -85,6 +85,10 @@ public class Layar_2 implements Initializable {
 	private Stage aplikasi;
 	private Scene tampilan;
 	
+	/**
+	 * Menghapus tulisan di semua kotak tulisan.
+	 * @param klik
+	 */
 	public void hapusSemua(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
 		
@@ -98,6 +102,10 @@ public class Layar_2 implements Initializable {
 		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 	}
 	
+	/**
+	 * Mengalihkan ke layar input data (Layar 3).
+	 * @param klik
+	 */
 	private void aktifkanInputData(MouseEvent klik) {
 		Proses.hitungWaktu(true, klik.getClass()); //TODO: hapus ini
 		
@@ -112,6 +120,10 @@ public class Layar_2 implements Initializable {
 		Proses.hitungWaktu(false, klik.getClass()); //TODO: hapus ini
 	}
 	
+	/**
+	 * Mengaktifkan data impresi dan mengalihkan ke layar input impresi.
+	 * @param klik
+	 */
 	public void inputImpresi(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
 		
@@ -130,6 +142,10 @@ public class Layar_2 implements Initializable {
 		aktifkanInputData(klik);
 	}
 	
+	/**
+	 * Mengaktifkan data pertanyaan dan mengalihkan ke layar input pertanyaan.
+	 * @param klik
+	 */
 	public void inputPertanyaan(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
 		
@@ -148,6 +164,10 @@ public class Layar_2 implements Initializable {
 		aktifkanInputData(klik);
 	}
 	
+	/**
+	 * Mengaktifkan data jawaban dan mengalihkan ke layar input jawaban.
+	 * @param klik
+	 */
 	public void inputJawaban(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
 		
@@ -166,6 +186,10 @@ public class Layar_2 implements Initializable {
 		aktifkanInputData(klik);
 	}
 	
+	/**
+	 * Mengaktifkan data ide utama dan mengalihkan ke layar input ide utama.
+	 * @param klik
+	 */
 	public void inputIdeUtama(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
 		
@@ -184,6 +208,10 @@ public class Layar_2 implements Initializable {
 		aktifkanInputData(klik);
 	}
 	
+	/**
+	 * Mengaktifkan data koding dan mengalihkan ke layar input koding.
+	 * @param klik
+	 */
 	public void inputKoding(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
 		
@@ -202,6 +230,10 @@ public class Layar_2 implements Initializable {
 		aktifkanInputData(klik);
 	}
 	
+	/**
+	 * Mengaktifkan data tema dan mengalihkan ke layar input tema.
+	 * @param klik
+	 */
 	public void inputTema(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
 		
@@ -220,6 +252,10 @@ public class Layar_2 implements Initializable {
 		aktifkanInputData(klik);
 	}
 	
+	/**
+	 * Mengalihkan ke layar analisis data (Layar 4).
+	 * @param klik
+	 */
 	public void lanjutAnalisis(ActionEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
 		
@@ -232,6 +268,10 @@ public class Layar_2 implements Initializable {
 		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 	}
 	
+	/**
+	 * Mengalihkan ke layar menu utama (Layar 1).
+	 * @param klik
+	 */
 	public void menuUtama(ActionEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
 		
@@ -261,6 +301,11 @@ public class Layar_2 implements Initializable {
 		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 	
+	/**
+	 * Mempersiapkan animasi hapus dan mengaplikasikannya ke KelompokIkon.
+	 * @param KelompokIkon satu atau lebih objek JFXHamburger
+	 * @see JFXHamburger
+	 */
 	private void animasiHapus(JFXHamburger... KelompokIkon) {
 		for(JFXHamburger ikon : KelompokIkon) {
 			if(ikon.equals(KelompokIkon[0])) {
@@ -309,6 +354,11 @@ public class Layar_2 implements Initializable {
 		}
 	}
 	
+	/**
+	 * Mempersiapkan animasi panah lanjut untuk mengindikasikan perpindahan data.
+	 * Metode ini hanya dapat diaplikasikan pada JFXHamburger.
+	 * @see jfoenix.controls.JFXHamburger
+	 */
 	private void animasiDataSelanjutnya() {	
 		HamburgerNextArrowBasicTransition animasi = new HamburgerNextArrowBasicTransition(IkonLanjut);
 		animasi.setRate(-1);
@@ -332,6 +382,11 @@ public class Layar_2 implements Initializable {
 		});
 	}
 	
+	/**
+	 * Mempersiapkan animasi panah kembali untuk mengindikasikan perpindahan data.
+	 * Metode ini hanya dapat diaplikasikan pada JFXHamburger.
+	 * @see JFXHamburger
+	 */
 	private void animasiDataSebelumnya() {
 		HamburgerBackArrowBasicTransition animasi = new HamburgerBackArrowBasicTransition(IkonKembali);
 		animasi.setRate(1);

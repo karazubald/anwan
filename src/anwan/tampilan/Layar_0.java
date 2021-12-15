@@ -44,7 +44,11 @@ public class Layar_0 implements Initializable {
     	Proses.pesan("Metode Initialize di Layar 0"); //TODO: hapus ini
     	Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
-	
+
+    /**
+     * Metode untuk beralih ke layar menu utama (Layar 1).
+     * @param klik
+     */
 	public void setuju(ActionEvent klik) {
 		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
 		
@@ -57,7 +61,11 @@ public class Layar_0 implements Initializable {
 		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 	
-	public void lisensi(MouseEvent me) {
+	/**
+	 * Metode untuk menapilkan lisensi dalam kotak tulisan.
+	 * @param klik
+	 */
+	public void lisensi(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass()); //TODO hapus ini
 		
 		try {

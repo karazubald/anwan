@@ -43,7 +43,11 @@ public class Layar_3 implements Initializable {
 	
 	private Stage aplikasi;
 	private Scene tampilan;
-	
+
+	/**
+	 * Menghapus tulisan di kotak tulisan.
+	 * @param klik
+	 */
 	public void hapus(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
 		
@@ -52,6 +56,10 @@ public class Layar_3 implements Initializable {
 		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 	
+	/**
+	 * Kembali ke layar input awal (Layar 2).
+	 * @param klik
+	 */
 	public void kembali(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
 		// TODO: Simpan otomatis sebelum kembali ke layar 2
@@ -81,6 +89,10 @@ public class Layar_3 implements Initializable {
 		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 	}
 	
+	/**
+	 * Mempersiapkan animasi panah kembali ke IkonKembali (objek JFXHamburger).
+	 * @see JFXHamburger
+	 */
 	private void animasiKembali() {
 		HamburgerBackArrowBasicTransition animasi = new HamburgerBackArrowBasicTransition(IkonKembali);
 		animasi.setRate(1);
@@ -104,6 +116,10 @@ public class Layar_3 implements Initializable {
 		});
 	}
 	
+	/**
+	 * Mempersiapkan animasi hapus dan mengaplikasikannya ke IkonHapus (objek JFXHamburger).
+	 * @see JFXHamburger
+	 */
 	private void animasiHapus() {
 		HamburgerBasicCloseTransition animasi = new HamburgerBasicCloseTransition(IkonHapus);
 		animasi.setRate(1);

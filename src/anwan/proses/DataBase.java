@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 import com.mysql.cj.jdbc.MysqlDataSource;
+
 /**
  * <h2>Kelas DataBase</h2>
  * Kelas ini menyajikan fungsi membuat (CREATE), membaca (READ), mengubah (UPDATE), dan menghapus (DELETE) 
@@ -198,6 +199,11 @@ public class DataBase {
 		return kalimat;
 	}
 	
+	/**
+	 * Metode untuk mengekstrak koding sesuai dengan tema.
+	 * @param tema
+	 * @return Kumpulan koding yang ada di suatu tema
+	 */
 	public static String sebutKoding(String tema) {
 		String kalimat = null;
 		try {
