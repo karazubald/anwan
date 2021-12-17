@@ -7,7 +7,7 @@ Anwan ditujukan untuk membantu dalam menganalisis transkrip wawancara dalam Psik
 
 | Waktu Mulai Project | Bahasa Pemrograman | Dependensi | Target Platform | Lisensi |
 | -------------: | -------------: | ----------: | -------------: |  -------------: |
-| Februari 2019 | Java, MySQL | OpenJDK 11+, OpenJFX 8+, JFoenix 9, MySQL 8.0+ | Desktop | [GPLv3.0](https://github.com/karazubald/anwan/blob/main/LICENSE-ID)|
+| Februari 2019 | Java, SQLite | OpenJDK 11+, OpenJFX 8+, JFoenix 9, SQLite 3.36.0.3 | Desktop | [GPLv3.0](https://github.com/karazubald/anwan/blob/main/LICENSE-ID)|
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/karazubald/anwan?color=%23eedc82&style=for-the-badge)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/karazubald/anwan?color=%23efdecd&style=for-the-badge)
@@ -16,7 +16,7 @@ Anwan ditujukan untuk membantu dalam menganalisis transkrip wawancara dalam Psik
 ## 🌀 Kontribusi
 ### Kebutuhan
 Proyek ini masih dalam tahap awal pengembangan sehingga membutuhkan relawan(<i>volunteer</i>):
-- 🧑‍🔬 Peneliti atau akademisi dengan latar belakang ilmu psikologi atau ilmu sosial.
+- 🧑‍🔬 Peneliti atau akademisi yang memahami beragam penelitian kualitatif.
 - 📑 Penerjemah bahasa Inggris ke bahasa Indonesia untuk evaluasi penerjemahan lisensi (LICENSE-ID.txt).
 - 🧑‍🎨 JavaFX UI Designer yang akrab/mahir dengan SceneBuilder. 🎨
 - 🧑‍💻 Penguji aplikasi(<i>Tester</i>).

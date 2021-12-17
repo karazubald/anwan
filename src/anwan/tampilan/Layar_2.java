@@ -13,7 +13,7 @@ import com.jfoenix.transitions.hamburger.HamburgerNextArrowBasicTransition;
 import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 
 import anwan.PenataLayar;
-import anwan.proses.DataBase;
+import anwan.data.DataBase;
 import anwan.proses.DataTextBox;
 import anwan.proses.Proses;
 import javafx.event.ActionEvent;
@@ -294,7 +294,7 @@ public class Layar_2 implements Initializable {
 		animasiDataSebelumnya();
 		
 		// TODO: Inisialisasi data
-		DataBase.muatData();
+		// DataBase.muatData();
 		
 		UrutanData.setText("1");
 		

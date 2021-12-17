@@ -16,9 +16,8 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/home/karazubald/Documents/devs/mysql-connector-java-8.0.27/mysql-connector-java-8.0.27.jar">
+	<classpathentry kind="lib" path="/home/karazubald/Documents/devs/sqlite/sqlite-jdbc-3.36.0.3.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="https://dev.mysql.com/doc/connector-j/8.0/en/"/>
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>

@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 import com.jfoenix.controls.JFXButton;
 
 import anwan.PenataLayar;
-import anwan.proses.DataBase;
+import anwan.data.DataBase;
 import anwan.proses.Proses;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
