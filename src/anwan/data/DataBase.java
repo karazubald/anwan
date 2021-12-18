@@ -20,21 +20,96 @@ import anwan.proses.Terbilang;
 /**
  * <h2>Kelas DataBase</h2>
  * Kelas ini menyajikan fungsi membuat (CREATE), membaca (READ), mengubah (UPDATE), dan menghapus (DELETE) 
- * data di database. Database yang digunakan dalam kelas ini adalah MySQL versi 8 sehingga operasi dalam kelas ini
- * hanya dapat bekerja apabila pengguna sudah menginstal MySQL versi 8 ke atas.
+ * data di database. Database yang digunakan dalam kelas ini adalah SQLite.
+ * <p>
+ * Berikut format dari tabel yang dibuat menggunakan metode dataBaru().
+ * <p>
+ * <TABLE>
+ *  <TR>
+ *  <TD>Baris</TD>
+ *  <TD>UrutanData</TD>
+ * <TD>Tema</TD>
+ * <TD>Koding</TD>
+ * <TD>Ide_Utama</TD>
+ * <TD>Jawaban</TD>
+ * <TD>Impresi</TD>
+ * </TR>
+ * <TR>
+ * <TD>Tipe Data (Ketentuan dalam SQL)</TD>
+ * <TD>Integer (Primary Key)</TD>
+ * <TD>String (VARCHAR[255])</TD>
+ * <TD>String (VARCHAR[255])</TD>
+ * <TD>String (VARCHAR[8000])</TD>
+ * <TD>String (VARCHAR[8000])</TD>
+ * <TD>String (VARCHAR[8000])</TD>
+ * </TR>
+ * </TABLE>
  * 
  * @author karazubald
- *
  */
 public class DataBase {
 	private static SQLiteDataSource sumberData = null;
 	private static Connection koneksiDataBase = null;
+	private static Statement eksekusi = null;
 	private static PreparedStatement perintah = null;
 	private static String query = null;
 	private static ResultSet hasilQuery = null;
-	private static String namaBerkasDB = null;
 	private static final String DEFAULT_DATABASE = "ANWAN_DATABASE";
-	private static final String DIREKTORI_DATA = System.getProperty("user.dir")+"/src/anwan/data/".replace("/", File.separator);
+	private static final String DIREKTORI_DATA = "src/anwan/data/".replace("/", File.separator);
+	/**
+	 * Membuat database baru dengan nama ANWAN_DATABASE.
+	 * Database baru secara otomatis membuat tabel dengan nama data_mentah.
+	 */
+	public static void dataBaru() {
+		try {
+			
+			bukaKoneksiDB(true);
+			
+			eksekusi = koneksiDataBase.createStatement();
+			
+			query = "DROP TABLE IF EXISTS data_mentah";
+			
+			eksekusi.execute(query);
+			
+			query = "CREATE TABLE IF NOT EXISTS data_mentah "
+					+ "(UrutanData INT NOT NULL,"
+					+ "Tema VARCHAR(255),"
+					+ "Koding VARCHAR(255),"
+					+ "Ide_Utama MEDIUMTEXT,"
+					+ "Jawaban MEDIUMTEXT,"
+					+ "Pertanyaan MEDIUMTEXT,"
+					+ "Impresi MEDIUMTEXT,"
+					+ "PRIMARY KEY (UrutanData))";
+			
+			eksekusi.execute(query);
+		
+			bukaKoneksiDB(false);
+			
+		} catch (SQLException galat) {
+			System.out.println("Galat dalam Operasi Database: "); //TODO: Hapus ini
+			galat.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Memuat database yang sudah pernah dibuat. Apabila data belum ada maka memanggil metode dataBaru.
+	 * @see #dataBaru()
+	 */
+	public static void muatData() {
+		try {
+			bukaKoneksiDB(true);
+			
+			query = "SELECT * FROM data_mentah";
+			
+			perintah = koneksiDataBase.prepareStatement(query);
+			perintah.execute(query);
+			
+			bukaKoneksiDB(false);
+		} catch (SQLException galat) {
+			System.out.println("Galat dalam Operasi Database: "); //TODO: Hapus ini
+			galat.printStackTrace();
+		}
+	}
 	
 	/**
 	 * Metode untuk membuka koneksi ke MySQL. Metode ini harus menjadi metode pertama di setiap metode kelas ini.
@@ -70,6 +145,7 @@ public class DataBase {
 		if(bukaKoneksi == false) {
 			try {
 				if(hasilQuery != null) hasilQuery.close();
+				if(eksekusi != null) eksekusi.close();
 				if(perintah != null) perintah.close();
 				koneksiDataBase.close();
 				
@@ -82,86 +158,15 @@ public class DataBase {
 		}
 	}
 	
-	/**
-	 * Membuat database baru sesuai dengan NamaDataBase. 
-	 * Database baru secara otomatis membuat tabel data mentah dengan ketentuan sebagai berikut.
-	 * <p>
-	 * <TABLE>
-	 * <TR>
-	 * <TD>Baris</TD>
-	 * <TD>UrutanData</TD>
-	 * <TD>Tema</TD>
-	 * <TD>Koding</TD>
-	 * <TD>Ide_Utama</TD>
-	 * <TD>Jawaban</TD>
-	 * <TD>Impresi</TD>
-	 * </TR>
-	 * <TR>
-	 * <TD>Tipe Data (Ketentuan dalam SQL)</TD>
-	 * <TD>Integer (Primary Key)</TD>
-	 * <TD>String (VARCHAR[255])</TD>
-	 * <TD>String (VARCHAR[255])</TD>
-	 * <TD>String (VARCHAR[8000])</TD>
-	 * <TD>String (VARCHAR[8000])</TD>
-	 * <TD>String (VARCHAR[8000])</TD>
-	 * </TR>
-	 * </TABLE>
-	 * 
-	 * @param NamaDataBase nama yang akan digunakan sebagai berkas database.
-	 */
-	public static void dataBaru() {
-		try {
-			
-			bukaKoneksiDB(true);
-			
-			query = "CREATE TABLE data_mentah "
-					+ "(UrutanData INT NOT NULL,"
-					+ "Tema VARCHAR(255),"
-					+ "Koding VARCHAR(255),"
-					+ "Ide_Utama MEDIUMTEXT,"
-					+ "Jawaban MEDIUMTEXT,"
-					+ "Pertanyaan MEDIUMTEXT,"
-					+ "Impresi MEDIUMTEXT,"
-					+ "PRIMARY KEY (UrutanData))";
-			
-			perintah = koneksiDataBase.prepareStatement(query);
-			perintah.execute(query);
-			
-			bukaKoneksiDB(false);
-			
-		} catch (SQLException galat) {
-			System.out.println("Galat dalam Operasi Database: "); //TODO: Hapus ini
-			galat.printStackTrace();
-		}
-	}
-	
-	/**
-	 * Memuat database yang sudah pernah dibuat.
-	 */
-	public static void muatData() {
-		try {
-			bukaKoneksiDB(true);
-			
-			query = "SELECT * FROM data_mentah";
-			
-			perintah = koneksiDataBase.prepareStatement(query);
-			perintah.execute(query);
-			
-			bukaKoneksiDB(false);
-		} catch (SQLException galat) {
-			System.out.println("Galat dalam Operasi Database: "); //TODO: Hapus ini
-			galat.printStackTrace();
-		}
-	}
-	
-	public static void merekamData(int NomorData, String Tema, String Koding, String IdeUtama, String Jawaban, String Pertanyaan, String Impresi) {
+	public static void rekamData(int NomorData, String Tema, String Koding, String IdeUtama, String Jawaban, String Pertanyaan, String Impresi) {
 		
 		bukaKoneksiDB(true);
+		
 		query = "SELECT * FROM data_mentah WHERE UrutanData="+NomorData;
 		
 		try {
-			perintah = koneksiDataBase.prepareStatement(query);
-			hasilQuery = perintah.executeQuery(query);
+			eksekusi = koneksiDataBase.createStatement();
+			hasilQuery = eksekusi.executeQuery(query);
 			
 			if (hasilQuery == null) {
 				query = "INSERT INTO data_mentah VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -178,10 +183,13 @@ public class DataBase {
 			perintah.setString(6, Pertanyaan);
 			perintah.setString(7, Impresi);
 			perintah.executeUpdate();
+			
 		} catch (SQLException galat) {
 			System.out.println("Galat dalam Operasi Database: "); //TODO: Hapus ini
 			galat.printStackTrace();
 		}
+		
+		bukaKoneksiDB(false);
 	}
 	
 	/**
@@ -191,12 +199,11 @@ public class DataBase {
 		try {
 			bukaKoneksiDB(true);
 			
+			eksekusi = koneksiDataBase.createStatement();
 			query = "CREATE pairTK AS SELECT Tema AS Tema, UrutanData AS Urutan, COUNT(Tema) AS Frekuensi, Koding "
 					+ "FROM data_mentah GROUP BY Tema, Urutan, Koding"
 					+ "ORDER BY Urutan DESC, COUNT(Tema) DESC";
-			
-			perintah = koneksiDataBase.prepareStatement(query);
-			perintah.execute(query);
+			eksekusi.execute(query);
 			
 			bukaKoneksiDB(false);
 
@@ -260,12 +267,11 @@ public class DataBase {
 	 * @see <a href="https://www.codejava.net/coding/java-code-example-to-export-from-database-to-csv-file">Nam Ha Minh</a>
 	 */
 	public static void simpanCSV() {
-		namaBerkasDB = DEFAULT_DATABASE;
-		try (BufferedWriter penulisData = new BufferedWriter(new FileWriter(namaBerkasDB+".csv"))) 
+		try (BufferedWriter penulisData = new BufferedWriter(new FileWriter(DEFAULT_DATABASE+".csv"))) 
 		{	
 			bukaKoneksiDB(true);
 			
-			query = "SELECT * FROM "+namaBerkasDB;
+			query = "SELECT * FROM "+DEFAULT_DATABASE;
 			perintah = koneksiDataBase.prepareStatement(query);
 			hasilQuery = perintah.executeQuery(query);
 			

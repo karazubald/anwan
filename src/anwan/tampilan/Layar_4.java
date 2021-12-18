@@ -7,6 +7,7 @@ import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXTextArea;
 
+import anwan.proses.Proses;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -43,8 +44,7 @@ public class Layar_4 implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO: Memuat data tema yang sudah ada di MySQL DataBase
-		
+		// TODO: Memuat data tema yang sudah ada di SQLite DataBase
 	}
 	
 	/**
@@ -52,7 +52,7 @@ public class Layar_4 implements Initializable {
 	 * @param klik
 	 */
 	public void ubahData(ActionEvent klik) {
-		// TODO: Mengubah data di MySQL DataBase
+		// TODO: Mengubah data di SQLite DataBase
 	}
 	
 	/**

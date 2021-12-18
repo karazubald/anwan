@@ -13,13 +13,13 @@
    <children>
       <Pane prefHeight="80.0" prefWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <TextField fx:id="UrutanData" disable="true" editable="false" layoutX="54.0" layoutY="24.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="72.0" text="090909">
+            <TextField fx:id="UrutanData" disable="true" editable="false" layoutX="54.0" layoutY="24.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="72.0" text="0">
                <font>
                   <Font name="Fira Sans Regular" size="18.0" />
                </font>
             </TextField>
-            <JFXHamburger fx:id="IkonKembali" layoutX="14.0" layoutY="30.0" />
-            <JFXHamburger fx:id="IkonLanjut" layoutX="135.0" layoutY="30.0" />
+            <JFXHamburger fx:id="IkonKembali" layoutX="14.0" layoutY="30.0" onMouseClicked="#dataSebelumnya" />
+            <JFXHamburger fx:id="IkonLanjut" layoutX="135.0" layoutY="30.0" onMouseClicked="#dataSelanjutnya" />
             <JFXHamburger fx:id="IkonHapusSemua" layoutX="309.0" layoutY="30.0" onMouseClicked="#hapusSemua" />
          </children>
       </Pane>
@@ -37,7 +37,7 @@
                         <Font name="Fira Sans Regular" size="11.0" />
                      </font>
                   </TextArea>
-                  <JFXHamburger fx:id="IkonHapusImpresi" layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
+                  <JFXHamburger fx:id="IkonHapusImpresi" layoutX="134.0" layoutY="9.0" onMouseClicked="#hapusImpresi" prefHeight="16.0" prefWidth="16.0" />
                </children>
             </Pane>
             <Pane layoutX="10.0" layoutY="176.0" prefHeight="136.0" prefWidth="164.0">
@@ -52,7 +52,7 @@
                         <Font name="Fira Sans Regular" size="11.0" />
                      </font>
                   </TextArea>
-                  <JFXHamburger fx:id="IkonHapusPertanyaan" layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
+                  <JFXHamburger fx:id="IkonHapusPertanyaan" layoutX="134.0" layoutY="9.0" onMouseClicked="#hapusPertanyaan" prefHeight="16.0" prefWidth="16.0" />
                </children>
             </Pane>
             <Pane layoutX="182.0" layoutY="176.0" prefHeight="136.0" prefWidth="164.0">
@@ -67,7 +67,7 @@
                         <Font name="Fira Sans Regular" size="11.0" />
                      </font>
                   </TextArea>
-                  <JFXHamburger fx:id="IkonHapusJawaban" layoutX="136.0" layoutY="10.0" prefHeight="16.0" prefWidth="16.0" />
+                  <JFXHamburger fx:id="IkonHapusJawaban" layoutX="136.0" layoutY="10.0" onMouseClicked="#hapusJawaban" prefHeight="16.0" prefWidth="16.0" />
                </children>
             </Pane>
             <Pane layoutX="182.0" layoutY="308.0" prefHeight="136.0" prefWidth="164.0">
@@ -82,7 +82,7 @@
                         <Font name="Fira Sans Regular" size="11.0" />
                      </font>
                   </TextArea>
-                  <JFXHamburger fx:id="IkonHapusIdeUtama" layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
+                  <JFXHamburger fx:id="IkonHapusIdeUtama" layoutX="134.0" layoutY="9.0" onMouseClicked="#hapusIdeUtama" prefHeight="16.0" prefWidth="16.0" />
                </children>
             </Pane>
             <Pane layoutX="182.0" layoutY="104.0" prefHeight="72.0" prefWidth="164.0">
@@ -97,7 +97,7 @@
                         <Font name="Fira Sans Regular" size="11.0" />
                      </font>
                   </TextArea>
-                  <JFXHamburger fx:id="IkonHapusKoding" layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
+                  <JFXHamburger fx:id="IkonHapusKoding" layoutX="134.0" layoutY="9.0" onMouseClicked="#hapusKoding" prefHeight="16.0" prefWidth="16.0" />
                </children>
             </Pane>
             <Pane layoutX="182.0" layoutY="24.0" prefHeight="72.0" prefWidth="164.0">
@@ -112,7 +112,7 @@
                         <Font name="Fira Sans Regular" size="11.0" />
                      </font>
                   </TextArea>
-                  <JFXHamburger fx:id="IkonHapusTema" layoutX="134.0" layoutY="9.0" prefHeight="16.0" prefWidth="16.0" />
+                  <JFXHamburger fx:id="IkonHapusTema" layoutX="134.0" layoutY="9.0" onMouseClicked="#hapusTema" prefHeight="16.0" prefWidth="16.0" />
                </children>
             </Pane>
             <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="15.0" layoutY="318.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#lanjutAnalisis" prefHeight="48.0" prefWidth="154.0" ripplerFill="#2deb02" text="Lanjut" textAlignment="CENTER">

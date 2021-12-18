@@ -1,12 +1,9 @@
 package anwan.tampilan;
 
-import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXHamburger;
-import com.jfoenix.controls.JFXTextArea;
 import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
 import com.jfoenix.transitions.hamburger.HamburgerBasicCloseTransition;
 import com.jfoenix.transitions.hamburger.HamburgerNextArrowBasicTransition;
@@ -14,19 +11,16 @@ import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 
 import anwan.PenataLayar;
 import anwan.data.DataBase;
-import anwan.proses.DataTextBox;
+import anwan.proses.PengangkutObjek;
 import anwan.proses.Proses;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 /**
@@ -85,39 +79,32 @@ public class Layar_2 implements Initializable {
 	private Stage aplikasi;
 	private Scene tampilan;
 	
-	/**
-	 * Menghapus tulisan di semua kotak tulisan.
-	 * @param klik
-	 */
-	public void hapusSemua(MouseEvent klik) {
-		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		Proses.pesan("Metode Initialize di Layar 2"); //TODO: hapus ini
+		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
 		
-		Tema.setText("");
-		Koding.setText("");
-		IdeUtama.setText("");
-		Jawaban.setText("");
-		Pertanyaan.setText("");
-		Impresi.setText("");
+		animasiHapus(IkonHapusSemua, IkonHapusTema, IkonHapusKoding, IkonHapusIdeUtama, IkonHapusJawaban, IkonHapusPertanyaan, IkonHapusImpresi);	
+		animasiDataSelanjutnya();
+		animasiDataSebelumnya();
 		
-		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
+		// TODO: Inisialisasi data dengan DataBase.muatData();
+		initIsiKotakTulisan();
+		
+		int urutandata = Integer.valueOf(UrutanData.getText());
+		if(urutandata == 0) UrutanData.setText("1");
+		
+		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 	
-	/**
-	 * Mengalihkan ke layar input data (Layar 3).
-	 * @param klik
-	 */
-	private void aktifkanInputData(MouseEvent klik) {
-		Proses.hitungWaktu(true, klik.getClass()); //TODO: hapus ini
-		
-		System.out.println(klik.getSource().toString());
-		
-		tampilan = PenataLayar.munculkanTampilan("Layar Analisis Data", 3);
-		
-		aplikasi = (Stage) ((Node) klik.getSource()).getScene().getWindow();
-		aplikasi.setScene(tampilan);
-		aplikasi.show();
-		
-		Proses.hitungWaktu(false, klik.getClass()); //TODO: hapus ini
+	private void initIsiKotakTulisan() {
+		if(PengangkutObjek.getIdObjek() == null) return;
+		if(PengangkutObjek.getIdObjek().equals(Tema.getId())) Tema.setText(PengangkutObjek.getIsiObjek());
+		if(PengangkutObjek.getIdObjek().equals(Koding.getId())) Koding.setText(PengangkutObjek.getIsiObjek());
+		if(PengangkutObjek.getIdObjek().equals(IdeUtama.getId())) IdeUtama.setText(PengangkutObjek.getIsiObjek());
+		if(PengangkutObjek.getIdObjek().equals(Jawaban.getId())) Jawaban.setText(PengangkutObjek.getIsiObjek());
+		if(PengangkutObjek.getIdObjek().equals(Pertanyaan.getId())) Pertanyaan.setText(PengangkutObjek.getIsiObjek());
+		if(PengangkutObjek.getIdObjek().equals(Impresi.getId())) Impresi.setText(PengangkutObjek.getIsiObjek());
 	}
 	
 	/**
@@ -129,13 +116,10 @@ public class Layar_2 implements Initializable {
 		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
-		DataTextBox.setId(Impresi.getId());
-		DataTextBox.setData(Impresi.getText());
-
-		/*
-		 * TODO: Memasukkan kode berikut
-		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
-		 */
+		PengangkutObjek.setIdObjek(Impresi.getId());
+		PengangkutObjek.setIsiObjek(Impresi.getText());
+		
+		DataBase.rekamData(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
 
 		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 		
@@ -151,13 +135,10 @@ public class Layar_2 implements Initializable {
 		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
-		DataTextBox.setId(Pertanyaan.getId());
-		DataTextBox.setData(Pertanyaan.getText());
-
-		/*
-		 * TODO: Memasukkan kode berikut
-		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
-		 */
+		PengangkutObjek.setIdObjek(Pertanyaan.getId());
+		PengangkutObjek.setIsiObjek(Pertanyaan.getText());
+		
+		DataBase.rekamData(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
 
 		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 		
@@ -173,13 +154,10 @@ public class Layar_2 implements Initializable {
 		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
-		DataTextBox.setId(Jawaban.getId());
-		DataTextBox.setData(Jawaban.getText());
-
-		/*
-		 * TODO: Memasukkan kode berikut
-		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
-		 */
+		PengangkutObjek.setIdObjek(Jawaban.getId());
+		PengangkutObjek.setIsiObjek(Jawaban.getText());
+		
+		DataBase.rekamData(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
 
 		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 		
@@ -195,13 +173,10 @@ public class Layar_2 implements Initializable {
 		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
-		DataTextBox.setId(IdeUtama.getId());
-		DataTextBox.setData(IdeUtama.getText());
-
-		/*
-		 * TODO: Memasukkan kode berikut
-		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
-		 */
+		PengangkutObjek.setIdObjek(IdeUtama.getId());
+		PengangkutObjek.setIsiObjek(IdeUtama.getText());
+		
+		DataBase.rekamData(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
 
 		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 		
@@ -217,13 +192,10 @@ public class Layar_2 implements Initializable {
 		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
-		DataTextBox.setId(Koding.getId());
-		DataTextBox.setData(Koding.getText());
-
-		/*
-		 * TODO: Memasukkan kode berikut
-		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
-		 */
+		PengangkutObjek.setIdObjek(Koding.getId());
+		PengangkutObjek.setIsiObjek(Koding.getText());
+		
+		DataBase.rekamData(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
 
 		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 		
@@ -239,13 +211,10 @@ public class Layar_2 implements Initializable {
 		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
-		DataTextBox.setId(Tema.getId());
-		DataTextBox.setData(Tema.getText());
-
-		/*
-		 * TODO: Memasukkan kode berikut
-		 * PengaturData.simpanOtomatis(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
-		 */
+		PengangkutObjek.setIdObjek(Tema.getId());
+		PengangkutObjek.setIsiObjek(Tema.getText());
+		
+		DataBase.rekamData(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
 
 		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 		
@@ -258,6 +227,9 @@ public class Layar_2 implements Initializable {
 	 */
 	public void lanjutAnalisis(ActionEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
+		
+		int urutandata = Integer.valueOf(UrutanData.getText());
+		DataBase.rekamData(urutandata, Tema.getText(), Koding.getText(), IdeUtama.getText(), Jawaban.getText(), Pertanyaan.getText(), Impresi.getText());
 		
 		tampilan = PenataLayar.munculkanTampilan("Layar Analisis Data", 4);
 		
@@ -283,22 +255,22 @@ public class Layar_2 implements Initializable {
 		
 		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 	}
-	
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		Proses.pesan("Metode Initialize di Layar 2"); //TODO: hapus ini
-		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
+	/**
+	 * Mengalihkan ke layar input data (Layar 3).
+	 * @param klik
+	 */
+	private void aktifkanInputData(MouseEvent klik) {
+		Proses.hitungWaktu(true, klik.getClass()); //TODO: hapus ini
 		
-		animasiHapus(IkonHapusSemua, IkonHapusTema, IkonHapusKoding, IkonHapusIdeUtama, IkonHapusJawaban, IkonHapusPertanyaan, IkonHapusImpresi);	
-		animasiDataSelanjutnya();
-		animasiDataSebelumnya();
+		System.out.println(klik.getSource().toString());
 		
-		// TODO: Inisialisasi data
-		// DataBase.muatData();
+		tampilan = PenataLayar.munculkanTampilan("Layar Analisis Data", 3);
 		
-		UrutanData.setText("1");
+		aplikasi = (Stage) ((Node) klik.getSource()).getScene().getWindow();
+		aplikasi.setScene(tampilan);
+		aplikasi.show();
 		
-		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
+		Proses.hitungWaktu(false, klik.getClass()); //TODO: hapus ini
 	}
 	
 	/**
@@ -408,5 +380,90 @@ public class Layar_2 implements Initializable {
 			animasi.setRate(animasi.getRate()*(-1));
 			animasi.play();
 		});
+	}
+	
+	/**
+	 * Menghapus tulisan di semua kotak tulisan.
+	 * @param klik
+	 */
+	public void hapusSemua(MouseEvent klik) {
+		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
+		
+		Tema.setText("");
+		Koding.setText("");
+		IdeUtama.setText("");
+		Jawaban.setText("");
+		Pertanyaan.setText("");
+		Impresi.setText("");
+		
+		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
+	}
+	
+	/**
+	 * Menghapus tulisan di kotak tulisan tema.
+	 * @param klik
+	 */
+	public void hapusTema(MouseEvent klik) {
+		Tema.setText("");
+	}
+	
+	/**
+	 * Menghapus tulisan di kotak tulisan koding.
+	 * @param klik
+	 */
+	public void hapusKoding(MouseEvent klik) {
+		Koding.setText("");
+	}
+	
+	/**
+	 * Menghapus tulisan di kotak tulisan ide utama.
+	 * @param klik
+	 */
+	public void hapusIdeUtama(MouseEvent klik) {
+		IdeUtama.setText("");
+	}
+	
+	/**
+	 * Menghapus tulisan di kotak tulisan jawaban.
+	 * @param klik
+	 */
+	public void hapusJawaban(MouseEvent klik) {
+		Jawaban.setText("");
+	}
+	
+	/**
+	 * Menghapus tulisan di kotak tulisan pertanyaan.
+	 * @param klik
+	 */
+	public void hapusPertanyaan(MouseEvent klik) {
+		Pertanyaan.setText("");
+	}
+	
+	/**
+	 * Menghapus tulisan di kotak tulisan impresi.
+	 * @param klik
+	 */
+	public void hapusImpresi(MouseEvent klik) {
+		Impresi.setText("");
+	}
+	
+	/**
+	 * Memulai input di data selanjutnya dengan menambah angka di urutan data.
+	 * @param klik
+	 */
+	public void dataSelanjutnya(MouseEvent klik) {
+		int urutandata = Integer.valueOf(UrutanData.getText());
+		urutandata += 1;
+		UrutanData.setText(String.valueOf(urutandata));
+	}
+	
+	/**
+	 * Memulai input di data sebelumnya dengan mengurangi angka di urutan data.
+	 * @param klik
+	 */
+	public void dataSebelumnya(MouseEvent klik) {
+		int urutandata = Integer.valueOf(UrutanData.getText());
+		if(urutandata == 1) urutandata = 1; else urutandata -= 1;
+		UrutanData.setText(String.valueOf(urutandata));
 	}
 }

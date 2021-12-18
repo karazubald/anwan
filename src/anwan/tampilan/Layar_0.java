@@ -2,11 +2,16 @@ package anwan.tampilan;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.Files;
 import java.util.ResourceBundle;
+import java.util.Scanner;
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
 
@@ -68,23 +73,16 @@ public class Layar_0 implements Initializable {
 	public void lisensi(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass()); //TODO hapus ini
 		
+		String isi = null;
+		File berkas_lisensi = new File("LICENSE-ID");
+		
 		try {
-			InputStream lisensi = getClass().getResourceAsStream("LICENSE-ID.txt");
-			BufferedReader pembacaIsi = new BufferedReader(new InputStreamReader(lisensi));
-			
-			StringBuilder isiLisensi = new StringBuilder();
-			
-			while(pembacaIsi.readLine() != null) {
-				isiLisensi.append(pembacaIsi.readLine());
-			}
-			
-			ta.setText(isiLisensi.toString());
-
-			pembacaIsi.close();
-			
-		} catch (Exception e) {
-			ta.setText(e.getMessage());
+			isi = Files.readString(berkas_lisensi.toPath());
+		} catch (IOException galat) {
+			galat.printStackTrace();
 		}
+		
+		ta.setText(isi);
 		
 		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}

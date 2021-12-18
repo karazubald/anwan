@@ -18,7 +18,7 @@ import javafx.scene.Scene;
  */
 public class PenataLayar {
 	private static Scene TampilanSekarang;
-	private static final String FolderTampilan = System.getProperty("user.dir")+"/src/anwan/tampilan/".replace("/", File.separator);
+	private static final String FolderTampilan = "src/anwan/tampilan/".replace("/", File.separator);
 	private static String LokasiFXML, LokasiCSS;
 	private static HashMap<Integer, Parent> KumpulanTampilan = new HashMap<>();
 	private static FXMLLoader PembacaFXML;
@@ -35,14 +35,14 @@ public class PenataLayar {
 		URL referensi;
 		for(Integer nomorTampilan = 0; nomorTampilan <= Integer.valueOf(jumlahTampilan); nomorTampilan++) {
 			LokasiFXML = FolderTampilan + "Layar_" + nomorTampilan+".fxml";
-			//LokasiCSS = FolderTampilan + "Layar_" + nomorTampilan+".css";
+			LokasiCSS = FolderTampilan + "Layar_" + nomorTampilan+".css";
 			try {
 				referensi = new File(LokasiFXML).toURI().toURL();
 				PembacaFXML = new FXMLLoader(referensi);
 				KumpulanTampilan.put(nomorTampilan, PembacaFXML.load());
 				
-				//referensi = new File(LokasiCSS).toURI().toURL();
-				//KumpulanTampilan.get(nomorTampilan).getStylesheets().add(referensi.toExternalForm());
+				referensi = new File(LokasiCSS).toURI().toURL();
+				KumpulanTampilan.get(nomorTampilan).getStylesheets().add(referensi.toExternalForm());
 				
 			} catch (Exception galat) {
 				galat.printStackTrace();
@@ -50,7 +50,6 @@ public class PenataLayar {
 		}
 		
 		Proses.hitungWaktu(false, PenataLayar.class); //TODO: hapus ini
-		
 	}
 	
 	/**
@@ -71,5 +70,4 @@ public class PenataLayar {
 		
 		return TampilanSekarang;
 	}
-	
 }

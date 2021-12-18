@@ -16,7 +16,7 @@ import javafx.stage.Stage;
  * <p>
  * Berkas TXT adalah hasil akhir dari analisis/interpretasi dari tema di CSV dalam bentuk paragraf.
  * @author karazubald
- * @version 0.1
+ * @version 0.0.0
  * @since 2019
  */
 public class Anwan extends Application {

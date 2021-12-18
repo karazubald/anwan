@@ -56,6 +56,8 @@ public class Layar_1 implements Initializable {
 	public void buatBaru(ActionEvent klik) {
 		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
 		
+		DataBase.dataBaru();
+		
 		tampilan = PenataLayar.munculkanTampilan("Layar Input Data", 2);
 		//tampilan = penataTampilan.munculkanTampilan("Layar Input Data", 2);
 		
