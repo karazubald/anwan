@@ -56,6 +56,11 @@ public class DataBase {
 	private static ResultSet hasilQuery = null;
 	private static final String DEFAULT_DATABASE = "ANWAN_DATABASE";
 	private static final String DIREKTORI_DATA = "src/anwan/data/".replace("/", File.separator);
+	
+	public static enum idData {
+		Tema, Koding, Ide_Utama, Jawaban, Pertanyaan, Impresi;
+	}
+	
 	/**
 	 * Membuat database baru dengan nama ANWAN_DATABASE.
 	 * Database baru secara otomatis membuat tabel dengan nama data_mentah.
@@ -86,7 +91,7 @@ public class DataBase {
 			bukaKoneksiDB(false);
 			
 		} catch (SQLException galat) {
-			System.out.println("Galat dalam Operasi Database: "); //TODO: Hapus ini
+			System.out.println("Galat dalam membuat database baru."); //TODO: Hapus ini
 			galat.printStackTrace();
 		}
 	}
@@ -106,9 +111,30 @@ public class DataBase {
 			
 			bukaKoneksiDB(false);
 		} catch (SQLException galat) {
-			System.out.println("Galat dalam Operasi Database: "); //TODO: Hapus ini
+			System.out.println("Galat dalam memuat database yang ada."); //TODO: Hapus ini
 			galat.printStackTrace();
 		}
+	}
+	
+	public static String muatData(idData id, Integer nomorData) {
+		String data;
+		String kolomData = id.toString();
+		try {
+			bukaKoneksiDB(true);
+			
+			query = "SELECT IF EXISTS " +kolomData+ " FROM data_mentah WHERE UrutanData="+nomorData;
+			
+			eksekusi = koneksiDataBase.createStatement();
+			hasilQuery = eksekusi.executeQuery(query);
+			data = hasilQuery.getString(kolomData);
+			
+			bukaKoneksiDB(false);
+		} catch (SQLException galat) {
+			System.out.println("Galat dalam memuat data "+ id.toString()+" : "); //TODO: Hapus ini
+			galat.printStackTrace();
+			data = null;
+		}
+		return data;
 	}
 	
 	/**
@@ -123,7 +149,7 @@ public class DataBase {
 		try {
 			referensi = new File(DIREKTORI_DATA).toURI().toURL();
 		} catch (MalformedURLException galat) {
-			Proses.pesan("Terjadi galat dalam penyusunan URL: ");
+			Proses.pesan("Terjadi galat dalam penyusunan URL."); //TODO: Hapus ini
 			galat.printStackTrace();
 			return;
 		}
@@ -136,7 +162,7 @@ public class DataBase {
 				koneksiDataBase = sumberData.getConnection();
 				Proses.pesan("Koneksi berhasil."); //TODO: Hapus ini
 			} catch (SQLException galat) {
-				System.out.println("Galat dalam Operasi Database: "); //TODO: Hapus ini
+				System.out.println("Galat dalam pembukaan database."); //TODO: Hapus ini
 				galat.printStackTrace();
 			}
 			return;
@@ -151,13 +177,51 @@ public class DataBase {
 				
 				Proses.pesan("Koneksi berhasil ditutup."); //TODO: Hapus ini
 			} catch (SQLException galat) {
-				System.out.println("Galat dalam Operasi Database: "); //TODO: Hapus ini
+				System.out.println("Galat dalam penutupan database."); //TODO: Hapus ini
 				galat.printStackTrace();
 			}
 			return;
 		}
 	}
 	
+	public static void rekamData(int NomorData, String kolomData, String data) {
+		try {
+			bukaKoneksiDB(true);
+			
+			query = "SELECT * FROM data_mentah WHERE UrutanData="+NomorData;
+			
+			eksekusi = koneksiDataBase.createStatement();
+			hasilQuery = eksekusi.executeQuery(query);
+			
+			if (hasilQuery == null) {
+				query = "INSERT INTO data_mentah (UrutanData, "+kolomData+") VALUES (?, ?)";
+				} else {
+					query = "UPDATE data_mentah SET UrutanData = ?, "+kolomData+" = ?";
+			}
+			
+			perintah = koneksiDataBase.prepareStatement(query);
+			perintah.setInt(1, NomorData);
+			perintah.setString(2, data);
+			perintah.executeUpdate();
+			
+			Proses.pesan("Berhasil merekam data "+kolomData+" di nomor "+NomorData+" ke dalam database!"); //TODO: Hapus ini
+			
+			bukaKoneksiDB(false);
+		} catch (SQLException galat) {
+			Proses.pesan("Galat dalam merekam data "+ kolomData +" di nomor "+ NomorData +"."); //TODO: Hapus ini
+			galat.printStackTrace();
+		}
+	}
+	/**
+	 * Memasukkan semua data ke database.
+	 * @param NomorData
+	 * @param Tema
+	 * @param Koding
+	 * @param IdeUtama
+	 * @param Jawaban
+	 * @param Pertanyaan
+	 * @param Impresi
+	 */
 	public static void rekamData(int NomorData, String Tema, String Koding, String IdeUtama, String Jawaban, String Pertanyaan, String Impresi) {
 		
 		bukaKoneksiDB(true);
@@ -182,10 +246,11 @@ public class DataBase {
 			perintah.setString(5, Jawaban);
 			perintah.setString(6, Pertanyaan);
 			perintah.setString(7, Impresi);
-			perintah.executeUpdate();
+			perintah.executeUpdate();			
+			
 			
 		} catch (SQLException galat) {
-			System.out.println("Galat dalam Operasi Database: "); //TODO: Hapus ini
+			Proses.pesan("Galat dalam Operasi Database: "); //TODO: Hapus ini
 			galat.printStackTrace();
 		}
 		
@@ -204,11 +269,10 @@ public class DataBase {
 					+ "FROM data_mentah GROUP BY Tema, Urutan, Koding"
 					+ "ORDER BY Urutan DESC, COUNT(Tema) DESC";
 			eksekusi.execute(query);
-			
+			Proses.pesan("Berhasil membuat tabel pairTK!"); //TODO: Hapus ini
 			bukaKoneksiDB(false);
-
 		} catch (SQLException galat) {
-			System.out.println("Galat dalam Operasi Database: "); //TODO: Hapus ini
+			Proses.pesan("Galat dalam operasi pembuatan tabel pasangan tema-koding: "); //TODO: Hapus ini
 			galat.printStackTrace();
 		}
 	}
@@ -224,16 +288,18 @@ public class DataBase {
 		try {
 			bukaKoneksiDB(true);
 			
-			query = "SELECT UrutanData FROM pairTK WHERE Tema="+tema+" LIMIT 1";
-			perintah = koneksiDataBase.prepareStatement(query);
-			hasilQuery = perintah.executeQuery(query);
+			query = "SELECT Urutan FROM pairTK WHERE Tema="+tema+" LIMIT 1";
+			eksekusi = koneksiDataBase.createStatement();
+			hasilQuery = eksekusi.executeQuery(query);
 			
 			kalimat = "Tema "+Terbilang.sebut(hasilQuery.getInt("UrutanData"))+" adalah "+tema;
+			
+			Proses.pesan("Berhasil mengurut Tema!"); //TODO: Hapus ini
 			
 			bukaKoneksiDB(false);
 			
 		} catch (SQLException galat) {
-			System.out.println("Terjadi galat: ");
+			Proses.pesan("Terjadi galat dalam mengurut Tema di database."); //TODO: Hapus ini
 			galat.printStackTrace();
 		}
 		return kalimat;
@@ -247,14 +313,19 @@ public class DataBase {
 	public static String sebutKoding(String tema) {
 		String kalimat = null;
 		try {
+			bukaKoneksiDB(true);
+			
 			query = "SELECT Koding FROM pairTK WHERE Tema="+tema+" GROUP BY Koding";
 			perintah = koneksiDataBase.prepareStatement(query);
 			hasilQuery = perintah.executeQuery(query);
 			while(hasilQuery.next()) {
 				kalimat += hasilQuery.getString("Koding")+",";
 			}
+			Proses.pesan("Berhasil mengurut koding!"); //TODO: Hapus ini
+			bukaKoneksiDB(true);
+			
 		} catch (SQLException galat) {
-			System.out.println("Galat dalam Operasi Database: "); //TODO: Hapus ini
+			Proses.pesan("Galat dalam operasi pemilihan koding dari tema."); //TODO: Hapus ini
 			galat.printStackTrace();
 		}
 		return kalimat;
@@ -272,8 +343,8 @@ public class DataBase {
 			bukaKoneksiDB(true);
 			
 			query = "SELECT * FROM "+DEFAULT_DATABASE;
-			perintah = koneksiDataBase.prepareStatement(query);
-			hasilQuery = perintah.executeQuery(query);
+			eksekusi = koneksiDataBase.createStatement();
+			hasilQuery = eksekusi.executeQuery(query);
 			
 			penulisData.write("UrutanData,Tema,Koding,Ide_Utama,Jawaban,Pertanyaan,Impresi");
 			
@@ -293,10 +364,10 @@ public class DataBase {
 				penulisData.write(data);
 			}
 		} catch (SQLException galat) {
-			System.out.println("Galat dalam Operasi Database: "); //TODO: Hapus ini
+			Proses.pesan("Galat dalam mengurutkan data di database."); //TODO: Hapus ini
 			galat.printStackTrace();
 		} catch (IOException galat) {
-			System.out.println("Galat dalam Operasi Berkas: "); //TODO: Hapus ini
+			Proses.pesan("Galat dalam penyimpanan berkas."); //TODO: Hapus ini
 			galat.printStackTrace();
 		}
 	}

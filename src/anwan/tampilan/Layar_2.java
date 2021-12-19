@@ -88,16 +88,35 @@ public class Layar_2 implements Initializable {
 		animasiDataSelanjutnya();
 		animasiDataSebelumnya();
 		
-		// TODO: Inisialisasi data dengan DataBase.muatData();
 		initIsiKotakTulisan();
-		
-		int urutandata = Integer.valueOf(UrutanData.getText());
-		if(urutandata == 0) UrutanData.setText("1");
 		
 		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 	
+	/**
+	 * Memuat data dari kelas DataBase atau kelas PengangkutObjek ke kotak tulisan UrutanData, Tema, Koding, IdeUtama, Jawaban, Pertanyaan, dan Impresi.
+	 */
 	private void initIsiKotakTulisan() {
+		UrutanData.setText("1");
+		if(PengangkutObjek.getNomorID() != null) UrutanData.setText(PengangkutObjek.getNomorID().toString());
+		
+		Integer dataSekarang =  Integer.valueOf(UrutanData.getText());
+		
+		// TODO: Galat dalam memuat database
+		String TemaSekarang = DataBase.muatData(DataBase.idData.Tema, dataSekarang);
+		String KodingSekarang = DataBase.muatData(DataBase.idData.Koding, dataSekarang); 
+		String IdeUtamaSekarang = DataBase.muatData(DataBase.idData.Ide_Utama, dataSekarang);
+		String JawabanSekarang = DataBase.muatData(DataBase.idData.Jawaban, dataSekarang); 
+		String PertanyaanSekarang = DataBase.muatData(DataBase.idData.Pertanyaan, dataSekarang);
+		String ImpresiSekarang = DataBase.muatData(DataBase.idData.Impresi, dataSekarang);
+		
+		if(TemaSekarang != null) Tema.setText(TemaSekarang);
+		if(KodingSekarang != null) Koding.setText(KodingSekarang);
+		if(IdeUtamaSekarang != null) IdeUtama.setText(IdeUtamaSekarang);
+		if(JawabanSekarang != null) Jawaban.setText(JawabanSekarang);
+		if(PertanyaanSekarang != null) Pertanyaan.setText(PertanyaanSekarang);
+		if(ImpresiSekarang != null) Impresi.setText(ImpresiSekarang);
+		
 		if(PengangkutObjek.getIdObjek() == null) return;
 		if(PengangkutObjek.getIdObjek().equals(Tema.getId())) Tema.setText(PengangkutObjek.getIsiObjek());
 		if(PengangkutObjek.getIdObjek().equals(Koding.getId())) Koding.setText(PengangkutObjek.getIsiObjek());
@@ -116,6 +135,7 @@ public class Layar_2 implements Initializable {
 		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
+		PengangkutObjek.setNomorID(urutandata);
 		PengangkutObjek.setIdObjek(Impresi.getId());
 		PengangkutObjek.setIsiObjek(Impresi.getText());
 		
@@ -135,6 +155,7 @@ public class Layar_2 implements Initializable {
 		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
+		PengangkutObjek.setNomorID(urutandata);
 		PengangkutObjek.setIdObjek(Pertanyaan.getId());
 		PengangkutObjek.setIsiObjek(Pertanyaan.getText());
 		
@@ -154,6 +175,7 @@ public class Layar_2 implements Initializable {
 		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
+		PengangkutObjek.setNomorID(urutandata);
 		PengangkutObjek.setIdObjek(Jawaban.getId());
 		PengangkutObjek.setIsiObjek(Jawaban.getText());
 		
@@ -173,6 +195,7 @@ public class Layar_2 implements Initializable {
 		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
+		PengangkutObjek.setNomorID(urutandata);
 		PengangkutObjek.setIdObjek(IdeUtama.getId());
 		PengangkutObjek.setIsiObjek(IdeUtama.getText());
 		
@@ -192,6 +215,7 @@ public class Layar_2 implements Initializable {
 		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
+		PengangkutObjek.setNomorID(urutandata);
 		PengangkutObjek.setIdObjek(Koding.getId());
 		PengangkutObjek.setIsiObjek(Koding.getText());
 		
@@ -211,6 +235,7 @@ public class Layar_2 implements Initializable {
 		
 		int urutandata = Integer.valueOf(UrutanData.getText());
 		
+		PengangkutObjek.setNomorID(urutandata);
 		PengangkutObjek.setIdObjek(Tema.getId());
 		PengangkutObjek.setIsiObjek(Tema.getText());
 		
@@ -463,7 +488,7 @@ public class Layar_2 implements Initializable {
 	 */
 	public void dataSebelumnya(MouseEvent klik) {
 		int urutandata = Integer.valueOf(UrutanData.getText());
-		if(urutandata == 1) urutandata = 1; else urutandata -= 1;
+		if(urutandata <= 1) urutandata = 1; else urutandata -= 1;
 		UrutanData.setText(String.valueOf(urutandata));
 	}
 }

@@ -8,8 +8,9 @@ package anwan.proses;
  * @author karazubald
  */
 public class PengangkutObjek {
-	private static volatile String idObjek;
-	private static volatile String isiObjek;
+	private static Integer nomorID = null;
+	private static String idObjek;
+	private static String isiObjek;
 	
 	/**
 	 * Mendapatkan identifier dari objek yang dibawa oleh kelas ini.
@@ -38,6 +39,20 @@ public class PengangkutObjek {
 	 */
 	public static void setIsiObjek(String isiObjek) {
 		PengangkutObjek.isiObjek = isiObjek;
+	}
+	/**
+	 * Mendapatkan nomor identitas dari objek yang dibawa oleh kelas ini.
+	 * @return nomor dalam bentuk integer.
+	 */
+	public static Integer getNomorID() {
+		return nomorID;
+	}
+	/**
+	 * Menetapkan nomor identitas dari objek yang dibawa oleh kelas ini dalam bentuk Integer.
+	 * @param nomorID nomor unik objek.
+	 */
+	public static void setNomorID(Integer nomorID) {
+		PengangkutObjek.nomorID = nomorID;
 	}
 	
 }

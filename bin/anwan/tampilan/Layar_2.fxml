@@ -13,7 +13,7 @@
    <children>
       <Pane prefHeight="80.0" prefWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <TextField fx:id="UrutanData" disable="true" editable="false" layoutX="54.0" layoutY="24.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="72.0" text="090909">
+            <TextField fx:id="UrutanData" disable="true" editable="false" layoutX="54.0" layoutY="24.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="32.0" prefWidth="72.0" text="0">
                <font>
                   <Font name="Fira Sans Regular" size="18.0" />
                </font>

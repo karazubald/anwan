@@ -50,7 +50,7 @@ public class Layar_1 implements Initializable {
 	private Scene tampilan;
 	
 	/**
-	 * Membuat data baru dengan mengarahkan ke layar input data.
+	 * Membuat data baru dan mengarahkan ke layar input data.
 	 * @param klik id dari event tetikus
 	 */
 	public void buatBaru(ActionEvent klik) {
@@ -70,11 +70,22 @@ public class Layar_1 implements Initializable {
 	}
 
 	/**
-	 * Memuat data dari MySQL.
+	 * Memuat data dari SQLite dan mengarahkan ke layar input data.
 	 * @param ae
 	 */
 	public void muatData(ActionEvent ae) {
+		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
+		
 		DataBase.muatData();
+		
+		tampilan = PenataLayar.munculkanTampilan("Layar Input Data", 2);
+		//tampilan = penataTampilan.munculkanTampilan("Layar Input Data", 2);
+		
+		aplikasi = (Stage) ((Node) ae.getSource()).getScene().getWindow();
+		aplikasi.setScene(tampilan);
+		aplikasi.show();
+		
+		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 	
 	/**

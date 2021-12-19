@@ -9,6 +9,7 @@ import com.jfoenix.transitions.hamburger.HamburgerBackArrowBasicTransition;
 import com.jfoenix.transitions.hamburger.HamburgerBasicCloseTransition;
 
 import anwan.PenataLayar;
+import anwan.data.DataBase;
 import anwan.proses.PengangkutObjek;
 import anwan.proses.Proses;
 import javafx.fxml.FXML;
@@ -56,6 +57,11 @@ public class Layar_3 implements Initializable {
 	 */
 	public void kembali(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
+		
+		PengangkutObjek.setIdObjek(namaTextBox.getText());
+		PengangkutObjek.setIsiObjek(TextBox.getText());
+		
+		DataBase.rekamData(PengangkutObjek.getNomorID(), PengangkutObjek.getIdObjek(), PengangkutObjek.getIsiObjek());
 		
 		tampilan = PenataLayar.munculkanTampilan("Layar Input Data", 2);
 		
