@@ -332,13 +332,13 @@ tersebut mewakili satu-satunya cara penggunaan produk yang signifikan.
 
   "Informasi Pemasangan" pada Produk Konsumen berarti segala metode, prosedur, 
 kunci otorisasi, atau informasi lainnya yang diperlukan untuk memasang dan 
-menjalankan versi modifikasi karya yang dimaksud di dalamProduk Pengguna dari 
+menjalankan versi modifikasi karya yang dimaksud di dalam Produk Pengguna dari 
 sebuah versi modifikasi Sumber Korespondensinya. Informasi harus berkecukupan 
 untuk memastikan bahwa kesinambungan fungsi dari kode objek yang dimodifikasi 
 tidak dicegah atau diganggu hanya karena modifikasi telah dilakukan.
 
   Apabila Anda melakukan pemindahan kode objek berdasarkan ketentuan ini, atau 
-dengan, atay secara khusus untuk menggunakannya dalam sebuah Produk Pengguna, 
+dengan, atau secara khusus untuk menggunakannya dalam sebuah Produk Pengguna, 
 dan pemindahan muncul sebagai bagian transaksi di mana hak kepemilikan dan 
 penggunaan Produk Pengguna ditransfer ke penerima selamanya atau selama waktu 
 yang telah ditentukan (terlepas dari karakteristik transaksi), Sumber 
