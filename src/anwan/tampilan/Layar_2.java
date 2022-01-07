@@ -12,6 +12,7 @@ import com.jfoenix.transitions.hamburger.HamburgerSlideCloseTransition;
 import anwan.PenataLayar;
 import anwan.data.DataBase;
 import anwan.proses.PengangkutObjek;
+import anwan.proses.PenghitungData;
 import anwan.proses.Proses;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -88,7 +89,7 @@ public class Layar_2 implements Initializable {
 		animasiDataSelanjutnya();
 		animasiDataSebelumnya();
 		
-		initIsiKotakTulisan();
+		PenghitungData.setNomorData(1);
 		
 		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
@@ -96,8 +97,8 @@ public class Layar_2 implements Initializable {
 	/**
 	 * Memuat data dari kelas DataBase atau kelas PengangkutObjek ke kotak tulisan UrutanData, Tema, Koding, IdeUtama, Jawaban, Pertanyaan, dan Impresi.
 	 */
-	private void initIsiKotakTulisan() {
-		UrutanData.setText("1");
+	private void initIsiKotakTulisan(int nomorData) {
+		UrutanData.setText(String.valueOf(nomorData));
 		if(PengangkutObjek.getNomorID() != null) UrutanData.setText(PengangkutObjek.getNomorID().toString());
 		
 		Integer dataSekarang =  Integer.valueOf(UrutanData.getText());

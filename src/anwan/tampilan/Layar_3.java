@@ -44,11 +44,7 @@ public class Layar_3 implements Initializable {
 	 * @param klik
 	 */
 	public void hapus(MouseEvent klik) {
-		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
-		
 		TextBox.setText("");
-		
-		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 	
 	/**
@@ -74,16 +70,11 @@ public class Layar_3 implements Initializable {
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		Proses.pesan("Metode Initialize di Layar 3"); //TODO: hapus ini
-		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
-		
 		animasiKembali();
 		animasiHapus();
 		
 		namaTextBox.setText(PengangkutObjek.getIdObjek());
 		TextBox.setText(PengangkutObjek.getIsiObjek());
-		
-		Proses.hitungWaktu(false, this.getClass());//TODO: hapus ini
 	}
 	
 	/**

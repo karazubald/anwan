@@ -122,7 +122,7 @@ public class DataBase {
 		try {
 			bukaKoneksiDB(true);
 			
-			query = "SELECT IF EXISTS " +kolomData+ " FROM data_mentah WHERE UrutanData="+nomorData;
+			query = "SELECT " +kolomData+ " FROM data_mentah WHERE UrutanData="+nomorData;
 			
 			eksekusi = koneksiDataBase.createStatement();
 			hasilQuery = eksekusi.executeQuery(query);
