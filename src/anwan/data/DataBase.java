@@ -20,30 +20,8 @@ import anwan.proses.Terbilang;
 /**
  * <h2>Kelas DataBase</h2>
  * Kelas ini menyajikan fungsi membuat (CREATE), membaca (READ), mengubah (UPDATE), dan menghapus (DELETE) 
- * data di database. Database yang digunakan dalam kelas ini adalah SQLite.
+ * data di database. Jenis database yang digunakan dalam kelas ini adalah database SQLite.
  * <p>
- * Berikut format dari tabel yang dibuat menggunakan metode dataBaru().
- * <p>
- * <TABLE>
- *  <TR>
- *  <TD>Baris</TD>
- *  <TD>UrutanData</TD>
- * <TD>Tema</TD>
- * <TD>Koding</TD>
- * <TD>Ide_Utama</TD>
- * <TD>Jawaban</TD>
- * <TD>Impresi</TD>
- * </TR>
- * <TR>
- * <TD>Tipe Data (Ketentuan dalam SQL)</TD>
- * <TD>Integer (Primary Key)</TD>
- * <TD>String (VARCHAR[255])</TD>
- * <TD>String (VARCHAR[255])</TD>
- * <TD>String (VARCHAR[8000])</TD>
- * <TD>String (VARCHAR[8000])</TD>
- * <TD>String (VARCHAR[8000])</TD>
- * </TR>
- * </TABLE>
  * 
  * @author karazubald
  */
@@ -64,6 +42,29 @@ public class DataBase {
 	/**
 	 * Membuat database baru dengan nama ANWAN_DATABASE.
 	 * Database baru secara otomatis membuat tabel dengan nama data_mentah.
+	 * Berikut format dari tabel yang dibuat menggunakan metode ini.
+	 * <p>
+	 * <TABLE>
+	 *  <TR>
+	 *  <TD>Baris</TD>
+	 *  <TD>UrutanData</TD>
+	 * <TD>Tema</TD>
+	 * <TD>Koding</TD>
+	 * <TD>Ide_Utama</TD>
+	 * <TD>Jawaban</TD>
+	 * <TD>Impresi</TD>
+	 * </TR>
+	 * <TR>
+	 * <TD>Tipe Data (Ketentuan dalam SQL)</TD>
+	 * <TD>Integer (Primary Key)</TD>
+	 * <TD>String (VARCHAR[255])</TD>
+	 * <TD>String (VARCHAR[255])</TD>
+	 * <TD>String (VARCHAR[8000])</TD>
+	 * <TD>String (VARCHAR[8000])</TD>
+	 * <TD>String (VARCHAR[8000])</TD>
+	 * </TR>
+	 * </TABLE>
+	 * 
 	 */
 	public static void dataBaru() {
 		try {
@@ -117,23 +118,25 @@ public class DataBase {
 	}
 	
 	public static String muatData(idData id, Integer nomorData) {
-		String data;
-		String kolomData = id.toString();
+		String data = null;
+		String namaKolomData = id.toString();
+		
 		try {
 			bukaKoneksiDB(true);
 			
-			query = "SELECT " +kolomData+ " FROM data_mentah WHERE UrutanData="+nomorData;
+			query = "SELECT " +namaKolomData+ " FROM data_mentah WHERE UrutanData="+nomorData;
 			
 			eksekusi = koneksiDataBase.createStatement();
 			hasilQuery = eksekusi.executeQuery(query);
-			data = hasilQuery.getString(kolomData);
+			data = hasilQuery.getString(namaKolomData);
 			
 			bukaKoneksiDB(false);
 		} catch (SQLException galat) {
-			System.out.println("Galat dalam memuat data "+ id.toString()+" : "); //TODO: Hapus ini
+			System.out.println("Galat dalam memuat data "+ namaKolomData+"..."); //TODO: Hapus ini
 			galat.printStackTrace();
-			data = null;
+			
 		}
+		
 		return data;
 	}
 	

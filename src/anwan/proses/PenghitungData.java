@@ -1,12 +1,11 @@
 package anwan.proses;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class PenghitungData {
 	private static int nomorData = 1;
@@ -40,15 +39,14 @@ public class PenghitungData {
 		
 		int nomor = 1;
 		String isiBerkas = null;
-		try {
-			BufferedReader pembacaBerkas = new BufferedReader(new FileReader(berkas));
-			while(pembacaBerkas.readLine() != null)	
-				isiBerkas = pembacaBerkas.readLine();
+		
+		
+		
+		try (Scanner pembacaBerkas = new Scanner(berkas)){
+			while(pembacaBerkas.hasNext())	
+				isiBerkas = String.valueOf(pembacaBerkas.nextInt());
 		} catch (FileNotFoundException galat) {
 			Proses.pesan("Berkas nomordata.txt tidak dapat ditemukan...");
-			galat.printStackTrace();
-		} catch (IOException galat) {
-			Proses.pesan("Tidak dapat membaca isi berkas...");
 			galat.printStackTrace();
 		}
 		

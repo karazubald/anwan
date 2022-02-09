@@ -91,6 +91,9 @@ public class Layar_2 implements Initializable {
 		
 		PenghitungData.setNomorData(1);
 		
+		// TODO: Memuat data dari Layar 3 dan Database
+		initIsiKotakTulisan(PenghitungData.getNomorData());
+		
 		Proses.hitungWaktu(false, this.getClass()); //TODO: hapus ini
 	}
 	
