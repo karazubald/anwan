@@ -99,6 +99,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Memuat data dari kelas DataBase atau kelas PengangkutObjek ke kotak tulisan UrutanData, Tema, Koding, IdeUtama, Jawaban, Pertanyaan, dan Impresi.
+	 * @param nomorData nomor data yang akan dimuat
 	 */
 	private void initIsiKotakTulisan(int nomorData) {
 		UrutanData.setText(String.valueOf(nomorData));

@@ -117,6 +117,12 @@ public class DataBase {
 		}
 	}
 	
+	/**
+	 * Memuat data tertentu dari database
+	 * @param id jenis data yang akan dimuat
+	 * @param nomorData nomor data yang akan dimuat
+	 * @return data dalam bentuk String (kata/kalimat)
+	 */
 	public static String muatData(idData id, Integer nomorData) {
 		String data = null;
 		String namaKolomData = id.toString();
@@ -187,6 +193,12 @@ public class DataBase {
 		}
 	}
 	
+	/**
+	 * Merekam data tertentu ke dalam database
+	 * @param NomorData nomor data yang akan direkam
+	 * @param kolomData jenis data yang akan direkam
+	 * @param data data dalam bentuk String (kata/kalimat)
+	 */
 	public static void rekamData(int NomorData, String kolomData, String data) {
 		try {
 			bukaKoneksiDB(true);
