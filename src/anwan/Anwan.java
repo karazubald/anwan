@@ -20,7 +20,6 @@ import javafx.stage.Stage;
  * @since 2019
  */
 public class Anwan extends Application {
-    private Stage aplikasi;
     private Scene tampilan;
     
 	@Override
