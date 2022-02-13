@@ -14,6 +14,7 @@ import com.jfoenix.controls.JFXButton;
 import anwan.PenataLayar;
 import anwan.data.DataBase;
 import anwan.proses.Proses;
+import anwan.tampilan.lainnya.Informasi;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -109,7 +110,7 @@ public class Layar_1 implements Initializable {
 	 * @param me
 	 */
 	public void klikLogo(MouseEvent me) {
-		// TODO: Memuat gambar setelah logo diklik
+		Informasi.Tampilkan();
 	}
 	
 	@Override
