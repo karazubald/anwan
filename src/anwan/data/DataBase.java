@@ -237,7 +237,7 @@ public class DataBase {
 	 * @param Pertanyaan
 	 * @param Impresi
 	 */
-	public static void rekamData(int NomorData, String Tema, String Koding, String IdeUtama, String Jawaban, String Pertanyaan, String Impresi) {
+	public static boolean rekamData(int NomorData, String Tema, String Koding, String IdeUtama, String Jawaban, String Pertanyaan, String Impresi) {
 		
 		bukaKoneksiDB(true);
 		
@@ -267,9 +267,11 @@ public class DataBase {
 		} catch (SQLException galat) {
 			Proses.pesan("Galat dalam Operasi Database: "); //TODO: Hapus ini
 			galat.printStackTrace();
+			return false;
 		}
 		
 		bukaKoneksiDB(false);
+		return true;
 	}
 	
 	/**

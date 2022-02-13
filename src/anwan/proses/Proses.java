@@ -17,28 +17,22 @@ import java.util.TimerTask;
  */
 public class Proses {
 	private static Instant waktuMulai, waktuSelesai;
-	public static final long DURASI_DEFAULT = 300000;
+	public static final long DURASI_DEFAULT = 5 * 60000;
 	
 	/**
 	 * Menyimpan otomatis data dalam waktu yang ditentukan di durasiMenit. 
 	 * Apabila nilai durasiMenit kurang dari 5, maka secara otomatis ditetapkan menjadi DURASI_DEFAULT (5 menit).
-	 * @param durasiMenit bilangan bulat lebih dari 0
+	 * @param statusQuery status dari proses penyimpanan data ke dalam DataBase yang bernilai true jika berhasil dan false jika terjadi galat.
+	 * @see data.DataBase#rekamData(int NomorData, String Tema, String Koding, String IdeUtama, String Jawaban, String Pertanyaan, String Impresi)
 	 */
-	public static void simpanOtomatis(int durasiMenit) {
-		long durasi = durasiMenit * 60000;
-		if (durasi <= DURASI_DEFAULT) {
-			durasi = DURASI_DEFAULT;
-		} else {
-			durasi = durasiMenit * 60000;
-		}
-		
+	public static void simpanOtomatis(boolean statusQuery) {
 		Timer waktu = new Timer();
 		waktu.schedule(new TimerTask() {
 			@Override
 			public void run() {
 				// TODO: kegiatan otomatis disini
 			}
-		}, 0, durasi);
+		}, 0, DURASI_DEFAULT);
 	}
 	
 	/**
