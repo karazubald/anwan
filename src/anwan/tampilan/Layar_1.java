@@ -31,6 +31,7 @@ import javafx.stage.Stage;
 /**
  * <h2>Layar 1</h2>
  * Layar utama dari aplikasi Anwan.
+ * 
  * @author karazubald
  *
  */
@@ -52,7 +53,7 @@ public class Layar_1 implements Initializable {
 	
 	/**
 	 * Membuat data baru dan mengarahkan ke layar input data.
-	 * @param klik id dari event tetikus
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void buatBaru(ActionEvent klik) {
 		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
@@ -72,17 +73,16 @@ public class Layar_1 implements Initializable {
 
 	/**
 	 * Memuat data dari SQLite dan mengarahkan ke layar input data.
-	 * @param ae
+	 * @param klik Event dari tetikus (mouse)
 	 */
-	public void muatData(ActionEvent ae) {
+	public void muatData(ActionEvent klik) {
 		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini
 		
 		DataBase.muatData();
 		
 		tampilan = PenataLayar.munculkanTampilan("Layar Input Data", 2);
-		//tampilan = penataTampilan.munculkanTampilan("Layar Input Data", 2);
-		
-		aplikasi = (Stage) ((Node) ae.getSource()).getScene().getWindow();
+
+		aplikasi = (Stage) ((Node) klik.getSource()).getScene().getWindow();
 		aplikasi.setScene(tampilan);
 		aplikasi.show();
 		
@@ -91,25 +91,25 @@ public class Layar_1 implements Initializable {
 	
 	/**
 	 * Mengaktifkan layar tutorial.
-	 * @param ae
+	 * @param klik Event dari tetikus (mouse)
 	 */
-	public void tutorial(ActionEvent ae) {
+	public void tutorial(ActionEvent klik) {
 		// TODO: Mengarahkan ke tutorial (gambar / video)
 	}
 	
 	/**
 	 * Segera menghentikan aplikasi ketika diaktifkan.
-	 * @param ae
+	 * @param klik Event dari tetikus (mouse)
 	 */
-	public void keluarAplikasi(ActionEvent ae) {
+	public void keluarAplikasi(ActionEvent klik) {
 		System.exit(0);
 	}
 	
 	/**
 	 * Metode untuk aksi setelah mengklik logo.
-	 * @param me
+	 * @param klik Event dari tetikus (mouse)
 	 */
-	public void klikLogo(MouseEvent me) {
+	public void klikLogo(MouseEvent klik) {
 		Informasi.Tampilkan();
 	}
 	

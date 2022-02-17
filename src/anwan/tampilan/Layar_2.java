@@ -99,7 +99,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Memuat data dari kelas DataBase atau kelas PengangkutObjek ke kotak tulisan UrutanData, Tema, Koding, IdeUtama, Jawaban, Pertanyaan, dan Impresi.
-	 * @param nomorData nomor data yang akan dimuat
+	 * @param nomorData Nomor data yang akan dimuat
 	 */
 	private void initIsiKotakTulisan(int nomorData) {
 		UrutanData.setText(String.valueOf(nomorData));
@@ -133,7 +133,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Mengaktifkan data impresi dan mengalihkan ke layar input impresi.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void inputImpresi(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
@@ -153,7 +153,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Mengaktifkan data pertanyaan dan mengalihkan ke layar input pertanyaan.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void inputPertanyaan(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
@@ -173,7 +173,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Mengaktifkan data jawaban dan mengalihkan ke layar input jawaban.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void inputJawaban(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
@@ -193,7 +193,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Mengaktifkan data ide utama dan mengalihkan ke layar input ide utama.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void inputIdeUtama(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
@@ -213,7 +213,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Mengaktifkan data koding dan mengalihkan ke layar input koding.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void inputKoding(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
@@ -233,7 +233,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Mengaktifkan data tema dan mengalihkan ke layar input tema.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void inputTema(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
@@ -253,7 +253,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Mengalihkan ke layar analisis data (Layar 4).
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void lanjutAnalisis(ActionEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
@@ -272,7 +272,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Mengalihkan ke layar menu utama (Layar 1).
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void menuUtama(ActionEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
@@ -287,7 +287,7 @@ public class Layar_2 implements Initializable {
 	}
 	/**
 	 * Mengalihkan ke layar input data (Layar 3).
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	private void aktifkanInputData(MouseEvent klik) {
 		Proses.hitungWaktu(true, klik.getClass()); //TODO: hapus ini
@@ -305,7 +305,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Mempersiapkan animasi hapus dan mengaplikasikannya ke KelompokIkon.
-	 * @param KelompokIkon satu atau lebih objek JFXHamburger
+	 * @param KelompokIkon Satu atau lebih objek JFXHamburger
 	 * @see <a href="https://javadoc.io/doc/com.jfoenix/jfoenix/latest/com/jfoenix/controls/JFXHamburger.html">JFXHamburger</a>
 	 */
 	private void animasiHapus(JFXHamburger... KelompokIkon) {
@@ -414,7 +414,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Menghapus tulisan di semua kotak tulisan.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void hapusSemua(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass());//TODO: hapus ini
@@ -431,7 +431,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Menghapus tulisan di kotak tulisan tema.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void hapusTema(MouseEvent klik) {
 		Tema.setText("");
@@ -439,7 +439,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Menghapus tulisan di kotak tulisan koding.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void hapusKoding(MouseEvent klik) {
 		Koding.setText("");
@@ -447,7 +447,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Menghapus tulisan di kotak tulisan ide utama.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void hapusIdeUtama(MouseEvent klik) {
 		IdeUtama.setText("");
@@ -455,7 +455,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Menghapus tulisan di kotak tulisan jawaban.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void hapusJawaban(MouseEvent klik) {
 		Jawaban.setText("");
@@ -463,7 +463,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Menghapus tulisan di kotak tulisan pertanyaan.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void hapusPertanyaan(MouseEvent klik) {
 		Pertanyaan.setText("");
@@ -471,7 +471,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Menghapus tulisan di kotak tulisan impresi.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void hapusImpresi(MouseEvent klik) {
 		Impresi.setText("");
@@ -479,7 +479,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Memulai input di data selanjutnya dengan menambah angka di urutan data.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void dataSelanjutnya(MouseEvent klik) {
 		int urutandata = Integer.valueOf(UrutanData.getText());
@@ -489,7 +489,7 @@ public class Layar_2 implements Initializable {
 	
 	/**
 	 * Memulai input di data sebelumnya dengan mengurangi angka di urutan data.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void dataSebelumnya(MouseEvent klik) {
 		int urutandata = Integer.valueOf(UrutanData.getText());

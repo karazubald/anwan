@@ -49,7 +49,7 @@ public class Layar_4 implements Initializable {
 	
 	/**
 	 * Melakukan pembaruan data di database.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void ubahData(ActionEvent klik) {
 		// TODO: Mengubah data di SQLite DataBase
@@ -58,7 +58,7 @@ public class Layar_4 implements Initializable {
 	/**
 	 * Melakukan finalisasi terhadap data yang sudah disunting.
 	 * Data yang sudah difinalisasi hanya dapat ditampilkan, tidak dapat disunting.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void verifikasiData(ActionEvent klik) {
 		// TODO: Melakukan pembaruan (update) dan mengakhiri penyuntingan lebih lanjut

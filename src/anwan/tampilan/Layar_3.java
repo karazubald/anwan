@@ -41,7 +41,7 @@ public class Layar_3 implements Initializable {
 
 	/**
 	 * Menghapus tulisan di kotak tulisan.
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void hapus(MouseEvent klik) {
 		TextBox.setText("");
@@ -49,7 +49,7 @@ public class Layar_3 implements Initializable {
 	
 	/**
 	 * Kembali ke layar input awal (Layar 2).
-	 * @param klik
+	 * @param klik Event dari tetikus (mouse)
 	 */
 	public void kembali(MouseEvent klik) {
 		Proses.hitungWaktu(true, this.getClass()); //TODO: hapus ini

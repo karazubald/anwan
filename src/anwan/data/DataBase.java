@@ -119,8 +119,8 @@ public class DataBase {
 	
 	/**
 	 * Memuat data tertentu dari database
-	 * @param id jenis data yang akan dimuat
-	 * @param nomorData nomor data yang akan dimuat
+	 * @param id Kolom data yang akan dimuat
+	 * @param nomorData Nomor data yang akan dimuat
 	 * @return data dalam bentuk String (kata/kalimat)
 	 */
 	public static String muatData(idData id, Integer nomorData) {
@@ -150,7 +150,7 @@ public class DataBase {
 	 * Metode untuk membuka koneksi ke MySQL. Metode ini harus menjadi metode pertama di setiap metode kelas ini.
 	 * Ubah nilai bukaKoneksi menjadi true untuk membuka dan memulai akses ke MySQL. 
 	 * Ubah nilai bukaKoneksi menjadi false untuk menutup koneksi ke MySQL.
-	 * @param bukaKoneksi bernilai antara true atau false
+	 * @param bukaKoneksi Bernilai antara true atau false
 	 */
 	private static void bukaKoneksiDB(boolean bukaKoneksi) {
 		
@@ -195,8 +195,8 @@ public class DataBase {
 	
 	/**
 	 * Merekam data tertentu ke dalam database
-	 * @param NomorData nomor data yang akan direkam
-	 * @param kolomData jenis data yang akan direkam
+	 * @param NomorData Nomor data yang akan direkam
+	 * @param kolomData Nama kolom data yang akan direkam
 	 * @param data data dalam bentuk String (kata/kalimat)
 	 */
 	public static void rekamData(int NomorData, String kolomData, String data) {
@@ -229,13 +229,13 @@ public class DataBase {
 	}
 	/**
 	 * Memasukkan semua data ke database.
-	 * @param NomorData
-	 * @param Tema
-	 * @param Koding
-	 * @param IdeUtama
-	 * @param Jawaban
-	 * @param Pertanyaan
-	 * @param Impresi
+	 * @param NomorData Nomor input data
+	 * @param Tema Tema yang akan direkam
+	 * @param Koding Koding yang akan direkam
+	 * @param IdeUtama Ide utama yang akan direkam
+	 * @param Jawaban Jawaban yang akan direkam
+	 * @param Pertanyaan Pertanyaan yang akan direkam
+	 * @param Impresi Impresi yang akan direkam
 	 */
 	public static boolean rekamData(int NomorData, String Tema, String Koding, String IdeUtama, String Jawaban, String Pertanyaan, String Impresi) {
 		
@@ -324,7 +324,7 @@ public class DataBase {
 	
 	/**
 	 * Metode untuk mengekstrak koding sesuai dengan tema.
-	 * @param tema
+	 * @param tema Tema yang menjadi acuan
 	 * @return Kumpulan koding yang ada di suatu tema
 	 */
 	public static String sebutKoding(String tema) {
