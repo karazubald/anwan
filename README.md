@@ -28,4 +28,4 @@ Proyek ini masih dalam tahap awal pengembangan sehingga membutuhkan relawan(<i>v
 - 🗨️ Menyampaikan isu, ide/saran, atau memulai diskusi dengan developer: [@karazubald](https://t.me/karazubald).
 
 ## 🔗 Developer
-Silakan menghubungi developer melalui obrolan(<i>chat</i>) 💭 di Telegram: [@karazubald](https://t.me/karazubald).
+Silakan menghubungi developer melalui surel (<i>email</i>): [karazubald](mailto:karazubald@gmail.com).
