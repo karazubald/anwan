@@ -25,7 +25,7 @@ Proyek ini masih dalam tahap awal pengembangan sehingga membutuhkan relawan(<i>v
 - 🧑‍💻 Kontribusi ke kode dalam proyek dapat dilihat di [kontribusi_kode](https://github.com/karazubald/anwan/blob/main/kontribusi_kode.md).
 - 📑 Membuat isu di Issues tentang galat(<i>error</i>) atau <i>bug</i> di GitLab atau GitHub.
 - 💬 Memulai diskusi di Discussion GitHub.
-- 🗨️ Menyampaikan isu, ide/saran, atau memulai diskusi dengan developer: [@karazubald](https://t.me/karazubald).
+- 🗨️ Menyampaikan isu, ide/saran, atau memulai diskusi dengan developer: [karazubald](mailto:karazubald@gmail.com).
 
 ## 🔗 Developer
 Silakan menghubungi developer melalui surel (<i>email</i>): [karazubald](mailto:karazubald@gmail.com).
