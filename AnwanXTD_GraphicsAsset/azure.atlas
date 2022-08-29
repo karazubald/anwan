@@ -1,0 +1,68 @@
+azure.png
+size: 1737, 1200
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+azureAnalysis
+  rotate: false
+  xy: 567, 0
+  size: 195, 107
+  orig: 195, 107
+  offset: 0, 0
+  index: -1
+azureAnalysisBTN
+  rotate: false
+  xy: 0, 0
+  size: 189, 206
+  orig: 189, 206
+  offset: 0, 0
+  index: -1
+azureMainBTN
+  rotate: false
+  xy: 189, 0
+  size: 189, 206
+  orig: 189, 206
+  offset: 0, 0
+  index: -1
+azureMainTextBox
+  rotate: false
+  xy: 1347, 0
+  size: 390, 240
+  orig: 390, 240
+  offset: 0, 0
+  index: -1
+azureReview
+  rotate: false
+  xy: 762, 0
+  size: 195, 107
+  orig: 195, 107
+  offset: 0, 0
+  index: -1
+azureRightMenu
+  rotate: false
+  xy: 957, 0
+  size: 195, 107
+  orig: 195, 107
+  offset: 0, 0
+  index: -1
+azureRightMenuBG
+  rotate: false
+  xy: 1152, 0
+  size: 195, 107
+  orig: 195, 107
+  offset: 0, 0
+  index: -1
+azureTheme
+  rotate: false
+  xy: 0, 240
+  size: 1560, 960
+  orig: 1560, 960
+  offset: 0, 0
+  index: -1
+azureThemeBTN
+  rotate: false
+  xy: 378, 0
+  size: 189, 206
+  orig: 189, 206
+  offset: 0, 0
+  index: -1

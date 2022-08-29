@@ -1,0 +1,68 @@
+dark.png
+size: 1737, 1200
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+darkAnalysis
+  rotate: false
+  xy: 567, 0
+  size: 195, 107
+  orig: 195, 107
+  offset: 0, 0
+  index: -1
+darkAnalysisBTN
+  rotate: false
+  xy: 0, 0
+  size: 189, 206
+  orig: 189, 206
+  offset: 0, 0
+  index: -1
+darkMainBTN
+  rotate: false
+  xy: 189, 0
+  size: 189, 206
+  orig: 189, 206
+  offset: 0, 0
+  index: -1
+darkMainTextBox
+  rotate: false
+  xy: 1347, 0
+  size: 390, 240
+  orig: 390, 240
+  offset: 0, 0
+  index: -1
+darkReview
+  rotate: false
+  xy: 762, 0
+  size: 195, 107
+  orig: 195, 107
+  offset: 0, 0
+  index: -1
+darkRightMenu
+  rotate: false
+  xy: 957, 0
+  size: 195, 107
+  orig: 195, 107
+  offset: 0, 0
+  index: -1
+darkRightMenuBG
+  rotate: false
+  xy: 1152, 0
+  size: 195, 107
+  orig: 195, 107
+  offset: 0, 0
+  index: -1
+darkTheme
+  rotate: false
+  xy: 0, 240
+  size: 1560, 960
+  orig: 1560, 960
+  offset: 0, 0
+  index: -1
+darkThemeBTN
+  rotate: false
+  xy: 378, 0
+  size: 189, 206
+  orig: 189, 206
+  offset: 0, 0
+  index: -1

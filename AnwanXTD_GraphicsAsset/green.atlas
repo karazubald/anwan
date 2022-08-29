@@ -1,0 +1,68 @@
+green.png
+size: 1737, 1200
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+greenAnalysis
+  rotate: false
+  xy: 567, 0
+  size: 195, 107
+  orig: 195, 107
+  offset: 0, 0
+  index: -1
+greenAnalysisBTN
+  rotate: false
+  xy: 0, 0
+  size: 189, 206
+  orig: 189, 206
+  offset: 0, 0
+  index: -1
+greenMainBTN
+  rotate: false
+  xy: 189, 0
+  size: 189, 206
+  orig: 189, 206
+  offset: 0, 0
+  index: -1
+greenMainTextBox
+  rotate: false
+  xy: 1347, 0
+  size: 390, 240
+  orig: 390, 240
+  offset: 0, 0
+  index: -1
+greenReview
+  rotate: false
+  xy: 762, 0
+  size: 195, 107
+  orig: 195, 107
+  offset: 0, 0
+  index: -1
+greenRightMenu
+  rotate: false
+  xy: 957, 0
+  size: 195, 107
+  orig: 195, 107
+  offset: 0, 0
+  index: -1
+greenRightMenuBG
+  rotate: false
+  xy: 1152, 0
+  size: 195, 107
+  orig: 195, 107
+  offset: 0, 0
+  index: -1
+greenTheme
+  rotate: false
+  xy: 0, 240
+  size: 1560, 960
+  orig: 1560, 960
+  offset: 0, 0
+  index: -1
+greenThemeBTN
+  rotate: false
+  xy: 378, 0
+  size: 189, 206
+  orig: 189, 206
+  offset: 0, 0
+  index: -1
