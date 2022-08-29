@@ -3,7 +3,7 @@ Anwan ditujukan untuk membantu dalam menganalisis transkrip wawancara dalam Psik
 
 📝 Proyek ini tersedia di [GitHub](https://github.com/karazubald/anwan) dengan sumber aslinya berasal dari [GitLab](https://gitlab.com/karazubald/anwan). 
 
-🔥 Proyek ini masih dalam tahap pengembangan dan terbuka untuk kontribusi.
+🔥 Proyek ini masih dalam tahap pengembangan (beta version, belum rilis/work) dan terbuka untuk kontribusi.
 
 | Waktu Mulai Project | Bahasa Pemrograman | Dependensi | Target Platform | Lisensi |
 | -------------: | -------------: | ----------: | -------------: |  -------------: |
@@ -15,15 +15,15 @@ Anwan ditujukan untuk membantu dalam menganalisis transkrip wawancara dalam Psik
 
 ## 🌀 Kontribusi
 ### Kebutuhan
-Proyek ini masih dalam tahap awal pengembangan sehingga membutuhkan relawan(<i>volunteer</i>):
+Proyek ini masih dalam tahap awal pengembangan sehingga membutuhkan relawan (<i>volunteer</i>):
 - 🧑‍🔬 Peneliti atau akademisi yang memahami beragam penelitian kualitatif.
 - 📑 Penerjemah bahasa Inggris ke bahasa Indonesia untuk evaluasi penerjemahan lisensi (LICENSE-ID.txt).
 - 🧑‍🎨 JavaFX UI Designer yang akrab/mahir dengan SceneBuilder. 🎨
-- 🧑‍💻 Penguji aplikasi(<i>Tester</i>).
+- 🧑‍💻 Penguji aplikasi (<i>Tester</i>).
 
 ### Cara berkontribusi
 - 🧑‍💻 Kontribusi ke kode dalam proyek dapat dilihat di [kontribusi_kode](https://github.com/karazubald/anwan/blob/main/kontribusi_kode.md).
-- 📑 Membuat isu di Issues tentang galat(<i>error</i>) atau <i>bug</i> di GitLab atau GitHub.
+- 📑 Membuat isu di Issues tentang galat (<i>error</i>) atau <i>bug</i> di GitLab atau GitHub.
 - 💬 Memulai diskusi di Discussion GitHub.
 - 🗨️ Menyampaikan isu, ide/saran, atau memulai diskusi dengan developer: [karazubald](mailto:karazubald@gmail.com).
 
